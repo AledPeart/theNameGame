@@ -1,0 +1,23 @@
+.game-section{
+    height: 600px;
+    border: 5px solid aqua;
+}
+
+.game-section h1{
+    margin: 50px auto;
+}
+.help-section{
+    height: 300px;
+    border: 5px solid greenyellow;
+}
+.help-section h1{
+    margin: 50px auto;
+}
+
+.score-section{
+    height: 300px;
+    border: 5px solid red;
+}
+.score-section h1{
+    margin: 50px auto;
+}
