@@ -1,22 +1,88 @@
+body {
+    background-color:rgb(247, 232, 211);   
+}
+
+/***** Site Logo *****/
+.bulb-logo{
+    background-color:rgb(247, 232, 211);
+    height: 80px;
+    width: 80px;
+   
+}
+
+.game-logo{
+    font-family: 'Jomhuria', cursive;
+    font-size: 60px;
+    padding-left: 20px;
+}
+
+/***** Game Section *****/
+
 .game-section{
     height: 600px;
-    border: 5px solid aqua;
+    border: 5px solid rgb(247, 232, 211);  
+    border-radius: 20px;
+    background-color:#fff;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.question-box{
+    text-align: center;
+}
+
+.question-text{
+    border: 2px solid black;
+    border-radius: 0.5em;
+    padding: 15px;
+    font-size: 1.75em;
 }
 
 .game-section h1{
-    margin: 50px auto;
+    text-align: center;
 }
+
+.answer-box{
+    border: 2px solid black;
+    border-radius: 0.5em;
+}
+
+.picture-box{
+    border: 2px solid black;
+    border-radius: 0.5em;
+}
+
+.cat-image{
+    padding-top: 30px;
+    width: 90%;
+    height: 90%;
+    border-radius: 0.5em;
+}
+
+/***** Help Section *****/
+
 .help-section{
     height: 300px;
-    border: 5px solid greenyellow;
+    border: 5px solid rgb(247, 232, 211);
+    border-radius: 20px;
+    background-color:#fff;
+    padding: 20px;
+    box-sizing: border-box;
+
 }
 .help-section h1{
     margin: 50px auto;
+    
 }
 
+/***** Score Section *****/
 .score-section{
     height: 300px;
-    border: 5px solid red;
+    border: 5px solid rgb(247, 232, 211); 
+    border-radius: 20px; 
+    background-color:#fff;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .score-section h1{
     margin: 50px auto;

@@ -13,6 +13,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Dosis:wght@600;700;800&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
+
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -28,19 +32,38 @@
 </head>
 <body>
 
+    <div>
+        <h1 class="game-logo">
+            <img src="assets/images/idea.png" class="bulb-logo"> THE NAME GAME
+        </h1>
+    </div>
+
     <div class="game-section container">
-        <div class="row">
+        
             <h1>Game Section</h1>
+        <div class="question-box row justify-content-center">
+            <p class="question-text">What can you see?</p>
         </div>
+        <div class="row justify-content-around">
+        <div class="picture-box col-4">
+            <img class="cat-image rounded mx-auto d-block" src="assets/images/cat-sq.jpg" alt="image of a cat">
+        </div>
+
+        <div class="answer-box col-4">
+            <p class="answer-instruction">Type your answer:</p>
+            <input class="answer-field" name="answer" type="text">
+            <button type="button" data-type="submit" class="btn btn-secondary btn-lg">Enter</button>
+        </div>
+    </div>
     </div>
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-8 help-section text-center">
+            <div class="col-md-8 help-section text-center">
                 <h1>Help Section</h1>
             </div>
     
-            <div class="col-lg-4 score-section text-center">
+            <div class="col-md-4 score-section text-center">
                 <h1>Score Section</h1>
             </div>
         </div>
