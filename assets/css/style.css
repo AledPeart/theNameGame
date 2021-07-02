@@ -62,15 +62,15 @@ body {
 
 .answer-instruction{
     font-size: 1.5em;
-    padding: 20px;
 }
 
 .answer-box{
-    padding: 20px;
     font-size: 1.5em;
 }
 
-.btn-enter{}
+.btn-enter{
+    margin: 20px;
+}
 
 /***** Help Section *****/
 
