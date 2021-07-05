@@ -1,10 +1,11 @@
 body {
-    background-color:rgb(247, 232, 211);   
+    background-color:#E7E6E1;   
+    
 }
 
 /***** Site Logo *****/
 .bulb-logo{
-    background-color:rgb(247, 232, 211);
+    background-color:#E7E6E1;
     height: 80px;
     width: 80px;
    
@@ -16,87 +17,121 @@ body {
     padding-left: 20px;
 }
 
+/**** Following media query to ensure that on mobile devices the logo text does not wrap****/
+@media screen and (max-width: 400px) {
+    .game-logo {
+        font-size: 45px;
+        padding-left: 0;
+    }
+}
+
+
 /***** Game Section *****/
 
+.page-box{
+    border: 5px solid #ffbe5c; 
+
+}
+
 .game-section{
-    height: 600px;
-    border: 5px solid rgb(247, 232, 211);  
-    border-radius: 20px;
-    background-color:#fff;
+    background-color: #E7E6E1;
     padding: 20px;
-    box-sizing: border-box;
+    /* border: 5px solid #ffbe5c;  */
+    padding-bottom: 50px;
+    border-radius: 5px;
+
+    
 }
 
 .question-box{
     text-align: center;
+    
 }
 
 .question-text{
-    border: 2px solid black;
-    border-radius: 0.5em;
-    padding: 15px;
-    font-size: 1.75em;
-}
-
-.game-section h1{
     font-family: 'Jomhuria', cursive;
     text-align: center;
+    font-size: 4em;
+}
+
+/**** Following media query to ensure that on mobile devices the question text does not wrap****/
+@media screen and (max-width: 400px) {
+    .question-text {
+        font-size: 3em;
+    }
 }
 
 .answer-box{
-    border: 2px solid black;
-    border-radius: 0.5em;
+    background-color: #fff;
+    font-size: 1.5em;
+    border-radius: 10px;
+
 }
 
 .picture-box{
-    border: 2px solid black;
-    border-radius: 0.5em;
+    background-color: #F9F9F9;
+    max-width: 350px;
+    max-height: 350px;
+
 }
 
-.cat-image{
-    padding-top: 30px;
-    width: 90%;
-    height: 90%;
-    border-radius: 0.5em;
+.question-image{
+    border-radius: 10px;
 }
 
 .answer-instruction{
     font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
 }
 
-.answer-box{
-    font-size: 1.5em;
+.answer-field{
+    background-color: #f9f9f9;
+    border: 2px solid #ffbe5c;
 }
+
 
 .btn-enter{
     margin: 20px;
 }
 
+.horizontal-rule{
+    border-top: 3px solid #ffbe5c;
+    width: 50%;
+}
+
 /***** Help Section *****/
 
 .help-section{
-    height: 300px;
-    border: 5px solid rgb(247, 232, 211);
-    border-radius: 20px;
-    background-color:#fff;
+    background-color: #E7E6E1;
     padding: 20px;
-    box-sizing: border-box;
-
+    /* border: 5px solid #ffbe5c;  */
+    border-radius: 10px;
 }
+
 .help-section h1{
-    font-family: 'Jomhuria', cursive;
-    
+    font-family: 'Jomhuria', cursive, sans-serif;
+}
+
+.help-box{
+    background-color: #F9F9F9;
+    border-radius: 10px;
+
 }
 
 /***** Score Section *****/
-.score-section{
-    height: 300px;
-    border: 5px solid rgb(247, 232, 211); 
-    border-radius: 20px; 
-    background-color:#fff;
-    padding: 20px;
-    box-sizing: border-box;
+
+.score-section{ 
+    background-color: #E7E6E1;
+    padding: 20px;  
+    /* border: 5px solid #ffbe5c;  */
+    border-radius: 10px;
 }
 .score-section h1{
     font-family: 'Jomhuria', cursive;
+}
+
+.score-box{
+    background-color: #F9F9F9;
+    border-radius: 10px;
+
 }
