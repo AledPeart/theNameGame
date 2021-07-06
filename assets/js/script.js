@@ -19,10 +19,7 @@ var questions = [
 
 for (var i = 0; i < questions.length; i++) {
     
-    console.log(questions[i]);
-
-
-   
+    console.log(questions[0].question);
 }
 
 //function to check the users input answer
@@ -30,10 +27,10 @@ for (var i = 0; i < questions.length; i++) {
 function checkAnswer() {
 
 let userAnswer = document.getElementsByClassName("answer-field").value;
-let answer = //the returned answer to the first question in the for loop -- questions.answer[0]?
+let answer = questions[0].question;
 
-correctAnswer = userAnswer === answer;
-}
+let correctAnswer = userAnswer === answer;
+
 
 if (correctAnswer) {
         addCorrectScore();
@@ -55,4 +52,5 @@ function addCorrectScore() {
 function addIncorrectScore() {
     let oldScore = document.getElementsByClassName("incorrect").innerText;
     document.getElementsByClassName("incorrect").innerText = ++oldScore;
+}
 }
