@@ -1,13 +1,31 @@
+//global counter variable that can be passed in to other functions as needed
+let globalCounter = 0;
+
+let submitButton = document.getElementById("submit-button");
+
+//Onclick event listener for the submit button
+submitButton.onclick = function() {
+    incrementCounter(); 
+    checkAnswer()
+};
+
+//function to increment global counter by +1
+function incrementCounter() {
+    globalCounter++;
+    console.log(globalCounter);
+    
+}
+
 
 //question bank stored as an array
 var questions = [
-    {
-          question: `assets/images/car.jpg`,
-          answer: "car"
+    {      
+          question: `assets/images/cat.jpg`,
+         answer: "cat"
     },
     {
-        question: `assets/images/cat.jpg`,
-         answer: "cat"
+        question: `assets/images/car.jpg`,
+          answer: "car"
     },
     {
         question: `assets/images/ball.jpg`,
@@ -15,19 +33,14 @@ var questions = [
     }
 ];
 
-//for loop to iterate through the questions array
-
-for (var i = 0; i < questions.length; i++) {
-    
-    console.log(questions[0].question);
-}
-
 //function to check the users input answer
 
 function checkAnswer() {
 
-let userAnswer = document.getElementsByClassName("answer-field").value;
-let answer = questions[0].question;
+let userAnswer = document.getElementById("answer-field").value;
+
+//answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
+let answer = questions[(globalCounter)].answer;
 
 let correctAnswer = userAnswer === answer;
 
@@ -43,14 +56,14 @@ else {
 //function to add correct score
 
 function addCorrectScore() {
-    let oldScore = document.getElementsByClassName("correct").innerText;
-    document.getElementsByClassName("correct").innerText = ++oldScore;
+    let oldScore = document.getElementById("correct").innerText;
+    document.getElementById("correct").innerText = ++oldScore;
 }
 
 //function to add incorrect score
 
 function addIncorrectScore() {
-    let oldScore = document.getElementsByClassName("incorrect").innerText;
-    document.getElementsByClassName("incorrect").innerText = ++oldScore;
+    let oldScore = document.getElementById("incorrect").innerText;
+    document.getElementById("incorrect").innerText = ++oldScore;
 }
 }
