@@ -6,16 +6,23 @@ let submitButton = document.getElementById("submit-button");
 //Onclick event listener for the submit button
 submitButton.onclick = function() {
     incrementCounter(); 
-    checkAnswer()
+    checkAnswer()  
+    setNextQuestion
 };
 
 //function to increment global counter by +1
 function incrementCounter() {
     globalCounter++;
-    console.log(globalCounter);
-    
+    console.log(globalCounter);   
 }
 
+//function to set the next question by loading the image relative to the global counter
+
+function setNextQuestion() {
+    for (i = 0; i < questions.length; i++) {
+        document.getElementById("question-image").innerHTML = questions[(globalCounter)].question;
+      };
+}
 
 //question bank stored as an array
 var questions = [
