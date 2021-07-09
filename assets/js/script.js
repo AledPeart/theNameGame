@@ -5,9 +5,9 @@ let submitButton = document.getElementById("submit-button");
 
 //Onclick event listener for the submit button
 submitButton.onclick = function() {
+    checkAnswer(); 
     incrementCounter(); 
-    checkAnswer()  
-    setNextQuestion
+    setNextQuestion();
 };
 
 //function to increment global counter by +1
@@ -19,23 +19,32 @@ function incrementCounter() {
 //function to set the next question by loading the image relative to the global counter
 
 function setNextQuestion() {
-    for (i = 0; i < questions.length; i++) {
-        document.getElementById("question-image").innerHTML = questions[(globalCounter)].question;
-      };
-}
+    
+    document.getElementById("answer-field").value = ""; // Erases the last typed answer
+    document.getElementById("answer-field").focus(); // Puts the cursor in the answer box
 
+    if (globalCounter < 3) {
+        document.getElementById("question-image").src=questions[globalCounter].question; 
+        console.log("game continues");
+      } else {
+        console.log("game has ended");
+      }
+        
+      };
+
+//<img id="question-image" class="question-image img-fluid" src="assets/images/cat.jpg" alt="image of a cat"></img>
 //question bank stored as an array
 var questions = [
     {      
-          question: `assets/images/cat.jpg`,
+          question: "assets/images/cat.jpg",
          answer: "cat"
     },
     {
-        question: `assets/images/car.jpg`,
+        question: "assets/images/car.jpg",
           answer: "car"
     },
     {
-        question: `assets/images/ball.jpg`,
+        question: "assets/images/ball.jpg",
          answer: "ball"
     }
 ];
@@ -47,7 +56,7 @@ function checkAnswer() {
 let userAnswer = document.getElementById("answer-field").value;
 
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
-let answer = questions[(globalCounter)].answer;
+let answer = questions[globalCounter].answer;
 
 let correctAnswer = userAnswer === answer;
 

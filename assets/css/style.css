@@ -70,8 +70,8 @@ body {
 
 .picture-box{
     background-color: #F9F9F9;
-    max-width: 350px;
-    max-height: 350px;
+    width: auto;
+    height: auto;
 
 }
 
