@@ -1,0 +1,52 @@
+[
+    {      
+          "question": "Can you name this animal?",
+          "Image": "assets/images/cat.jpg",
+         "answer": "cat"
+    },
+    {
+        "question": "What do you see in the picture?",
+        "image": "assets/images/car.jpg",
+        "answer": "car"
+    },
+    {
+        "question": "Can you name this object?",
+        "image": "assets/images/ball.jpg",
+         "answer": "ball"
+    },
+    {      
+        "question": "Can you name this fruit?",
+        "Image": "assets/images/orange.jpg",
+       "answer": "orange"
+  },
+  {      
+    "question": "What do you see in the picture?",
+    "Image": "assets/images/flower.jpg",
+   "answer": "flower"
+},
+{
+    "question": "Can you name this object?",
+    "image": "assets/images/train.jpg",
+     "answer": "train"
+},
+{      
+    "question": "What do you see in the picture?",
+    "Image": "assets/images/moon.jpg",
+   "answer": "moon"
+},
+{      
+    "question": "Can you name this animal?",
+    "Image": "assets/images/rabbit.jpg",
+   "answer": "rabbit"
+},
+{      
+    "question": "What do you see in the picture?",
+    "Image": "assets/images/hat.jpg",
+   "answer": "hat"
+},
+{
+    "question": "Can you name this object?",
+    "image": "assets/images/pencil.jpg",
+     "answer": "pencil"
+}
+]

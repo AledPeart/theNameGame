@@ -79,7 +79,7 @@ body {
     border-radius: 10px;
 }
 
-.answer-instruction{
+#question-box{
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
 }
@@ -133,5 +133,12 @@ body {
 .score-box{
     background-color: #F9F9F9;
     border-radius: 10px;
+}
 
+#correct{
+    color: green;
+}
+
+#incorrect{
+    color: red;
 }

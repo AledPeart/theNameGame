@@ -23,8 +23,9 @@ function setNextQuestion() {
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer box
 
-    if (globalCounter < 3) {
-        document.getElementById("question-image").src=questions[globalCounter].question; 
+    if (globalCounter < 10) {
+        document.getElementById("question-image").src=questions[globalCounter].image; 
+        document.getElementById("question-box").innerHTML=questions[globalCounter].question;
         console.log("game continues");
       } else {
         console.log("game has ended");
@@ -32,22 +33,60 @@ function setNextQuestion() {
         
       };
 
-//<img id="question-image" class="question-image img-fluid" src="assets/images/cat.jpg" alt="image of a cat"></img>
-//question bank stored as an array
+
+// question bank stored as an array ***DELETE ONCE JSON FILE IS WORKING***
 var questions = [
     {      
-          question: "assets/images/cat.jpg",
+          question: "Can you name this animal?",
+          image: "assets/images/cat.jpg",
          answer: "cat"
     },
     {
-        question: "assets/images/car.jpg",
-          answer: "car"
+        question: "What do you see in the picture?",
+        image: "assets/images/car.jpg",
+        answer: "car"
     },
     {
-        question: "assets/images/ball.jpg",
+        question: "Can you name this object?",
+        image: "assets/images/ball.jpg",
          answer: "ball"
-    }
-];
+    },
+    {      
+        question: "Can you name this fruit?",
+        image: "assets/images/orange.png",
+       answer: "orange"
+  },
+  {      
+    question: "What do you see in the picture?",
+    image: "assets/images/flower.jpg",
+   answer: "flower"
+},
+{
+    question: "Can you name this object?",
+    image: "assets/images/train.jpg",
+     answer: "train"
+},
+{      
+    question: "What do you see in the picture?",
+    image: "assets/images/moon.jpg",
+   answer: "moon"
+},
+{      
+    question: "Can you name this animal?",
+    image: "assets/images/rabbit.jpg",
+   answer: "rabbit"
+},
+{      
+    question: "What do you see in the picture?",
+    image: "assets/images/hat.jpg",
+   answer: "hat"
+},
+{
+    question: "Can you name this object?",
+    image: "assets/images/pencil.jpg",
+     answer: "pencil"
+}
+]
 
 //function to check the users input answer
 
@@ -83,3 +122,42 @@ function addIncorrectScore() {
     document.getElementById("incorrect").innerText = ++oldScore;
 }
 }
+
+
+//following code enables the user to submit the answer using the enter button on the keyboard
+// targets the answer field
+let answerField = document.getElementById("answer-field");
+// Executes a function when the user releases the enter key on the keyboard
+answerField.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) { //default keycode for the enter button
+    // prevents the default action from occuring
+    event.preventDefault();
+    // triggers the submit button
+    document.getElementById("submit-button").click();
+  }
+});
+
+
+// //***JSON API***
+
+// //variable to store location of JSON file
+// let requestURL = "assets/js/questions.json";
+
+// //variable to hold the request object (XHR)
+// let request = new XMLHttpRequest();
+
+// //in order to open the JSON request
+// request.open('GET', requestURL);
+
+// //so that the XHR knows that the data wil be in JSON format
+// request.responseType = 'json';
+
+// //send method which sends the request
+// request.send();
+
+// //stores the JSON questions data in a variable, and ensures it is available (onload)
+// //and is there when it is needed 
+// request.onload = function() {
+//     let questions = request.response;
+//     // const questions = JSON.parse(questionsText);
+//   }
