@@ -22,6 +22,7 @@ function setNextQuestion() {
     
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer box
+    document.getElementById("answer-box").classList.add("");
 
     if (globalCounter < 10) {
         document.getElementById("question-image").src=questions[globalCounter].image; 
@@ -99,12 +100,22 @@ let answer = questions[globalCounter].answer;
 
 let correctAnswer = userAnswer === answer;
 
+let answerBox = document.getElementById("answer-box");
 
 if (correctAnswer) {
+    //change border to green
+    // answerBox.classList.remove("answer-box");
+    // answerBox.classList.add("answer-box-correct");
+
+
         addCorrectScore();
 }
 
 else {
+//change border to red
+    // answerBox.classList.remove("answer-box");
+    // answerBox.classList.add("answer-box-incorrect");
+
     addIncorrectScore();
 }
 
@@ -161,3 +172,10 @@ answerField.addEventListener("keyup", function(event) {
 //     let questions = request.response;
 //     // const questions = JSON.parse(questionsText);
 //   }
+
+
+//***jQuery***
+
+// $('.click').click(function() {
+//     $('.div2').replaceWith($('.div1'));        
+// });
