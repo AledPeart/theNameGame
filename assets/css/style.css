@@ -68,6 +68,16 @@ body {
 
 }
 
+.answer-box-correct {
+    border: 10px solid green;
+    border-radius: 10px;
+}
+
+.answer-box-incorrect {
+    border: 10px solid red;
+    border-radius: 10px;
+}
+
 .picture-box{
     background-color: #F9F9F9;
     width: auto;
