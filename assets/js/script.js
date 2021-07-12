@@ -1,3 +1,13 @@
+let startBtn = document.getElementById("start-btn");
+
+startBtn.onclick = function() {
+    startPage();
+};
+
+function startPage() {
+    document.getElementById("main-page-box").innerHTML = `<div class="row"> <div class="col"> <h1>Start Game</h1> </div>`;
+}
+
 //global counter variable that can be passed in to other functions as needed
 let globalCounter = 0;
 
