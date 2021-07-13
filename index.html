@@ -32,24 +32,36 @@
 </head>
 <body>
 
-    <div class= "container-fluid">
+    <div id="logo-box" class= "container-fluid box-cover">
         <div class="row">
             <div class="col-md-12"><h1 class="game-logo">
-                <img src="assets/images/idea2.png" class="bulb-logo"> THE NAME GAME
-            </h1>
+                <img src="assets/images/idea2.png" class="bulb-logo"> The Name Game
+                </h1>
              </div>
-             <button id="start-btn">Start Game</button>
          </div>
     </div>
 <!------- GAME SECTION ------->
-    <div id="main-page-box" class="container page-box">
-        <!-- <div class="row">
-            <div class="col">
-                <h1>Start Game</h1>
-            </div>
-        </div> -->
+    
 
-    <div class="game-section container">
+<div id="main-page-box" class="container page-box">
+
+    <!------- START BOX ------->
+    <div class="container">    
+    <div id="start-box" class="row h-100">
+            <div class="col my-auto text-center">
+                <h1 class="game-logo">
+                    WELCOME TO THE NAME GAME<img src="assets/images/idea2.png" class="bulb-logo"> 
+                    </h1>
+                    <div class="row justify-content-center">
+                        <button type="button" data-type="submit" id="start-btn" class="btn btn-warning btn-lg">Start Game</button>
+                    </div>
+            </div>
+        </div>
+    </div> 
+
+        <!------- GAME BOX ------->
+        <div id ="game-box" class="box-hide my-auto">
+        <div class="game-section container">
 
         <div class="question-box row justify-content-center">
             <p class="question-text col-md-4">What can you see?</p>
@@ -92,6 +104,8 @@
             <div class="col-md-8 mb-4 help-section text-center">
                 <div class="score-box">
                     <h1>Help Section</h1>
+                    <p id="clue"></p>
+                    <button id="help-button">Help</button>
                 </div>
             </div>
 
@@ -125,6 +139,25 @@
             </div>
         </div>
     </div>
+</div>
+
+<!------- END BOX ------->
+
+<div id="end-box" class="row my-auto h-100 box-hide">
+    <div class="col text-center">
+        <h1 class="end-game-logo">
+            That's the end of the game<img src="assets/images/idea2.png" class="end-bulb-logo"> 
+            </h1>
+            <div class="row justify-content-center">
+                <p class="congrats-text">Congratulations! You scored <span id ="correct-answers"> </span> out of <span id ="num-of-questions"> </span></p>
+                </div>
+                <div class="row justify-content-center">
+                <button type="button" data-type="submit" id="end-btn" class="btn btn-warning btn-lg">Start Again</button>
+            </div>
+    </div>
+</div>
+
+
 </div>
 
  <!------- JAVASCRIPT ------->

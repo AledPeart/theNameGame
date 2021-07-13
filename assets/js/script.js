@@ -1,11 +1,21 @@
+
+//defining variables to use to load startBox/gameBox/endBox
 let startBtn = document.getElementById("start-btn");
 
+let startBox = document.getElementById("start-box").innerHTML;
+let gameBox = document.getElementById("game-box").innerHTML;
+let endBox = document.getElementById("end-box").innerHTML;
+
+
+//startPage function set to fire onclick of start button
 startBtn.onclick = function() {
-    startPage();
+    startGame();
 };
 
-function startPage() {
-    document.getElementById("main-page-box").innerHTML = `<div class="row"> <div class="col"> <h1>Start Game</h1> </div>`;
+function startGame() {
+    document.getElementById("logo-box").classList.remove("box-cover"); //removes the box-cover class from the logo-box
+    document.getElementById("game-box").classList.remove("box-hide"); //removes the box-hide class from the game-box
+    document.getElementById("start-box").className = "box-hide"; //adds the the box-hide class to the start-box
 }
 
 //global counter variable that can be passed in to other functions as needed
@@ -32,17 +42,45 @@ function setNextQuestion() {
     
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer box
-    document.getElementById("answer-box").classList.add("");
+    // document.getElementById("answer-box").classList.add(""); //meant to clear the box - needs refining
 
     if (globalCounter < 10) {
         document.getElementById("question-image").src=questions[globalCounter].image; 
         document.getElementById("question-box").innerHTML=questions[globalCounter].question;
-        console.log("game continues");
+        document.getElementById("clue").innerHTM="";
+        
+        
       } else {
-        console.log("game has ended");
+            endGame ();
       }
         
       };
+
+      let helpButton = document.getElementById("help-button");
+
+      helpButton.onclick = function() {
+        showClue();
+    };
+
+      function showClue() {
+        document.getElementById("clue").innerHTML=questions[globalCounter].clue;
+      }
+
+
+
+      //function to load end-box on completion of quiz and display the scores
+      function endGame () {
+        document.getElementById("logo-box").className = "box-cover"; //adds the the box-cover class to the logo-box
+        document.getElementById("end-box").classList.remove("box-hide"); //removes the box-hide class from the end-box
+        document.getElementById("game-box").className = "box-hide"; //adds the the box-hide class to the game-box
+
+        let correctAnswers = document.getElementById("correct").innerText;
+        let numOfQuestions = questions.length;
+
+        document.getElementById("correct-answers").innerText= correctAnswers;
+        document.getElementById("num-of-questions").innerText= numOfQuestions;
+      };
+
 
 
 // question bank stored as an array ***DELETE ONCE JSON FILE IS WORKING***
@@ -50,52 +88,62 @@ var questions = [
     {      
           question: "Can you name this animal?",
           image: "assets/images/cat.jpg",
-         answer: "cat"
+         answer: "cat",
+         clue: "C _ _"
     },
     {
         question: "What do you see in the picture?",
         image: "assets/images/car.jpg",
-        answer: "car"
+        answer: "car",
+        clue: "C _ _"
     },
     {
         question: "Can you name this object?",
         image: "assets/images/ball.jpg",
-         answer: "ball"
+         answer: "ball",
+         clue: "B _ _ _"
     },
     {      
         question: "Can you name this fruit?",
         image: "assets/images/orange.png",
-       answer: "orange"
+       answer: "orange",
+       clue: "O _ _ _ _ _"
   },
   {      
     question: "What do you see in the picture?",
     image: "assets/images/flower.jpg",
-   answer: "flower"
+   answer: "flower",
+   clue: "F _ _ _ _ _"
 },
 {
     question: "Can you name this object?",
     image: "assets/images/train.jpg",
-     answer: "train"
+     answer: "train",
+     clue: "T _ _ _ _"
 },
 {      
     question: "What do you see in the picture?",
     image: "assets/images/moon.jpg",
-   answer: "moon"
+   answer: "moon",
+   clue: "M _ _ _"
 },
 {      
     question: "Can you name this animal?",
     image: "assets/images/rabbit.jpg",
-   answer: "rabbit"
+   answer: "rabbit",
+   clue: "R _ _ _ _ _"
 },
 {      
     question: "What do you see in the picture?",
     image: "assets/images/hat.jpg",
-   answer: "hat"
+   answer: "hat",
+   clue: "H _ _"
 },
 {
     question: "Can you name this object?",
     image: "assets/images/pencil.jpg",
-     answer: "pencil"
+     answer: "pencil",
+     clue: "P _ _ _ _ _"
 }
 ]
 

@@ -1,6 +1,16 @@
+/***** Generic/Site Wide *****/
+
 body {
     background-color:#E7E6E1;   
     
+}
+
+.box-hide{
+    display: none;
+}
+
+.box-cover{
+    visibility: hidden;
 }
 
 /***** Site Logo *****/
@@ -15,6 +25,7 @@ body {
     font-family: 'Jomhuria', cursive;
     font-size: 60px;
     padding-left: 20px;
+    text-transform: uppercase;
 }
 
 /**** Following media query to ensure that on mobile devices the logo text does not wrap****/
@@ -27,6 +38,18 @@ body {
 
 
 /***** Game Section *****/
+
+/* #start-box{
+display: none;
+} */
+
+
+
+#start-btn{
+    margin-bottom: 20px;
+}
+
+
 
 .page-box{
     border: 5px solid #ffbe5c; 
@@ -128,6 +151,10 @@ body {
 
 }
 
+#clue{
+    font-size: 1.5rem;
+}
+
 /***** Score Section *****/
 
 .score-section{ 
@@ -151,4 +178,30 @@ body {
 
 #incorrect{
     color: red;
+}
+
+/***** End Section *****/
+
+#end-box{
+    margin: auto;
+}
+#end-btn{
+    margin-bottom: 20px;
+}
+
+.end-bulb-logo{
+    background-color:#E7E6E1;
+    height: 80px;
+    width: 80px;
+}
+
+.end-game-logo{
+    font-family: 'Jomhuria', cursive;
+    font-size: 60px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.congrats-text{
+    font-size: 2rem;
 }
