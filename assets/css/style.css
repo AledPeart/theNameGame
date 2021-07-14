@@ -43,6 +43,13 @@ body {
 display: none;
 } */
 
+.enter-name{
+    font-family: 'Jomhuria', cursive;
+    font-size: 45px;
+    padding-right: 20px;
+    text-transform: uppercase;
+}
+
 
 
 #start-btn{

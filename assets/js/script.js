@@ -1,16 +1,27 @@
 
 //defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHULD I USE THEM?***
 let startBtn = document.getElementById("start-btn");
-
+let endBtn = document.getElementById("end-btn");
 let startBox = document.getElementById("start-box").innerHTML;
 let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
+let userNameBtn = document.getElementById("enter-name-btn");
 
 
 //startPage function set to fire onclick of start button
 startBtn.onclick = function() {
     startGame();
+    displayUserName ();
+
 };
+
+//FUNCTION TO RESET THE GAME BUT NOT WORKING??
+endBtn.onclick = function() {
+    startGame();
+    window.location.reload();
+};
+
+
 
 function startGame() {
     document.getElementById("logo-box").classList.remove("box-cover"); //removes the box-cover class from the logo-box
@@ -37,6 +48,14 @@ function incrementCounter() {
     globalCounter++;
     console.log(globalCounter);   
 }
+
+
+// to display user's name in the score box
+function displayUserName () {
+    let userName = document.getElementById("enter-name").value;
+    document.getElementById("user-name").innerText = userName;
+}
+
 
 //function to set the next question by loading the image relative to the global counter
 
@@ -80,7 +99,9 @@ function setNextQuestion() {
 
         let correctAnswers = document.getElementById("correct").innerText;
         let numOfQuestions = questions.length;
+        let userName = document.getElementById("enter-name").value;
 
+        document.getElementById("player-name").innerText= userName;
         document.getElementById("correct-answers").innerText= correctAnswers;
         document.getElementById("num-of-questions").innerText= numOfQuestions;
       };
@@ -155,14 +176,14 @@ var questions = [
 
 function checkAnswer() {
 
-let userAnswer = document.getElementById("answer-field").value;
+let userAnswer = document.getElementById("answer-field").value.toLowerCase(); //ensures the users answer is correct if includes uppercase
 
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
 let answer = questions[globalCounter].answer;
 
 let correctAnswer = userAnswer === answer;
 
-let answerBox = document.getElementById("answer-box");
+// let answerBox = document.getElementById("answer-box"); To Be Deleted?
 
 if (correctAnswer) {
     //change border to green
