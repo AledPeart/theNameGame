@@ -1,5 +1,5 @@
 
-//defining variables to use to load startBox/gameBox/endBox
+//defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHULD I USE THEM?***
 let startBtn = document.getElementById("start-btn");
 
 let startBox = document.getElementById("start-box").innerHTML;
@@ -16,6 +16,8 @@ function startGame() {
     document.getElementById("logo-box").classList.remove("box-cover"); //removes the box-cover class from the logo-box
     document.getElementById("game-box").classList.remove("box-hide"); //removes the box-hide class from the game-box
     document.getElementById("start-box").className = "box-hide"; //adds the the box-hide class to the start-box
+    document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
+    
 }
 
 //global counter variable that can be passed in to other functions as needed
@@ -41,13 +43,13 @@ function incrementCounter() {
 function setNextQuestion() {
     
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
-    document.getElementById("answer-field").focus(); // Puts the cursor in the answer box
-    // document.getElementById("answer-box").classList.add(""); //meant to clear the box - needs refining
+    document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
+    
 
     if (globalCounter < 10) {
         document.getElementById("question-image").src=questions[globalCounter].image; 
         document.getElementById("question-box").innerHTML=questions[globalCounter].question;
-        document.getElementById("clue").innerHTM="";
+        document.getElementById("clue").innerHTML="";
         
         
       } else {
@@ -56,6 +58,7 @@ function setNextQuestion() {
         
       };
 
+      //function to reveal a clue onclick of the Help Btn
       let helpButton = document.getElementById("help-button");
 
       helpButton.onclick = function() {
@@ -64,6 +67,7 @@ function setNextQuestion() {
 
       function showClue() {
         document.getElementById("clue").innerHTML=questions[globalCounter].clue;
+        document.getElementById("answer-field").focus();// returns the cursor to the answer field
       }
 
 
@@ -167,6 +171,7 @@ if (correctAnswer) {
 
 
         addCorrectScore();
+        
 }
 
 else {
@@ -192,8 +197,7 @@ function addIncorrectScore() {
 }
 }
 
-
-//following code enables the user to submit the answer using the enter button on the keyboard
+//following code enables the user to submit the answer using the enter button on the keyboard ***CREDIT***W3Schools**
 // targets the answer field
 let answerField = document.getElementById("answer-field");
 // Executes a function when the user releases the enter key on the keyboard
@@ -237,3 +241,12 @@ answerField.addEventListener("keyup", function(event) {
 // $('.click').click(function() {
 //     $('.div2').replaceWith($('.div1'));        
 // });
+
+// $("#test-button").click(function(){
+//     $(".div").animate({
+//       left: '250px',
+//       opacity: '0.5',
+//       height: '150px',
+//       width: '150px'
+//     });
+//   }); 
