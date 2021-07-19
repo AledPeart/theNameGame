@@ -38,9 +38,12 @@ let submitButton = document.getElementById("submit-button");
 
 //Onclick event listener for the submit button
 submitButton.onclick = function() {
-    checkAnswer(); 
-    incrementCounter(); 
-    setNextQuestion();
+    checkAnswer();
+    //delays the counter and increment functions until the correct/incorrect animations have run
+    setTimeout(function() { 
+        incrementCounter(); 
+        setNextQuestion(); 
+    }, 1000);   
 };
 
 //function to increment global counter by +1
@@ -63,12 +66,13 @@ function setNextQuestion() {
     
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
+    document.getElementById("audio-clue").classList.add("box-cover"); //adds box cover to the audio controls again
     
 
     if (globalCounter < 10) {
         document.getElementById("question-image").src=questions[globalCounter].image; 
         document.getElementById("question-box").innerHTML=questions[globalCounter].question;
-        document.getElementById("clue").innerHTML="";
+        document.getElementById("visual-clue").innerHTML="";
         
         
       } else {
@@ -77,17 +81,31 @@ function setNextQuestion() {
         
       };
 
-      //function to reveal a clue onclick of the Help Btn
-      let helpButton = document.getElementById("help-button");
+      //function to reveal a clue onclick of the Visual Help Btn
+      let visualHelpButton = document.getElementById("visual-help-button");
 
-      helpButton.onclick = function() {
-        showClue();
+      visualHelpButton.onclick = function() {
+        showVisualClue();
     };
 
-      function showClue() {
-        document.getElementById("clue").innerHTML=questions[globalCounter].clue;
+      function showVisualClue() {
+        document.getElementById("visual-clue").innerHTML=questions[globalCounter].visualclue;
         document.getElementById("answer-field").focus();// returns the cursor to the answer field
       }
+
+      //function to reveal a clue onclick of the Audio Help Btn
+      let audioHelpButton = document.getElementById("audio-help-button");
+
+      audioHelpButton.onclick = function() {
+        showAudioClue();
+    };
+
+      function showAudioClue() {
+        document.getElementById("audio-clue").classList.remove("box-cover");
+        document.getElementById("audio-clue").src=questions[globalCounter].audioclue;
+        document.getElementById("answer-field").focus();// returns the cursor to the answer field
+      }
+
 
 
 
@@ -100,6 +118,15 @@ function setNextQuestion() {
         let correctAnswers = document.getElementById("correct").innerText;
         let numOfQuestions = questions.length;
         let userName = document.getElementById("enter-name").value;
+
+        //Ammends the end user message depending on score
+        if ( correctAnswers <= 2) {
+            document.getElementById("congrats-text").innerText= "Unlucky";
+        } else {
+            document.getElementById("congrats-text").innerText= "Congratulations";
+        };
+            
+        
 
         document.getElementById("player-name").innerText= userName;
         document.getElementById("correct-answers").innerText= correctAnswers;
@@ -114,61 +141,63 @@ var questions = [
           question: "Can you name this animal?",
           image: "assets/images/cat.jpg",
          answer: "cat",
-         clue: "C _ _"
+         visualclue: "C _ _",
+         audioclue: "assets/audio/cat-audio.mp3"
     },
     {
         question: "What do you see in the picture?",
         image: "assets/images/car.jpg",
         answer: "car",
-        clue: "C _ _"
+        visualclue: "C _ _",
+        audioclue: "assets/audio/file_example_MP3_700KB.mp3"
     },
     {
         question: "Can you name this object?",
         image: "assets/images/ball.jpg",
          answer: "ball",
-         clue: "B _ _ _"
+         visualclue: "B _ _ _"
     },
     {      
         question: "Can you name this fruit?",
         image: "assets/images/orange.png",
        answer: "orange",
-       clue: "O _ _ _ _ _"
+       visualclue: "O _ _ _ _ _"
   },
   {      
     question: "What do you see in the picture?",
     image: "assets/images/flower.jpg",
    answer: "flower",
-   clue: "F _ _ _ _ _"
+   visualclue: "F _ _ _ _ _"
 },
 {
     question: "Can you name this object?",
     image: "assets/images/train.jpg",
      answer: "train",
-     clue: "T _ _ _ _"
+     visualclue: "T _ _ _ _"
 },
 {      
     question: "What do you see in the picture?",
     image: "assets/images/moon.jpg",
    answer: "moon",
-   clue: "M _ _ _"
+   visualclue: "M _ _ _"
 },
 {      
     question: "Can you name this animal?",
     image: "assets/images/rabbit.jpg",
    answer: "rabbit",
-   clue: "R _ _ _ _ _"
+   visualclue: "R _ _ _ _ _"
 },
 {      
     question: "What do you see in the picture?",
     image: "assets/images/hat.jpg",
    answer: "hat",
-   clue: "H _ _"
+   visualclue: "H _ _"
 },
 {
     question: "Can you name this object?",
     image: "assets/images/pencil.jpg",
      answer: "pencil",
-     clue: "P _ _ _ _ _"
+     visualclue: "P _ _ _ _ _"
 }
 ]
 
@@ -183,12 +212,16 @@ let answer = questions[globalCounter].answer;
 
 let correctAnswer = userAnswer === answer;
 
-// let answerBox = document.getElementById("answer-box"); To Be Deleted?
+let tickIcon = document.getElementById("tick-icon"); 
+let crossIcon = document.getElementById("cross-icon"); 
 
 if (correctAnswer) {
-    //change border to green
-    // answerBox.classList.remove("answer-box");
-    // answerBox.classList.add("answer-box-correct");
+    //display tick icon if correct
+   
+    tickIcon.classList.remove("box-hide");
+
+    setTimeout(function(){
+        tickIcon.classList.add("box-hide"); }, 1000);
 
 
         addCorrectScore();
@@ -196,9 +229,12 @@ if (correctAnswer) {
 }
 
 else {
-//change border to red
-    // answerBox.classList.remove("answer-box");
-    // answerBox.classList.add("answer-box-incorrect");
+////display cross icon if incorrect
+
+    crossIcon.classList.remove("box-hide"); 
+
+    setTimeout(function(){
+        crossIcon.classList.add("box-hide"); }, 1000);
 
     addIncorrectScore();
 }

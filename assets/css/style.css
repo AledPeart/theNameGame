@@ -98,6 +98,16 @@ display: none;
 
 }
 
+.tick-icon {
+    font-size: 10rem;
+    color: green;
+}
+
+.cross-icon {
+    font-size: 10rem;
+    color: red;
+}
+
 .answer-box-correct {
     border: 10px solid green;
     border-radius: 10px;
@@ -158,7 +168,7 @@ display: none;
 
 }
 
-#clue{
+#visual-clue{
     font-size: 1.5rem;
 }
 

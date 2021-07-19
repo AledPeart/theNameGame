@@ -72,10 +72,15 @@
         </div>
 
 
-        <div class="row no-gutters justify-content-around">
+        <div class="row no-gutters align-items-center justify-content-around">
         
-            <div class="picture-box col-md-4 mb-4">
+            <div id= "picture-box" class="picture-box col-md-4 mb-4">
                 <img id="question-image" class="question-image img-fluid" src="assets/images/cat.jpg" alt="image of a cat">
+            </div>
+
+            <div id= "animation-box" class="animation-box col-md-2 mb-4 text-center">
+                <i id="tick-icon" class="fas fa-check-circle tick-icon box-hide"></i> 
+                <i id="cross-icon" class="fas fa-times-circle cross-icon box-hide"></i>
             </div>
 
             <div id= "answer-box" class= "answer-box col-md-4 text-center mb-4">
@@ -107,11 +112,29 @@
         <div class="row">
             <div class="col-md-8 mb-4 help-section text-center">
                 <div class="score-box">
-                    <h1>Help Section</h1>
-                    <p id="clue"></p>
-                    <button id="help-button">Help</button>
+                    <div row>
+                        <div class="col">
+                            <h1>Help Section</h1>
+                         </div>
+                    </div>
+                        <div class="row">
+                        <div class="col-6">
+                             
+                             <button id="visual-help-button">Visual <i class="far fa-eye clue-icon"></i></button>
+                            <p id="visual-clue"></p>
+                        </div>
+                        <div class="col-6">
+                            
+                            <button id="audio-help-button">Audio <i class="fas fa-volume-up clue-icon"></i></button>
+                            <audio id="audio-clue" class="box-cover" controls type="audio/mpeg"></audio>
+                       </div>
+                    </div>
+                    <!-- <audio id="audio-clue" controls type="audio/mpeg"></audio> -->
+                   
+                    
                 </div>
 
+                
                 <!-- Testing JQuery Button -->
                 <!-- <div class="div">
                 <button id = "test-button">TEST</button>
@@ -158,7 +181,7 @@
             That's the end of the game<img src="assets/images/idea2.png" class="end-bulb-logo"> 
             </h1>
             <div class="row justify-content-center">
-                <p class="congrats-text"> Congratulations <span id ="player-name"> </span>! You scored <span id ="correct-answers"> </span> out of <span id ="num-of-questions"> </span></p>
+                <p class="congrats-text"><span id="congrats-text"> </span> <span id ="player-name" > </span>! You scored <span id ="correct-answers"> </span> out of <span id ="num-of-questions"> </span></p>
                 </div>
                 <div class="row justify-content-center">
                 <button type="button" type="reset" value="Reset" id="end-btn" class="btn btn-warning btn-lg">Play Again</button>
