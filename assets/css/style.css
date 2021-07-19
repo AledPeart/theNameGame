@@ -100,15 +100,15 @@ display: none;
 
 .tick-icon {
     font-size: 10rem;
-    color: green;
+    color: #50CB93;
 }
 
 .cross-icon {
     font-size: 10rem;
-    color: red;
+    color: #F54748;
 }
 
-.answer-box-correct {
+/* .answer-box-correct {
     border: 10px solid green;
     border-radius: 10px;
 }
@@ -116,7 +116,7 @@ display: none;
 .answer-box-incorrect {
     border: 10px solid red;
     border-radius: 10px;
-}
+} */
 
 .picture-box{
     background-color: #F9F9F9;
@@ -172,6 +172,9 @@ display: none;
     font-size: 1.5rem;
 }
 
+.clue-icon{
+    font-size: 1.5rem;
+}
 /***** Score Section *****/
 
 .score-section{ 
@@ -190,11 +193,13 @@ display: none;
 }
 
 #correct{
-    color: green;
+    color: #50CB93;
+    font-size: 1.25rem;
 }
 
 #incorrect{
-    color: red;
+    color: #F54748;
+    font-size: 1.25rem;
 }
 
 /***** End Section *****/

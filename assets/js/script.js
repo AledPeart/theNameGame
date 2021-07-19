@@ -10,6 +10,7 @@ let userNameBtn = document.getElementById("enter-name-btn");
 
 //startPage function set to fire onclick of start button
 startBtn.onclick = function() {
+    clickSound.play();
     startGame();
     displayUserName ();
 
@@ -17,6 +18,7 @@ startBtn.onclick = function() {
 
 //FUNCTION TO RESET THE GAME BUT NOT WORKING??
 endBtn.onclick = function() {
+    clickSound.play();
     startGame();
     window.location.reload();
 };
@@ -86,6 +88,7 @@ function setNextQuestion() {
 
       visualHelpButton.onclick = function() {
         showVisualClue();
+        clickSound.play();
     };
 
       function showVisualClue() {
@@ -95,9 +98,11 @@ function setNextQuestion() {
 
       //function to reveal a clue onclick of the Audio Help Btn
       let audioHelpButton = document.getElementById("audio-help-button");
+      let clickSound = new Audio('assets/audio/zapsplat_technology_computer_mouse_click_apple_002_47278.mp3');
 
       audioHelpButton.onclick = function() {
         showAudioClue();
+        clickSound.play();
     };
 
       function showAudioClue() {
@@ -206,7 +211,9 @@ var questions = [
 function checkAnswer() {
 
 let userAnswer = document.getElementById("answer-field").value.toLowerCase(); //ensures the users answer is correct if includes uppercase
-
+let correctAudio = new Audio('assets/audio/zapsplat_multimedia_correct_ping_tone_007_68784.mp3'); // defines variables for the audio files
+let incorrectAudio = new Audio('assets/audio/zapsplat_multimedia_game_sound_percussive_hit_tone_tap_negative_error_002_40574.mp3');//Audio file from Zapsplat.com
+    
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
 let answer = questions[globalCounter].answer;
 
@@ -219,6 +226,7 @@ if (correctAnswer) {
     //display tick icon if correct
    
     tickIcon.classList.remove("box-hide");
+    correctAudio.play(); //plays audio file Code Credit - Stack Overflow https://stackoverflow.com/questions/9419263/how-to-play-audio
 
     setTimeout(function(){
         tickIcon.classList.add("box-hide"); }, 1000);
@@ -232,6 +240,8 @@ else {
 ////display cross icon if incorrect
 
     crossIcon.classList.remove("box-hide"); 
+    incorrectAudio.play();
+
 
     setTimeout(function(){
         crossIcon.classList.add("box-hide"); }, 1000);
@@ -264,6 +274,16 @@ answerField.addEventListener("keyup", function(event) {
     event.preventDefault();
     // triggers the submit button
     document.getElementById("submit-button").click();
+  }
+});
+
+//same as above but for enter user name on game start ***CREDIT***W3Schools**
+let nameField = document.getElementById("enter-name");
+
+nameField.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) { 
+    event.preventDefault();
+    document.getElementById("start-btn").click();
   }
 });
 
