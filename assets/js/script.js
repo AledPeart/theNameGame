@@ -75,7 +75,7 @@ function setNextQuestion() {
         document.getElementById("question-image").src=questions[globalCounter].image; 
         document.getElementById("question-box").innerHTML=questions[globalCounter].question;
         document.getElementById("visual-clue").innerHTML="";
-        
+        document.getElementById("multi-choice-clue").innerHTML="";
         
       } else {
             endGame ();
@@ -111,6 +111,28 @@ function setNextQuestion() {
         document.getElementById("answer-field").focus();// returns the cursor to the answer field
       }
 
+      //function to reveal a clue onclick of the Multi Choice Help Btn
+      let multiHelpButton = document.getElementById("multi-help-button");
+
+      multiHelpButton.onclick = function() {
+        showMultiClue();
+        clickSound.play();
+    };
+
+      function showMultiClue() {
+        document.getElementById("multi-choice-clue").classList.remove("box-cover");
+        // *****attempt to populate the multi choice with a list item***
+
+        const multiChoice = questions[globalCounter].multichoice;
+        for (let i = 0; i < multiChoice.length; i++) {
+          const listItem = document.createElement('li');
+          listItem.textContent = multiChoice[i];
+          document.getElementById("multi-choice-clue").appendChild(listItem);
+        }
+    
+        document.getElementById("answer-field").focus();// returns the cursor to the answer field
+      };
+
 
 
 
@@ -141,70 +163,70 @@ function setNextQuestion() {
 
 
 // question bank stored as an array ***DELETE ONCE JSON FILE IS WORKING***
-var questions = [
-    {      
-          question: "Can you name this animal?",
-          image: "assets/images/cat.jpg",
-         answer: "cat",
-         visualclue: "C _ _",
-         audioclue: "assets/audio/cat-audio.mp3"
-    },
-    {
-        question: "What do you see in the picture?",
-        image: "assets/images/car.jpg",
-        answer: "car",
-        visualclue: "C _ _",
-        audioclue: "assets/audio/file_example_MP3_700KB.mp3"
-    },
-    {
-        question: "Can you name this object?",
-        image: "assets/images/ball.jpg",
-         answer: "ball",
-         visualclue: "B _ _ _"
-    },
-    {      
-        question: "Can you name this fruit?",
-        image: "assets/images/orange.png",
-       answer: "orange",
-       visualclue: "O _ _ _ _ _"
-  },
-  {      
-    question: "What do you see in the picture?",
-    image: "assets/images/flower.jpg",
-   answer: "flower",
-   visualclue: "F _ _ _ _ _"
-},
-{
-    question: "Can you name this object?",
-    image: "assets/images/train.jpg",
-     answer: "train",
-     visualclue: "T _ _ _ _"
-},
-{      
-    question: "What do you see in the picture?",
-    image: "assets/images/moon.jpg",
-   answer: "moon",
-   visualclue: "M _ _ _"
-},
-{      
-    question: "Can you name this animal?",
-    image: "assets/images/rabbit.jpg",
-   answer: "rabbit",
-   visualclue: "R _ _ _ _ _"
-},
-{      
-    question: "What do you see in the picture?",
-    image: "assets/images/hat.jpg",
-   answer: "hat",
-   visualclue: "H _ _"
-},
-{
-    question: "Can you name this object?",
-    image: "assets/images/pencil.jpg",
-     answer: "pencil",
-     visualclue: "P _ _ _ _ _"
-}
-]
+// var questions = [
+//     {      
+//           question: "Can you name this animal?",
+//           image: "assets/images/cat.jpg",
+//          answer: "cat",
+//          visualclue: "C _ _",
+//          audioclue: "assets/audio/cat-audio.mp3"
+//     },
+//     {
+//         question: "What do you see in the picture?",
+//         image: "assets/images/car.jpg",
+//         answer: "car",
+//         visualclue: "C _ _",
+//         audioclue: "assets/audio/file_example_MP3_700KB.mp3"
+//     },
+//     {
+//         question: "Can you name this object?",
+//         image: "assets/images/ball.jpg",
+//          answer: "ball",
+//          visualclue: "B _ _ _"
+//     },
+//     {      
+//         question: "Can you name this fruit?",
+//         image: "assets/images/orange.png",
+//        answer: "orange",
+//        visualclue: "O _ _ _ _ _"
+//   },
+//   {      
+//     question: "What do you see in the picture?",
+//     image: "assets/images/flower.jpg",
+//    answer: "flower",
+//    visualclue: "F _ _ _ _ _"
+// },
+// {
+//     question: "Can you name this object?",
+//     image: "assets/images/train.jpg",
+//      answer: "train",
+//      visualclue: "T _ _ _ _"
+// },
+// {      
+//     question: "What do you see in the picture?",
+//     image: "assets/images/moon.jpg",
+//    answer: "moon",
+//    visualclue: "M _ _ _"
+// },
+// {      
+//     question: "Can you name this animal?",
+//     image: "assets/images/rabbit.jpg",
+//    answer: "rabbit",
+//    visualclue: "R _ _ _ _ _"
+// },
+// {      
+//     question: "What do you see in the picture?",
+//     image: "assets/images/hat.jpg",
+//    answer: "hat",
+//    visualclue: "H _ _"
+// },
+// {
+//     question: "Can you name this object?",
+//     image: "assets/images/pencil.jpg",
+//      answer: "pencil",
+//      visualclue: "P _ _ _ _ _"
+// }
+// ]
 
 //function to check the users input answer
 
@@ -288,16 +310,16 @@ nameField.addEventListener("keyup", function(event) {
 });
 
 
-// //***JSON API***
+//***JSON API***
 
-// //variable to store location of JSON file
-// let requestURL = "assets/js/questions.json";
+//variable to store location of JSON file
+//let requestURL = "assets/js/questions.json";
 
-// //variable to hold the request object (XHR)
+//variable to hold the request object (XHR)
 // let request = new XMLHttpRequest();
 
 // //in order to open the JSON request
-// request.open('GET', requestURL);
+// request.open('GET', "assets/js/questions.json");
 
 // //so that the XHR knows that the data wil be in JSON format
 // request.responseType = 'json';
@@ -308,11 +330,9 @@ nameField.addEventListener("keyup", function(event) {
 // //stores the JSON questions data in a variable, and ensures it is available (onload)
 // //and is there when it is needed 
 // request.onload = function() {
-//     let questions = request.response;
-//     // const questions = JSON.parse(questionsText);
-//   }
+//     const questions = request.responseText;
 
-
+// };
 //***jQuery***
 
 // $('.click').click(function() {
@@ -327,3 +347,29 @@ nameField.addEventListener("keyup", function(event) {
 //       width: '150px'
 //     });
 //   }); 
+
+
+//****JSON CI Version****
+
+
+// 
+
+
+//****MY BOOK****/
+
+var xhr = new XMLHttpRequest();
+xhr.onload = function() {
+    if(xhr.status === 200){
+        questions = JSON.parse(xhr.responseText);
+        console.log (typeof(questions));
+    }
+};
+
+xhr.open("GET", "assets/js/questions.json", true);
+xhr.send(null);
+
+
+
+
+
+   
