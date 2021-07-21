@@ -87,13 +87,13 @@ display: none;
 .question-text{
     font-family: 'Jomhuria', cursive;
     text-align: center;
-    font-size: 4em;
+    font-size: 4rem;
 }
 
 /**** Following media query to ensure that on mobile devices the question text does not wrap****/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 576px) {
     .question-text {
-        font-size: 3em;
+        font-size: 3rem;
     }
 }
 
@@ -103,14 +103,13 @@ display: none;
     border-radius: 10px;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
-    max-height: 350px;
+    min-height: 350px;
+    max-height: auto;
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
 }
-
 
 
 
@@ -138,16 +137,23 @@ display: none;
     background-color: #Fff;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
-    max-height: 350px;
-    max-width: 350px;
+    height: 350px;
+    width: 350px;
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
 }
 
-
+/**** Following media query to ensure that on mobile devices the picture box height is responsive****/
+@media screen and (max-width: 576px) {
+    .picture-box {
+        height: 250px;
+        width: 250px;
+    }
 }
+
+
+
 
 .question-image{
     border-radius: 10px;
@@ -156,6 +162,13 @@ display: none;
 #question-box{
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
+}
+
+/* ***media query to reduce the size and length of text in the answer box */
+@media screen and (max-width: 576px) {
+    #question-box {
+        font-size: 1em;
+    }
 }
 
 .answer-field{
@@ -174,6 +187,9 @@ display: none;
 }
 
 /***** Help Section *****/
+.bottom-section{
+    overflow: hidden;
+}
 
 .help-section{
     background-color: #E7E6E1;
@@ -262,6 +278,21 @@ ul {
 }
 /***** Score Section *****/
 
+/**** Following media query to reduce text size on mobile devices****/
+
+@media screen and (max-width: 760px) {
+    .scores > p{
+        font-size: 1rem;
+    }
+    #user-name{
+        font-size: 1rem;
+    }
+    #player{
+        font-size: 1rem;
+    }
+}
+
+
 .score-section{ 
     background-color: #E7E6E1;
     padding: 20px;  
@@ -284,7 +315,7 @@ ul {
     background-color: #F9F9F9;
     border-radius: 10px;
     height: auto;
-    height: 25vh;
+    min-height: 25vh;
 }
 
 #correct{

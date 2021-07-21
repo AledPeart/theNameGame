@@ -98,8 +98,10 @@ function setNextQuestion() {
 
       function showVisualClue() {
         document.getElementById("visual-clue").innerHTML=questions[globalCounter].visualclue;
-        document.getElementById("answer-field").focus();// returns the cursor to the answer field
+        if (screen.width >= 576) {
+          document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
       }
+    };
 
       //function to reveal a clue onclick of the Audio Help Btn
       let audioHelpButton = document.getElementById("audio-help-button");
@@ -115,8 +117,10 @@ function setNextQuestion() {
       function showAudioClue() {
         document.getElementById("audio-clue").classList.remove("box-hide");
         document.getElementById("audio-clue").src=questions[globalCounter].audioclue;
-        document.getElementById("answer-field").focus();// returns the cursor to the answer field
+        if (screen.width >= 576) {
+          document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
       }
+      };
 
       //function to reveal a clue onclick of the Multi Choice Help Btn
       let multiHelpButton = document.getElementById("multi-help-button");
@@ -140,8 +144,11 @@ function setNextQuestion() {
           
         }
     
-        document.getElementById("answer-field").focus();// returns the cursor to the answer field
-      };
+        if (screen.width >= 576) {
+          document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
+      }
+    };
+      
 
 
 
