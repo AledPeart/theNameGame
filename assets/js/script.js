@@ -45,7 +45,8 @@ submitButton.onclick = function() {
     setTimeout(function() { 
         incrementCounter(); 
         setNextQuestion(); 
-    }, 1000);   
+    }, 1000); 
+    multiHelpButton.disabled = false;  //resets the multi help button for the next question
 };
 
 //function to increment global counter by +1
@@ -103,6 +104,7 @@ function setNextQuestion() {
       audioHelpButton.onclick = function() {
         showAudioClue();
         clickSound.play();
+        
     };
 
       function showAudioClue() {
@@ -117,6 +119,8 @@ function setNextQuestion() {
       multiHelpButton.onclick = function() {
         showMultiClue();
         clickSound.play();
+        this.disabled = true; //disables the button after initial click **credit*** https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
+        //***BUG***** code displaying mutiple times
     };
 
       function showMultiClue() {
@@ -128,6 +132,7 @@ function setNextQuestion() {
           const listItem = document.createElement('li');
           listItem.textContent = multiChoice[i];
           document.getElementById("multi-choice-clue").appendChild(listItem);
+          
         }
     
         document.getElementById("answer-field").focus();// returns the cursor to the answer field
