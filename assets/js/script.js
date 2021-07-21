@@ -46,7 +46,10 @@ submitButton.onclick = function() {
         incrementCounter(); 
         setNextQuestion(); 
     }, 1000); 
-    multiHelpButton.disabled = false;  //resets the multi help button for the next question
+
+    visualHelpButton.disabled = false; //resets the help buttons for the next question
+    audioHelpButton.disabled = false;
+    multiHelpButton.disabled = false;  
 };
 
 //function to increment global counter by +1
@@ -90,6 +93,7 @@ function setNextQuestion() {
       visualHelpButton.onclick = function() {
         showVisualClue();
         clickSound.play();
+        this.disabled = true;
     };
 
       function showVisualClue() {
@@ -104,6 +108,7 @@ function setNextQuestion() {
       audioHelpButton.onclick = function() {
         showAudioClue();
         clickSound.play();
+        this.disabled = true;
         
     };
 
@@ -244,7 +249,7 @@ let incorrectAudio = new Audio('assets/audio/zapsplat_multimedia_game_sound_perc
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
 let answer = questions[globalCounter].answer;
 
-let correctAnswer = userAnswer === answer;
+let correctAnswer = userAnswer === answer; 
 
 let tickIcon = document.getElementById("tick-icon"); 
 let crossIcon = document.getElementById("cross-icon"); 
