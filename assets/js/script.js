@@ -72,7 +72,7 @@ function setNextQuestion() {
     
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
-    document.getElementById("audio-clue").classList.add("box-cover"); //adds box cover to the audio controls again
+    document.getElementById("audio-clue").classList.add("box-hide"); //adds box cover to the audio controls again
     
 
     if (globalCounter < 10) {
@@ -113,7 +113,7 @@ function setNextQuestion() {
     };
 
       function showAudioClue() {
-        document.getElementById("audio-clue").classList.remove("box-cover");
+        document.getElementById("audio-clue").classList.remove("box-hide");
         document.getElementById("audio-clue").src=questions[globalCounter].audioclue;
         document.getElementById("answer-field").focus();// returns the cursor to the answer field
       }

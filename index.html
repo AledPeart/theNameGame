@@ -78,16 +78,17 @@
 
         <div class="row no-gutters align-items-center justify-content-around">
         
-            <div id= "picture-box" class="picture-box col-md-4 mb-4">
-                <img id="question-image" class="question-image img-fluid" src="assets/images/cat.jpg" alt="image of a cat">
+            <div id= "picture-box" class="picture-box col-lg-4 mb-4">
+                <img id="question-image" class="question-image align-self-center img-fluid" src="assets/images/cat.jpg" alt="image of a cat">
             </div>
 
-            <div id= "animation-box" class="animation-box col-md-2 mb-4 text-center">
+            <div id= "animation-box" class="animation-box col-lg-2 mb-4 text-center">
                 <i id="tick-icon" class="fas fa-check-circle tick-icon box-hide"></i> 
                 <i id="cross-icon" class="fas fa-times-circle cross-icon box-hide"></i>
             </div>
 
-            <div id= "answer-box" class= "answer-box col-md-4 text-center mb-4">
+            <div id= "answer-box" class= "answer-box col-lg-4 text-center mb-4">
+                
                 <div class="row">
                     <p id="question-box" class="question-box col mt-5 mb-3">Can you name this animal?</p>
                 </div>
@@ -99,7 +100,7 @@
                 <div class="row justify-content-center">
                     <button type="button" data-type="submit" id="submit-button" class="col-4 btn btn-warning btn-lg btn-enter">Enter</button>
                 </div>
-
+           
             </div>
         
         </div>
@@ -114,35 +115,45 @@
     <div class="bottom-section container">
  
         <div class="row">
-            <div class="col-md-8 mb-4 help-section text-center">
-                <div class="score-box">
+            <div class="col-sm-8 mb-4 help-section text-center">
+                <div class="help-box">
                     <div row>
                         <div class="col">
                             <h1>Help Section</h1>
                          </div>
                     </div>
+                    <!-- <div class="btn-group"> -->
                         <div class="row">
-                        <div class="col-4">
+                        
+                        <div class="col-lg-4">
                              <button id="visual-help-button" class="btn btn-warning btn-lg">Visual <i class="far fa-eye clue-icon"></i></button>
                             <p id="visual-clue"></p>
                         </div>
+                      
 
-                        <div class="col-4">
+                        <hr class="horizontal-rule-help"> 
+                            
+                        <div class="col-lg-4">
                             <button id="audio-help-button" class="btn btn-warning btn-lg">Audio <i class="fas fa-volume-up clue-icon"></i></button>
-                            <audio id="audio-clue" class="box-cover" controls type="audio/mpeg"></audio>
+                            <audio id="audio-clue" class="box-hide" controls type="audio/mpeg"></audio>
                        </div>
+                    
 
-                       <div class="col-4">
+                       <hr class="horizontal-rule-help">
+                       
+                       <div class="col-lg-4">
                             <button id="multi-help-button" class="btn btn-warning btn-lg">Choice <i class="fas fa-list clue-icon"></i></button>
-                            <ul id="multi-choice-clue">
+                            <ul id="multi-choice-clue" class="multi-choice-clue">
                                 
                             </ul>
                         </div>
+                    
                     </div>
+                </div>
                     
                    
                     
-                </div>
+                <!-- </div> -->
 
                 
                 <!-- Testing JQuery Button -->
@@ -156,7 +167,7 @@
 
     
         
-             <div class="col-md-4 mb-4 score-section text-center">
+             <div class="col-sm-4 mb-4 score-section text-center">
                  <div class="score-box">
                 <div class="row">
                     <div class="col">
@@ -164,7 +175,7 @@
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row scores">
                     <div class="col">
                         <p>Player: <span id="user-name"> </span></p>
                     </div>

@@ -1,4 +1,4 @@
-/***** Generic/Site Wide *****/
+    /***** Generic/Site Wide *****/
 
 body {
     background-color:#E7E6E1;   
@@ -11,6 +11,12 @@ body {
 
 .box-cover{
     visibility: hidden;
+}
+
+.btn{
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /***** Site Logo *****/
@@ -95,8 +101,18 @@ display: none;
     background-color: #fff;
     font-size: 1.5em;
     border-radius: 10px;
-
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 350px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
 }
+
+
+
 
 .tick-icon {
     font-size: 10rem;
@@ -119,9 +135,17 @@ display: none;
 } */
 
 .picture-box{
-    background-color: #F9F9F9;
-    width: auto;
-    height: auto;
+    background-color: #Fff;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 350px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
 
 }
 
@@ -165,12 +189,73 @@ display: none;
 .help-box{
     background-color: #F9F9F9;
     border-radius: 10px;
+    height: auto;
+    min-height: 25vh;
+}
 
+#multi-help-button{
+    margin-bottom: 10px;
+}
+
+.horizontal-rule-help{
+    color: #ffbe5c;
+  border: none;
+  border-top: 2px solid;
+  width: 10rem;
+}
+
+/**** Following media query to remove the hr from larger devices****/
+@media screen and (min-width: 992px) {
+    .horizontal-rule-help {
+        display: none;
+    }
 }
 
 #visual-clue{
     font-size: 1.5rem;
+    padding-top: 20px;
 }
+/**** Following media query to remove padding on smaller devices - asthetic****/
+@media screen and (max-width: 992px) {
+    #visual-clue {
+        padding-top: 0;
+        margin: 0;
+        
+        
+    }
+}
+/* ***trying to colour the backgrounds to differentiate the sections */
+/* .visual-box{
+    background-color: #f9f9f9;
+}
+
+.audio-box{
+    background-color: #fff;
+}
+
+.multi-box{
+    background-color: #f9f9f9;
+} */
+  
+
+
+#audio-clue{
+    max-width: 80%;
+    padding-top: 25px;
+}
+#multi-choice-clue{
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    padding-top: 5px;
+  }
 
 .clue-icon{
     font-size: 1.5rem;
@@ -187,19 +272,29 @@ display: none;
     font-family: 'Jomhuria', cursive;
 }
 
+.scores{
+    font-size: 1.5rem;
+}
+
+#user-name{
+    font-weight: 600;
+}
+
 .score-box{
     background-color: #F9F9F9;
     border-radius: 10px;
+    height: auto;
+    height: 25vh;
 }
 
 #correct{
     color: #50CB93;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 #incorrect{
     color: #F54748;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 /***** End Section *****/
