@@ -105,7 +105,9 @@ function setNextQuestion() {
 
       //function to reveal a clue onclick of the Audio Help Btn
       let audioHelpButton = document.getElementById("audio-help-button");
-      let clickSound = new Audio('assets/audio/zapsplat_technology_computer_mouse_click_apple_002_47278.mp3');
+      let clickSound = document.getElementById("audio-click");
+
+      //new Audio('assets/audio/zapsplat_technology_computer_mouse_click_apple_002_47278.mp3');
 
       audioHelpButton.onclick = function() {
         showAudioClue();
@@ -250,8 +252,8 @@ function setNextQuestion() {
 function checkAnswer() {
 
 let userAnswer = document.getElementById("answer-field").value.toLowerCase(); //ensures the users answer is correct if includes uppercase
-let correctAudio = new Audio('assets/audio/zapsplat_multimedia_correct_ping_tone_007_68784.mp3'); // defines variables for the audio files
-let incorrectAudio = new Audio('assets/audio/zapsplat_multimedia_game_sound_percussive_hit_tone_tap_negative_error_002_40574.mp3');//Audio file from Zapsplat.com
+let correctAudio = document.getElementById("audio-correct"); // defines variables for the audio files
+let incorrectAudio = document.getElementById("audio-incorrect");//Audio file from Zapsplat.com
     
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
 let answer = questions[globalCounter].answer;
@@ -326,6 +328,72 @@ nameField.addEventListener("keyup", function(event) {
   }
 });
 
+// TURN ON MUTE BUTTON - source https://forums.tumult.com/t/muting-audio-or-video/1705
+
+let muteBtn = document.getElementById("mute-button");
+var isMuted = false;
+
+
+muteBtn.onclick = function() {
+muteAudio();
+}
+
+ function muteAudio(){
+
+  if (isMuted === false) {
+    isMuted=true;
+  document.getElementById("audio-correct").muted = true;
+  document.getElementById("audio-incorrect").muted = true;
+  document.getElementById("audio-click").muted = true;
+  document.getElementById("mute-btn-icon").classList.remove("fa-volume-off");
+  document.getElementById("mute-btn-icon").classList.add("fa-volume-mute");
+  document.getElementById("mute-button").classList.remove("mute-btn");
+  document.getElementById("mute-button").classList.add("mute-btn-faded");
+  }
+  else if (isMuted === true) {
+    isMuted=false;
+    document.getElementById("audio-correct").muted = false;
+    document.getElementById("audio-incorrect").muted = false;
+    document.getElementById("audio-click").muted = false;
+    document.getElementById("mute-btn-icon").classList.add("fa-volume-off");
+    document.getElementById("mute-btn-icon").classList.remove("fa-volume-mute");
+    document.getElementById("mute-button").classList.remove("mute-btn-faded");
+    document.getElementById("mute-button").classList.add("mute-btn");
+    }
+
+    if (screen.width >= 576) {
+      document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
+  }
+};
+
+// // function muteAudio(){
+// //   let allAudio = document.getElementsByClassName("audio-mute");
+
+// //   allAudio.muted = true;
+// // };
+// let silence = false;
+
+// function muteAudio() {
+
+//   let allaudio = document.getElementsByClassName("audio-mute");
+
+//   if (silence) {
+//       for (let j = 0; j < allaudio.length; j++) {
+//           allaudio[j].muted = false;
+//       }
+//       silence = false;
+//   }
+//   else {
+//       for (let j = 0; j < allaudio.length; j++) {
+//           allaudio[j].muted = true;
+//       }
+//       silence = true;
+//   }
+// //   document.getElementById('mute-button i').toggleClass('fa-volume-off');
+// }
+
+
+
 
 //***JSON API***
 
@@ -389,4 +457,4 @@ xhr.send(null);
 
 
 
-   
+

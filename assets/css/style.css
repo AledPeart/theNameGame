@@ -19,7 +19,7 @@ body {
     margin-right: auto;
 }
 
-/***** Site Logo *****/
+/***** Site Logo/Header *****/
 .bulb-logo{
     background-color:#E7E6E1;
     height: 80px;
@@ -32,6 +32,14 @@ body {
     font-size: 60px;
     padding-left: 20px;
     text-transform: uppercase;
+}
+
+#mute-btn-icon{
+    font-size: 2.25rem;
+}
+
+.mute-btn-faded{
+    opacity: 40%;
 }
 
 /**** Following media query to ensure that on mobile devices the logo text does not wrap****/

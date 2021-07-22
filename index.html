@@ -31,12 +31,15 @@
     <title>theNameGame</title>
 </head>
 <body>
-
+<!------- LOGO/HEADER ------->
     <div id="logo-box" class= "container-fluid box-cover">
         <div class="row">
-            <div class="col-md-12"><h1 class="game-logo">
+            <div class="col-md-6"><h1 class="game-logo">
                 <img src="assets/images/idea2.png" class="bulb-logo"> The Name Game
                 </h1>
+             </div>
+             <div class="col-md-2">
+                <button type="button" data-type="submit" id="mute-button" class="mute-btn btn btn-sm btn-enter align-self-right"><i id="mute-btn-icon" class="fas fa-volume-off"></i></button>
              </div>
          </div>
     </div>
@@ -220,6 +223,12 @@
 
 
 </div>
+
+ <!-- AUDIO FILES -->
+ <audio id="audio-correct" src="assets/audio/zapsplat_multimedia_correct_ping_tone_007_68784.mp3"></audio>
+ <audio id="audio-incorrect" src="assets/audio/zapsplat_multimedia_game_sound_percussive_hit_tone_tap_negative_error_002_40574.mp3"></audio>
+ <audio id="audio-click" src="assets/audio/zapsplat_technology_computer_mouse_click_apple_002_47278.mp3"></audio>
+ 
 
  <!------- JAVASCRIPT ------->
     <script src="assets/js/script.js"></script>
