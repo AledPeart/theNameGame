@@ -52,13 +52,21 @@ body {
         font-size: 45px;
         padding-left: 0;
     }
+
+    .btn-icon{
+        font-size: 1.5rem;
+    }
+    #mute-button{
+        font-size: 2rem;
 }
+}
+
 
 /**** Following media query to ensure that on mobile devices game section reduces in size****/
 @media screen and (max-width: 576px) {
    
     #answer-field{
-        margin: 0!important; 
+        margin: 5!important; 
     }
     .game-section{
         height: 450px;
@@ -294,6 +302,16 @@ ul {
 }
 /***** Score Section *****/
 
+#correct{
+    color: #50CB93;
+    font-size: 1.5rem;
+}
+
+#incorrect{
+    color: #F54748;
+    font-size: 1.5rem;
+}
+
 /**** Following media query to reduce text size on mobile devices****/
 
 @media screen and (max-width: 760px) {
@@ -305,6 +323,12 @@ ul {
     }
     #player{
         font-size: 1rem;
+    }
+    #correct{
+        font-size: 1.25rem;
+    }
+    #incorrect{
+        font-size: 1.25rem;
     }
 }
 
@@ -334,15 +358,7 @@ ul {
     min-height: 25vh;
 }
 
-#correct{
-    color: #50CB93;
-    font-size: 1.5rem;
-}
 
-#incorrect{
-    color: #F54748;
-    font-size: 1.5rem;
-}
 
 /***** End Section *****/
 

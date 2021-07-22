@@ -45,7 +45,7 @@ submitButton.onclick = function() {
     setTimeout(function() { 
         incrementCounter(); 
         setNextQuestion(); 
-    }, 1000); 
+    }, 10); 
 
     visualHelpButton.disabled = false; //resets the help buttons for the next question
     audioHelpButton.disabled = false;
