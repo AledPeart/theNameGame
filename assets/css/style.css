@@ -49,7 +49,8 @@ body {
         margin: 0!important; 
     }
     .game-section{
-        height: 400px;
+        height: 450px;
+        
     }
 }
 
@@ -98,24 +99,25 @@ display: none;
 .question-text{
     font-family: 'Jomhuria', cursive;
     text-align: center;
-    font-size: 4rem;
+    font-size: 1.75rem;
+    font-weight: 200;
+    line-height: normal;
+    margin-bottom: 0;
 }
 
-/**** Following media query to ensure that on mobile devices the question text does not wrap****/
+/* *** Following media query to ensure that on mobile devices the question text does not wrap***
 @media screen and (max-width: 576px) {
     .question-text {
-        font-size: 2rem;
+       
     }
-}
+} */
 
 .answer-box{
     background-color: #fff;
     font-size: 1.5em;
     border-radius: 10px;
     box-sizing: border-box;
-    width: 85%;
-    min-height: 350px;
-    max-height: auto;
+    max-height: 350px;
     max-width: 350px;
     margin-left: auto;
     margin-right: auto;
@@ -145,21 +147,23 @@ display: none;
 } */
 
 .picture-box{
-    background-color: #Fff;
+    /* background-color: #Fff; */
     box-sizing: border-box;
     width: 85%;
-    height: 350px;
-    width: 350px;
+    /* height: 350px;
+    width: 350px; */
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
+    /* /* border-radius: 10px; */
 }
+
 
 /**** Following media query to ensure that on mobile devices the picture box height is responsive****/
 @media screen and (max-width: 576px) {
     .picture-box {
-        height: 200px;
-        width: 200px;
+        height: 250px;
+        width: 250px;
     }
 }
 
@@ -168,6 +172,8 @@ display: none;
 
 .question-image{
     border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #question-box{
@@ -175,12 +181,12 @@ display: none;
     font-family: 'Roboto', sans-serif;
 }
 
-/* ***media query to reduce the size and length of text in the answer box */
-@media screen and (max-width: 576px) {
+/* ***media query to reduce the size and length of text in the answer box NOT DISPLAYED CURRENTLY */
+/* @media screen and (max-width: 576px) {
     #question-box {
         font-size: 1em;
     }
-}
+} */
 
 .answer-field{
     background-color: #f9f9f9;
@@ -251,19 +257,6 @@ display: none;
         
     }
 }
-/* ***trying to colour the backgrounds to differentiate the sections */
-/* .visual-box{
-    background-color: #f9f9f9;
-}
-
-.audio-box{
-    background-color: #fff;
-}
-
-.multi-box{
-    background-color: #f9f9f9;
-} */
-  
 
 
 #audio-clue{

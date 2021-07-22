@@ -54,7 +54,7 @@
                     </h1>
                     <div class="row justify-content-center">
                         <p class="enter-name">Enter Your Name</p>
-                        <input id="enter-name" class="col-3 mb-4" name="enter-name" type="text">
+                        <input id="enter-name" class="col-5 mb-4" name="enter-name" type="text">
                     </div>
                     <div class="row justify-content-center">
                         <button type="button" data-type="submit" id="start-btn" class="btn btn-warning btn-lg">Start Game</button>
@@ -72,13 +72,13 @@
         <div class="game-section container">
 
         <div class="question-box row justify-content-center">
-            <p class="question-text col-md-4">What can you see?</p>
+            <p class="question-text d-sm-none col-md-4">What can you see? type your answer below.</p>
         </div>
 
 
         <div class="row no-gutters align-items-center justify-content-around">
         
-            <div id= "picture-box" class="picture-box col-lg-4 mb-4">
+            <div id= "picture-box" class="picture-box col-lg-4 text-center mb-2">
                 <img id="question-image" class="question-image align-self-center img-fluid" src="assets/images/cat.jpg" alt="image of a cat">
 
                 <!-- <div class="row justify-content-center d-sm-none">
@@ -90,19 +90,19 @@
                 </div> -->
             </div>
 
-            <div id= "animation-box" class="animation-box col-lg-2 mb-4 text-center d-none d-sm-block">
+            <div id= "animation-box" class="animation-box col-lg-2 sm-mb-4 text-center d-none d-sm-block">
                 <i id="tick-icon" class="fas fa-check-circle tick-icon box-hide"></i> 
                 <i id="cross-icon" class="fas fa-times-circle cross-icon box-hide"></i>
             </div>
 
-            <div id="answer-box" class= "answer-box col-lg-4 text-center mb-4">
+            <div id="answer-box" class= "answer-box col-lg-4 text-center sm-mb-4">
                 
                 <div class="row d-none d-sm-block">
-                    <p id="question-box" class="question-box col mt-5 mb-3">Can you name this animal?</p>
+                    <p id="question-box" class="question-box col mt-5 sm-mb-3">Can you name this animal?</p>
                 </div>
 
                 <div class="row justify-content-center">
-                    <input id="answer-field" class="answer-field col-10 mb-5" name="answer" type="text">
+                    <input id="answer-field" class="answer-field col-10 sm-mb-3" name="answer" type="text">
                 </div>
 
                 <div class="row justify-content-center">
@@ -185,7 +185,7 @@
 
                 <div class="row scores">
                     <div class="col">
-                        <p id="`">Player: <span id="user-name"> </span></p>
+                        <p id="player">Player: <span id="user-name"> </span></p>
                     </div>
                 </div>
 
