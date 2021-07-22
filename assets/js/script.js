@@ -366,81 +366,26 @@ muteAudio();
   }
 };
 
-// // function muteAudio(){
-// //   let allAudio = document.getElementsByClassName("audio-mute");
+//*********REFRESH PAGE BUTTON**********
 
-// //   allAudio.muted = true;
-// // };
-// let silence = false;
+let refreshBtn = document.getElementById("refresh-button");
 
-// function muteAudio() {
+refreshBtn.onclick = function() {
+  clickSound.play();
+  window.location.reload();
 
-//   let allaudio = document.getElementsByClassName("audio-mute");
-
-//   if (silence) {
-//       for (let j = 0; j < allaudio.length; j++) {
-//           allaudio[j].muted = false;
-//       }
-//       silence = false;
-//   }
-//   else {
-//       for (let j = 0; j < allaudio.length; j++) {
-//           allaudio[j].muted = true;
-//       }
-//       silence = true;
-//   }
-// //   document.getElementById('mute-button i').toggleClass('fa-volume-off');
-// }
+  };
 
 
 
 
-//***JSON API***
-
-//variable to store location of JSON file
-//let requestURL = "assets/js/questions.json";
-
-//variable to hold the request object (XHR)
-// let request = new XMLHttpRequest();
-
-// //in order to open the JSON request
-// request.open('GET', "assets/js/questions.json");
-
-// //so that the XHR knows that the data wil be in JSON format
-// request.responseType = 'json';
-
-// //send method which sends the request
-// request.send();
-
-// //stores the JSON questions data in a variable, and ensures it is available (onload)
-// //and is there when it is needed 
-// request.onload = function() {
-//     const questions = request.responseText;
-
-// };
-//***jQuery***
-
-// $('.click').click(function() {
-//     $('.div2').replaceWith($('.div1'));        
-// });
-
-// $("#test-button").click(function(){
-//     $(".div").animate({
-//       left: '250px',
-//       opacity: '0.5',
-//       height: '150px',
-//       width: '150px'
-//     });
-//   }); 
 
 
-//****JSON CI Version****
 
 
-// 
 
 
-//****MY BOOK****/
+//JSON source****MY BOOK(J Duckett et al)****/
 
 var xhr = new XMLHttpRequest();
 xhr.onload = function() {

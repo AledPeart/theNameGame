@@ -34,8 +34,12 @@ body {
     text-transform: uppercase;
 }
 
-#mute-btn-icon{
+.btn-icon{
     font-size: 2.25rem;
+}
+
+#mute-button{
+    font-size: 3rem;
 }
 
 .mute-btn-faded{
