@@ -7,6 +7,25 @@ let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
 let userNameBtn = document.getElementById("enter-name-btn");
 
+// to center the site logo an smaller screens.
+
+window.addEventListener('resize', resize);
+
+function resize() {
+
+  if (screen.width <= 992){
+    document.getElementById("site-logo").classList.add("mx-auto");
+  }else{
+      document.getElementById("site-logo").classList.remove("mx-auto");
+   }
+};
+
+
+// if (screen.width <= 992){
+//   document.getElementById("site-logo").classList.add("mx-auto");
+// } else{
+//   document.getElementById("site-logo").classList.remove("mx-auto");
+// }
 
 //startPage function set to fire onclick of start button
 startBtn.onclick = function() {
