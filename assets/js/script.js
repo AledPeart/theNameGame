@@ -31,8 +31,7 @@ startBtn.onclick = function() {
 //FUNCTION TO RESET THE GAME BUT NOT WORKING??
 endBtn.onclick = function() {
     clickSound.play();
-    startGame();
-    window.location.reload();
+    window.location.reload(); 
 };
 
 
