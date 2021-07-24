@@ -1,5 +1,5 @@
 
-//defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHULD I USE THEM?***
+//defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHOULD I USE THEM?***
 let startBtn = document.getElementById("start-btn");
 let endBtn = document.getElementById("end-btn");
 let startBox = document.getElementById("start-box").innerHTML;
@@ -7,7 +7,7 @@ let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
 let userNameBtn = document.getElementById("enter-name-btn");
 
-// to center the site logo an smaller screens.
+// to center the site logo an smaller screens ***CODE taken from https://stackoverflow.com/questions/39557244/run-code-if-screen-has-certain-width***
 
 window.addEventListener('resize', resize);
 
@@ -19,13 +19,6 @@ function resize() {
       document.getElementById("site-logo").classList.remove("mx-auto");
    }
 };
-
-
-// if (screen.width <= 992){
-//   document.getElementById("site-logo").classList.add("mx-auto");
-// } else{
-//   document.getElementById("site-logo").classList.remove("mx-auto");
-// }
 
 //startPage function set to fire onclick of start button
 startBtn.onclick = function() {
@@ -64,7 +57,7 @@ submitButton.onclick = function() {
     setTimeout(function() { 
         incrementCounter(); 
         setNextQuestion(); 
-    }, 10); 
+    }, 1000); 
 
     visualHelpButton.disabled = false; //resets the help buttons for the next question
     audioHelpButton.disabled = false;
@@ -74,8 +67,8 @@ submitButton.onclick = function() {
 //function to increment global counter by +1
 function incrementCounter() {
     globalCounter++;
-    console.log(globalCounter);   
-}
+//     (globalCounterconsole.log);   
+ }
 
 
 // to display user's name in the score box
@@ -276,35 +269,41 @@ let incorrectAudio = document.getElementById("audio-incorrect");//Audio file fro
     
 //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
 let answer = questions[globalCounter].answer;
-
 let correctAnswer = userAnswer === answer; 
 
 let tickIcon = document.getElementById("tick-icon"); 
 let crossIcon = document.getElementById("cross-icon"); 
+let tickIconSm = document.getElementById("tick-icon-sm"); 
+let crossIconSm = document.getElementById("cross-icon-sm"); 
 
 if (correctAnswer) {
     //display tick icon if correct
    
-    tickIcon.classList.remove("box-hide");
+    if (screen.width >993) {tickIcon.classList.remove("box-hide");}
+      else if (screen.width <992) {crossIconSm.classList.add("box-cover");}
+
     correctAudio.play(); //plays audio file Code Credit - Stack Overflow https://stackoverflow.com/questions/9419263/how-to-play-audio
 
     setTimeout(function(){
-        tickIcon.classList.add("box-hide"); }, 1000);
+        tickIcon.classList.add("box-hide"), crossIconSm.classList.remove("box-cover"); }, 1000);
+       
 
-
-        addCorrectScore();
-        
+        addCorrectScore();     
 }
 
 else {
 ////display cross icon if incorrect
+if (screen.width >993) {crossIcon.classList.remove("box-hide");}
+      else if (screen.width <992) {tickIconSm.classList.add("box-cover");}
+    
+      
 
-    crossIcon.classList.remove("box-hide"); 
+
     incorrectAudio.play();
 
 
     setTimeout(function(){
-        crossIcon.classList.add("box-hide"); }, 1000);
+        crossIcon.classList.add("box-hide"), tickIconSm.classList.remove("box-cover"); }, 1000);
 
     addIncorrectScore();
 }
@@ -410,7 +409,7 @@ var xhr = new XMLHttpRequest();
 xhr.onload = function() {
     if(xhr.status === 200){
         questions = JSON.parse(xhr.responseText);
-        console.log (typeof(questions));
+        // console.log (typeof(questions));
     }
 };
 
