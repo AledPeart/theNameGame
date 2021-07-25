@@ -1,4 +1,11 @@
 
+//***START PAGE BOX***
+
+window.onload = function() {
+  document.getElementById("enter-name").focus(); // Puts the cursor in the answer field
+};
+
+
 //defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHOULD I USE THEM?***
 let startBtn = document.getElementById("start-btn");
 let endBtn = document.getElementById("end-btn");
@@ -7,12 +14,25 @@ let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
 let userNameBtn = document.getElementById("enter-name-btn");
 
+
+//global counter variable that can be passed in to other functions as needed
+let globalCounter = 0;
+
+
+//Start Btn onclick 
+startBtn.onclick = function() {
+  clickSound.play();
+  startGame();
+  displayUserName ();
+};
+
+
+
+
 // to center the site logo an smaller screens ***CODE taken from https://stackoverflow.com/questions/39557244/run-code-if-screen-has-certain-width***
 
 window.addEventListener('resize', resize);
-
 function resize() {
-
   if (screen.width <= 992){
     document.getElementById("site-logo").classList.add("mx-auto");
   }else{
@@ -20,36 +40,25 @@ function resize() {
    }
 };
 
-//startPage function set to fire onclick of start button
-startBtn.onclick = function() {
-    clickSound.play();
-    startGame();
-    displayUserName ();
-
-};
 
 
 
 
+//***Start Game Function***
 
 function startGame() {
     document.getElementById("logo-box").classList.remove("box-cover"); //removes the box-cover class from the logo-box
     document.getElementById("game-box").classList.remove("box-hide"); //removes the box-hide class from the game-box
     document.getElementById("start-box").className = "box-hide"; //adds the the box-hide class to the start-box
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
-    
 }
-
-//global counter variable that can be passed in to other functions as needed
-let globalCounter = 0;
 
 let submitButton = document.getElementById("submit-button");
 
 //Onclick event listener for the submit button
 submitButton.onclick = function() {
     checkAnswer();
-    //delays the counter and increment functions until the correct/incorrect animations have run
-    setTimeout(function() { 
+    setTimeout(function() { //delays the counter and increment functions until the correct/incorrect animations have run
         incrementCounter(); 
         setNextQuestion(); 
     }, 1000); 
@@ -62,9 +71,7 @@ submitButton.onclick = function() {
 //function to increment global counter by +1
 function incrementCounter() {
     globalCounter++;
-//     (globalCounterconsole.log);   
  }
-
 
 // to display user's name in the score box
 function displayUserName () {
@@ -73,10 +80,74 @@ function displayUserName () {
 }
 
 
+//***CHECK ANSWER***
+
+//function to check the users input answer
+function checkAnswer() {
+
+  let userAnswer = document.getElementById("answer-field").value.toLowerCase(); //ensures the users answer is correct if includes uppercase
+  let correctAudio = document.getElementById("audio-correct"); // defines variables for the audio files
+  let incorrectAudio = document.getElementById("audio-incorrect");//Audio file from Zapsplat.com
+      
+  //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
+  let answer = questions[globalCounter].answer;
+  let correctAnswer = userAnswer === answer; 
+  
+  let tickIcon = document.getElementById("tick-icon"); 
+  let crossIcon = document.getElementById("cross-icon"); 
+  let tickIconSm = document.getElementById("tick-icon-sm"); 
+  let crossIconSm = document.getElementById("cross-icon-sm"); 
+  
+  if (correctAnswer) {
+      //display tick icon if correct
+     
+      if (screen.width >993) {tickIcon.classList.remove("box-hide");}
+        else if (screen.width <992) {crossIconSm.classList.add("box-cover");}
+  
+      correctAudio.play(); //plays audio file Code Credit - Stack Overflow https://stackoverflow.com/questions/9419263/how-to-play-audio
+  
+      setTimeout(function(){
+          tickIcon.classList.add("box-hide"), crossIconSm.classList.remove("box-cover"); }, 1000);
+         
+  
+          addCorrectScore();     
+  }
+  
+  else {
+  ////display cross icon if incorrect
+  if (screen.width >993) {crossIcon.classList.remove("box-hide");}
+        else if (screen.width <992) {tickIconSm.classList.add("box-cover");}
+      
+      incorrectAudio.play();
+
+      setTimeout(function(){
+          crossIcon.classList.add("box-hide"), tickIconSm.classList.remove("box-cover"); }, 1000);
+  
+      addIncorrectScore();
+  }
+  
+  //***ADD SCORES***
+
+  //function to add correct score
+  
+  function addCorrectScore() {
+      let oldScore = document.getElementById("correct").innerText;
+      document.getElementById("correct").innerText = ++oldScore;
+  }
+  
+  //function to add incorrect score
+  
+  function addIncorrectScore() {
+      let oldScore = document.getElementById("incorrect").innerText;
+      document.getElementById("incorrect").innerText = ++oldScore;
+  }
+  }
+
+  //***SET NEXT QUESTION*** */
+
 //function to set the next question by loading the image relative to the global counter
 
 function setNextQuestion() {
-    
     document.getElementById("answer-field").value = ""; // Erases the last typed answer
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
     document.getElementById("audio-clue").classList.add("box-hide"); //adds box cover to the audio controls again
@@ -90,9 +161,13 @@ function setNextQuestion() {
         
       } else {
             endGame ();
-      }
-        
+      }  
       };
+
+
+      //***HELP BOX***
+
+      //***VISUAL CLUE***
 
       //function to reveal a clue onclick of the Visual Help Btn
       let visualHelpButton = document.getElementById("visual-help-button");
@@ -110,17 +185,16 @@ function setNextQuestion() {
       }
     };
 
+    //***AUDIO CLUE***
+
       //function to reveal a clue onclick of the Audio Help Btn
       let audioHelpButton = document.getElementById("audio-help-button");
       let clickSound = document.getElementById("audio-click");
 
-      //new Audio('assets/audio/zapsplat_technology_computer_mouse_click_apple_002_47278.mp3');
-
       audioHelpButton.onclick = function() {
         showAudioClue();
         clickSound.play();
-        this.disabled = true;
-        
+        this.disabled = true;  
     };
 
       function showAudioClue() {
@@ -130,6 +204,8 @@ function setNextQuestion() {
           document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
       }
       };
+
+//***MULTI CHOICE CLUE***
 
       //function to reveal a clue onclick of the Multi Choice Help Btn
       let multiHelpButton = document.getElementById("multi-help-button");
@@ -143,14 +219,13 @@ function setNextQuestion() {
 
       function showMultiClue() {
         document.getElementById("multi-choice-clue").classList.remove("box-cover");
-        // *****attempt to populate the multi choice with a list item***
-
+        
+        // *****attempt to populate the multi choice with a list item*****
         const multiChoice = questions[globalCounter].multichoice;
         for (let i = 0; i < multiChoice.length; i++) {
           const listItem = document.createElement('li');
           listItem.textContent = multiChoice[i];
           document.getElementById("multi-choice-clue").appendChild(listItem);
-          
         }
     
         if (screen.width >= 576) {
@@ -161,7 +236,7 @@ function setNextQuestion() {
 
 
 
-
+//***END GAME***
       //function to load end-box on completion of quiz and display the scores
       function endGame () {
         document.getElementById("logo-box").className = "box-cover"; //adds the the box-cover class to the logo-box
@@ -180,9 +255,7 @@ function setNextQuestion() {
         } else if (correctAnswers >= 6) {
           document.getElementById("congrats-text").innerText= "Congratulations";
         };
-            
-        
-
+          
         document.getElementById("player-name").innerText= userName;
         document.getElementById("correct-answers").innerText= correctAnswers;
         document.getElementById("num-of-questions").innerText= numOfQuestions;
@@ -256,80 +329,14 @@ function setNextQuestion() {
 // }
 // ]
 
-//function to check the users input answer
-
-function checkAnswer() {
-
-let userAnswer = document.getElementById("answer-field").value.toLowerCase(); //ensures the users answer is correct if includes uppercase
-let correctAudio = document.getElementById("audio-correct"); // defines variables for the audio files
-let incorrectAudio = document.getElementById("audio-incorrect");//Audio file from Zapsplat.com
-    
-//answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
-let answer = questions[globalCounter].answer;
-let correctAnswer = userAnswer === answer; 
-
-let tickIcon = document.getElementById("tick-icon"); 
-let crossIcon = document.getElementById("cross-icon"); 
-let tickIconSm = document.getElementById("tick-icon-sm"); 
-let crossIconSm = document.getElementById("cross-icon-sm"); 
-
-if (correctAnswer) {
-    //display tick icon if correct
-   
-    if (screen.width >993) {tickIcon.classList.remove("box-hide");}
-      else if (screen.width <992) {crossIconSm.classList.add("box-cover");}
-
-    correctAudio.play(); //plays audio file Code Credit - Stack Overflow https://stackoverflow.com/questions/9419263/how-to-play-audio
-
-    setTimeout(function(){
-        tickIcon.classList.add("box-hide"), crossIconSm.classList.remove("box-cover"); }, 1000);
-       
-
-        addCorrectScore();     
-}
-
-else {
-////display cross icon if incorrect
-if (screen.width >993) {crossIcon.classList.remove("box-hide");}
-      else if (screen.width <992) {tickIconSm.classList.add("box-cover");}
-    
-      
-
-
-    incorrectAudio.play();
-
-
-    setTimeout(function(){
-        crossIcon.classList.add("box-hide"), tickIconSm.classList.remove("box-cover"); }, 1000);
-
-    addIncorrectScore();
-}
-
-//function to add correct score
-
-function addCorrectScore() {
-    let oldScore = document.getElementById("correct").innerText;
-    document.getElementById("correct").innerText = ++oldScore;
-}
-
-//function to add incorrect score
-
-function addIncorrectScore() {
-    let oldScore = document.getElementById("incorrect").innerText;
-    document.getElementById("incorrect").innerText = ++oldScore;
-}
-}
 
 //following code enables the user to submit the answer using the enter button on the keyboard ***CREDIT***W3Schools**
-// targets the answer field
-let answerField = document.getElementById("answer-field");
-// Executes a function when the user releases the enter key on the keyboard
-answerField.addEventListener("keyup", function(event) {
+
+let answerField = document.getElementById("answer-field"); // targets the answer field
+answerField.addEventListener("keyup", function(event) {  // Executes a function when the user releases the enter key on the keyboard
   if (event.keyCode === 13) { //default keycode for the enter button
-    // prevents the default action from occuring
-    event.preventDefault();
-    // triggers the submit button
-    document.getElementById("submit-button").click();
+    event.preventDefault();  // prevents the default action from occuring
+    document.getElementById("submit-button").click();  // triggers the submit button
   }
 });
 
@@ -352,7 +359,7 @@ nameField.addEventListener("keyup", function(event) {
 //   }
 // });
 
-// TURN ON MUTE BUTTON - source https://forums.tumult.com/t/muting-audio-or-video/1705
+// ***TURN ON MUTE BUTTON*** - source https://forums.tumult.com/t/muting-audio-or-video/1705
 
 let muteBtn = document.getElementById("mute-button");
 var isMuted = false;
@@ -399,7 +406,7 @@ refreshBtn.onclick = function() {
   location.reload(); 
   };
 
-  //FUNCTION TO RESET THE GAME BUT NOT WORKING- start game removed now working **bug Fix
+//FUNCTION TO RESET THE GAME BUT NOT WORKING- start game removed now working **bug Fix
 endBtn.onclick = function() {
   clickSound.play();
   window.location.reload(); 
