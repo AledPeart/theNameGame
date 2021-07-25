@@ -28,11 +28,7 @@ startBtn.onclick = function() {
 
 };
 
-//FUNCTION TO RESET THE GAME BUT NOT WORKING??
-endBtn.onclick = function() {
-    clickSound.play();
-    window.location.reload(); 
-};
+
 
 
 
@@ -178,9 +174,11 @@ function setNextQuestion() {
 
         //Ammends the end user message depending on score
         if ( correctAnswers <= 2) {
-            document.getElementById("congrats-text").innerText= "Unlucky";
-        } else {
-            document.getElementById("congrats-text").innerText= "Congratulations";
+            document.getElementById("congrats-text").innerText= "Better luck next time";
+        } else if (correctAnswers <= 5) {
+            document.getElementById("congrats-text").innerText= "Good effort";
+        } else if (correctAnswers >= 6) {
+          document.getElementById("congrats-text").innerText= "Congratulations";
         };
             
         
@@ -345,6 +343,15 @@ nameField.addEventListener("keyup", function(event) {
   }
 });
 
+//same as above but for play again button ***CREDIT***W3Schools** not working
+
+// endBtn.addEventListener("keyup", function(event) {
+//   if (event.keyCode === 13) { 
+//     event.preventDefault();
+//     document.getElementById("end-btn").click();
+//   }
+// });
+
 // TURN ON MUTE BUTTON - source https://forums.tumult.com/t/muting-audio-or-video/1705
 
 let muteBtn = document.getElementById("mute-button");
@@ -389,9 +396,15 @@ let refreshBtn = document.getElementById("refresh-button");
 
 refreshBtn.onclick = function() {
   clickSound.play();
-  window.location.reload();
-
+  location.reload(); 
   };
+
+  //FUNCTION TO RESET THE GAME BUT NOT WORKING- start game removed now working **bug Fix
+endBtn.onclick = function() {
+  clickSound.play();
+  window.location.reload(); 
+};
+  
 
 
 
