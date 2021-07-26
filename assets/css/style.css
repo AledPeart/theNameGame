@@ -48,8 +48,12 @@ body {
 
 /**** Following media query to ensure that on mobile devices the logo text does not wrap****/
 @media screen and (max-width: 576px) {
+    
+    #enter-name-text{
+        font-size: 2rem;
+    }
     .game-logo {
-        font-size: 45px;
+        font-size: 3rem;
         padding-left: 0;
     }
 
@@ -62,11 +66,12 @@ body {
 }
 
 
+
 /**** Following media query to ensure that on mobile devices game section reduces in size****/
 @media screen and (max-width: 576px) {
    
     #answer-field{
-        margin: 5!important; 
+        margin: 5px !important; 
     }
     .game-section{
         height: 450px;
@@ -400,4 +405,13 @@ ul {
 
 .congrats-text{
     font-size: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+    .end-game-logo{
+        font-size: 3rem;
+    }
+    .congrats-text{
+        font-size: 1.5rem;
+    }
 }
