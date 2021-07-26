@@ -35,9 +35,13 @@ Here I will address the aims and goals of the website from both the perspectives
 
 * As a user I want to be offered some additional prompts if I am struggling to name an object.
 
-* As a user I want to receive clear confirmation if my answer is correct or incorrect.
+* As a user I want to receive clear confirmation if my answer is correct or incorrect and see my score as I progress through the game.
 
-* As a user I want to see my score as I progress through the game.
+* As a user I want to receive clear instructions on how the game works
+
+* As a user I want to be able to refresh the game and start again
+
+* As a user I want to be able to 'mute' the sound during the game
 
 ### Owner stories
 
@@ -53,7 +57,7 @@ Here I will address the aims and goals of the website from both the perspectives
 
 * As the owner I want a breakdown of the users correct and incorrect answers.
 
-* As the owner I want a breakdown of the additional prompts given to the user in order to asses which neural pathways the user was having difficulty with.
+* As the owner I want a breakdown of the additional prompts given to the user in order to assess which neural pathways the user was having difficulty with.
 
 
 ### Design Objectives
