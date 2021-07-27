@@ -8,7 +8,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
  ### **As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies**.  
  
- ![supporting screenshot](https://github.com/AledPeart) 
+ ![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-1-game.png) 
  
 -	Fully functioning game with a clear layout and purpose
 -	Users interact with the game by trying to name the pictures they see on screen
@@ -19,8 +19,6 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want the web application to be clear and uncluttered and present information to me in a cohesive manner**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
-
 -	Layout is uncluttered and visually pleasing
 -	Clearly defined areas, which are distinct and separated visually from each other
 -	Game responds in a logical way when viewed on smaller devices.
@@ -30,7 +28,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want the web application to use icons and colors to help my understanding of what is required**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-2-icons-colors.png) 
 
 -	Strong colors used to emphasize buttons
 -	Use of icons to reinforce meaning and to reduce unnecessary ‘clutter’ on screen
@@ -38,7 +36,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want to be shown a number of clear well presented images for me to identify**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-3-image.png) 
 
 -	Images are clear and unambiguous
 -	Everyday ‘high frequency’ objects are used 
@@ -47,14 +45,12 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want to be able to input my answer using the computer keyboard**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
-
 - Answer input fields support the user to enter the answer using a keyboard
 -	Users are able to submit the answer by either clicking on the ‘Enter’ button or by hitting the ‘Enter’ button on their keyboard
 
 ### **As a user I want to be offered some additional prompts if I am struggling to name an object**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-7-clues.png) 
 
 -	Multiple hints offered to users to prompt and guide them towards the answer
 -	Hints offered in different forms to aid the different neural pathways that the user maybe having difficulty with
