@@ -21,12 +21,11 @@ let globalCounter = 0;
 
 //Start Btn onclick 
 startBtn.onclick = function() {
+  checkForInput();
   clickSound.play();
   startGame();
   displayUserName ();
 };
-
-
 
 
 // to center the site logo an smaller screens ***CODE taken from https://stackoverflow.com/questions/39557244/run-code-if-screen-has-certain-width***
@@ -40,9 +39,17 @@ function resize() {
    }
 };
 
+//***Check for input Function***
 
+function checkForInput() {
+  if( isEmpty(this.value) ) {
+    console.log( "please enter your name" )
+  } 
+};
 
+const isEmpty = str => !str.trim().length;
 
+  
 
 //***Start Game Function***
 
@@ -109,7 +116,6 @@ function checkAnswer() {
       setTimeout(function(){
           tickIcon.classList.add("box-hide"), crossIconSm.classList.remove("box-cover"); }, 1000);
          
-  
           addCorrectScore();     
   }
   
@@ -167,7 +173,7 @@ function setNextQuestion() {
 
       //***HELP BOX***
 
-      //***VISUAL CLUE***
+      //***visual clues***
 
       //function to reveal a clue onclick of the Visual Help Btn
       let visualHelpButton = document.getElementById("visual-help-button");
@@ -185,7 +191,7 @@ function setNextQuestion() {
       }
     };
 
-    //***AUDIO CLUE***
+    //***audio clue***
 
       //function to reveal a clue onclick of the Audio Help Btn
       let audioHelpButton = document.getElementById("audio-help-button");
@@ -205,7 +211,7 @@ function setNextQuestion() {
       }
       };
 
-//***MULTI CHOICE CLUE***
+//***multi choice clue***
 
       //function to reveal a clue onclick of the Multi Choice Help Btn
       let multiHelpButton = document.getElementById("multi-help-button");
@@ -233,8 +239,6 @@ function setNextQuestion() {
       }
     };
       
-
-
 
 //***END GAME***
       //function to load end-box on completion of quiz and display the scores
@@ -414,21 +418,12 @@ endBtn.onclick = function() {
   
 
 
-
-
-
-
-
-
-
-
-//JSON source****MY BOOK(J Duckett et al)****/
+//***JSON*** source - Book(J Duckett et al)****/
 
 var xhr = new XMLHttpRequest();
 xhr.onload = function() {
     if(xhr.status === 200){
         questions = JSON.parse(xhr.responseText);
-        // console.log (typeof(questions));
     }
 };
 

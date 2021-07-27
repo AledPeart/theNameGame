@@ -68,10 +68,22 @@
     /***** START BOX *****/
     .enter-name {
         font-family: 'Jomhuria', cursive;
-        font-size: 3rem;
-        padding-right: 20px;
+        font-size: 2.5rem;
         text-transform: uppercase;
     }
+
+    .intro-text{
+        padding: 20px;
+        font-size: 1.25rem;
+    }
+
+    @media screen and (max-width: 992px) {
+    .intro-text{
+        padding: 10px;
+        font-size: .75rem;
+    }
+}
+
 
     #enter-name-box {
         max-width: 40%;
