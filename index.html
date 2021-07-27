@@ -76,13 +76,12 @@
                     </div>
                 </div>
             </div>
-
             <!-- End of MODAL -->
-
         </div>
     </div>
-    <!--GAME SECTION-->
 
+
+    <!--GAME SECTION-->
 
     <div id="main-page-box" class="container page-box">
 
@@ -93,18 +92,15 @@
                     <h1 class="game-logo">
                         WELCOME TO THE NAME GAME<img src="assets/images/idea2.png" class="bulb-logo" alt="game logo is a lightbulb">
                     </h1>
-
                     <div class="row justify-content-center">
                         <p id="enter-name-text" class="enter-name">Enter Your Name</p>
-                        <input id="enter-name" class="col-5 mb-4" name="enter-name" type="text">
+                    </div>
+                    <div class="row justify-content-center">
+                        <input id="enter-name-box" class="col mb-4" name="enter-name" type="text">
                     </div>
                     <div class="row justify-content-center">
                         <button type="button" data-type="submit" id="start-btn" class="btn btn-warning btn-lg">Start
                             Game</button>
-                    </div>
-
-                    <div ID="data-test">
-
                     </div>
                 </div>
             </div>
@@ -113,23 +109,10 @@
         <!--GAME BOX-->
         <div id="game-box" class="box-hide my-auto">
             <div class="game-section container">
-
-
-
-
                 <div class="row no-gutters align-items-center justify-content-around">
-
                     <div id="picture-box" class="picture-box col-lg-4 text-center mb-2">
                         <img id="question-image" class="question-image align-self-center img-fluid"
                             src="assets/images/cat.jpg" alt="image of a cat">
-
-                        <!-- <div class="row justify-content-center d-sm-none">
-                    <input id="answer-field" class="answer-field col-10 mb-5" name="answer" type="text">
-                </div>
-
-                <div class="row justify-content-center d-sm-none">
-                    <button type="button" data-type="submit" id="submit-button" class="col-4 btn btn-warning btn-lg btn-enter">Enter</button>
-                </div> -->
                     </div>
 
                     <div id="animation-box" class="animation-box col-lg-2 sm-mb-4 text-center d-none d-sm-block">
@@ -138,7 +121,6 @@
                     </div>
 
                     <div id="answer-box" class="answer-box col-lg-4 text-center sm-mb-4">
-
                         <div class="row d-none d-sm-block">
                             <p id="question-box" class="question-box col mt-5 sm-mb-3">Can you name this animal?</p>
                         </div>
@@ -156,37 +138,30 @@
                             <i id="tick-icon-sm" class="fas fa-check-circle tick-icon-sm d-lg-none"></i>
                             <i id="cross-icon-sm" class="fas fa-times-circle cross-icon-sm d-lg-none"></i>
                         </div>
-
                     </div>
-
                 </div>
             </div>
 
             <hr class="horizontal-rule d-none d-lg-block">
 
-
-
             <!--HELP SECTION-->
 
             <div class="bottom-section container">
-
                 <div class="row">
-                    <div class="col-lg-8 mb-4 help-section text-center">
+                    <div class="col-lg-8 mb-lg-4 help-section text-center">
                         <div class="help-box">
                             <div class="row">
                                 <div class="col">
                                     <h1>Help Section</h1>
                                 </div>
                             </div>
-                            <!-- <div class="btn-group"> -->
+            
                             <div class="row">
-
                                 <div class="col-lg-4">
                                     <button id="visual-help-button" class="btn btn-warning btn-lg">Visual <i
                                             class="far fa-eye clue-icon"></i></button>
                                     <p id="visual-clue"></p>
                                 </div>
-
 
                                 <hr class="horizontal-rule-help">
 
@@ -195,7 +170,6 @@
                                             class="fas fa-volume-up clue-icon"></i></button>
                                     <audio id="audio-clue" class="box-hide" controls type="audio/mpeg"></audio>
                                 </div>
-
 
                                 <hr class="horizontal-rule-help">
 
@@ -206,27 +180,13 @@
 
                                     </ul>
                                 </div>
-
                             </div>
                         </div>
-
-
-
-                        <!-- </div> -->
-
-
-                        <!-- Testing JQuery Button -->
-                        <!-- <div class="div">
-                <button id = "test-button">TEST</button>
-                </div> -->
                     </div>
-
 
                     <!--SCORE SECTION-->
 
-
-
-                    <div class="col-lg-4 mb-4 score-section text-center">
+                    <div class="col-lg-4 mb-lg-4 score-section text-center">
                         <div class="score-box">
                             <div class="row">
                                 <div class="col">
@@ -247,7 +207,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -270,8 +229,6 @@
                 </div>
             </div>
         </div>
-
-
     </div>
 
     <!-- AUDIO FILES -->
@@ -287,6 +244,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
@@ -295,7 +253,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
 
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script> -->
 </body>
-
 </html>

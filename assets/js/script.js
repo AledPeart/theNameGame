@@ -2,7 +2,7 @@
 //***START PAGE BOX***
 
 window.onload = function() {
-  document.getElementById("enter-name").focus(); // Puts the cursor in the answer field
+  document.getElementById("enter-name-box").focus(); // Puts the cursor in the answer field
 };
 
 
@@ -75,7 +75,7 @@ function incrementCounter() {
 
 // to display user's name in the score box
 function displayUserName () {
-    let userName = document.getElementById("enter-name").value;
+    let userName = document.getElementById("enter-name-box").value;
     document.getElementById("user-name").innerText = userName;
 }
 
@@ -245,7 +245,7 @@ function setNextQuestion() {
 
         let correctAnswers = document.getElementById("correct").innerText;
         let numOfQuestions = questions.length;
-        let userName = document.getElementById("enter-name").value;
+        let userName = document.getElementById("enter-name-box").value;
 
         //Ammends the end user message depending on score
         if ( correctAnswers <= 2) {
@@ -341,7 +341,7 @@ answerField.addEventListener("keyup", function(event) {  // Executes a function 
 });
 
 //same as above but for enter user name on game start ***CREDIT***W3Schools**
-let nameField = document.getElementById("enter-name");
+let nameField = document.getElementById("enter-name-box");
 
 nameField.addEventListener("keyup", function(event) {
   if (event.keyCode === 13) { 
