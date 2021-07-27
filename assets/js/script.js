@@ -12,6 +12,7 @@ let endBtn = document.getElementById("end-btn");
 let startBox = document.getElementById("start-box").innerHTML;
 let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
+
 // let userNameBtn = document.getElementById("enter-name-btn");
 
 
@@ -21,7 +22,7 @@ let globalCounter = 0;
 
 //Start Btn onclick 
 startBtn.onclick = function() {
-  checkForInput();
+  // checkForInput();
   clickSound.play();
   startGame();
   displayUserName ();
@@ -39,23 +40,28 @@ function resize() {
    }
 };
 
-// ***Check for input Function***
+// ***Check for input Function ensures user must enter a name***
 
-function checkForInput() {
 
-  if (document.getElementById("enter-name-box").value == "") {
+
+let nameBox = document.getElementById("enter-name-box");
+nameBox.addEventListener('input', checkInput);
+
+function checkInput() {
+
+let startBtn = document.getElementById("start-btn")
+
+  if ((nameBox).value == "") {
     startBtn.disabled = true;
-}
-else {
+    
+  } else {
     startBtn.disabled = false;
 }
 };
 
 
 
-   
 
-  
 
 //***Start Game Function***
 
