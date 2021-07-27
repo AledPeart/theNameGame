@@ -12,7 +12,7 @@ let endBtn = document.getElementById("end-btn");
 let startBox = document.getElementById("start-box").innerHTML;
 let gameBox = document.getElementById("game-box").innerHTML;
 let endBox = document.getElementById("end-box").innerHTML;
-let userNameBtn = document.getElementById("enter-name-btn");
+// let userNameBtn = document.getElementById("enter-name-btn");
 
 
 //global counter variable that can be passed in to other functions as needed
@@ -39,15 +39,21 @@ function resize() {
    }
 };
 
-//***Check for input Function***
+// ***Check for input Function***
 
 function checkForInput() {
-  if( isEmpty(this.value) ) {
-    console.log( "please enter your name" )
-  } 
+
+  if (document.getElementById("enter-name-box").value == "") {
+    startBtn.disabled = true;
+}
+else {
+    startBtn.disabled = false;
+}
 };
 
-const isEmpty = str => !str.trim().length;
+
+
+   
 
   
 
