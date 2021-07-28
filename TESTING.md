@@ -57,7 +57,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want to receive clear confirmation if my answer is correct or incorrect and see my score as I progress through the game**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-4-Score.png) 
 
 -	Users given clear instant feedback on whether the question is correct or incorrect
 -	Users shown a running total of their score as the game progresses
@@ -73,13 +73,11 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want to be able to refresh the game and start again**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-5-mute-refresh.png) 
 
 -	Users can click the refresh icon button and restart the game at any point
 
 ### **As a user I want to be able to 'mute' the sound during the game**.  
-
-![supporting screenshot](https://github.com/AledPeart) 
 
 -	Users can click on the mute icon in order to mute the game sounds at any point.
 -	Users can click the icon again to un-mute the game sounds
