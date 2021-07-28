@@ -44,6 +44,13 @@
         opacity: 40%;
     }
 
+    #myModalLabel {
+        font-family: 'Jomhuria', cursive;
+        font-size: 3.5rem;
+        margin-left: auto;
+        text-transform: uppercase;
+    }
+
     /**** media query to ensure that on mobile devices the logo text does not wrap****/
     @media screen and (max-width: 776px) {
 
