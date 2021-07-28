@@ -1,3 +1,7 @@
+/*jshint esversion: 6 */ //to correct JSHint issue with using 'let'
+/* global questions:true */ //workaround which shows JSHint that questions is a global variable. More detail in README.md
+/* jshint expr: true */ 
+
 //***START PAGE BOX***
 
 window.onload = function () {
@@ -8,9 +12,8 @@ window.onload = function () {
 //defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHOULD I USE THEM?***
 let startBtn = document.getElementById("start-btn");
 let endBtn = document.getElementById("end-btn");
-let startBox = document.getElementById("start-box").innerHTML;
-let gameBox = document.getElementById("game-box").innerHTML;
-let endBox = document.getElementById("end-box").innerHTML;
+
+
 
 // let userNameBtn = document.getElementById("enter-name-btn");
 
@@ -38,7 +41,7 @@ function resize() {
   } else {
     document.getElementById("site-logo").classList.remove("mx-auto");
   }
-};
+}
 
 // ***Check for input Function ensures user must enter a name***
 
@@ -49,7 +52,7 @@ nameBox.addEventListener('input', checkInput);
 
 function checkInput() {
 
-  let startBtn = document.getElementById("start-btn")
+  let startBtn = document.getElementById("start-btn");
 
   if ((nameBox).value == "") {
     startBtn.disabled = true;
@@ -57,7 +60,7 @@ function checkInput() {
   } else {
     startBtn.disabled = false;
   }
-};
+}
 
 
 //**SOURCE https://stackoverflow.com/questions/23476532/check-if-string-contains-only-letters-in-javascript */ **BUG**
@@ -71,7 +74,7 @@ function verify() {
     startGame();
     displayUserName();
   }
-};
+}
 
 
 
@@ -145,7 +148,8 @@ function checkAnswer() {
     correctAudio.play(); //plays audio file Code Credit - Stack Overflow https://stackoverflow.com/questions/9419263/how-to-play-audio
 
     setTimeout(function () {
-      tickIcon.classList.add("box-hide"), crossIconSm.classList.remove("box-cover");
+      tickIcon.classList.add("box-hide");
+      crossIconSm.classList.remove("box-cover");
     }, 500);
 
     addCorrectScore();
@@ -160,7 +164,8 @@ function checkAnswer() {
     incorrectAudio.play();
 
     setTimeout(function () {
-      crossIcon.classList.add("box-hide"), tickIconSm.classList.remove("box-cover");
+      crossIcon.classList.add("box-hide"); 
+      tickIconSm.classList.remove("box-cover");
     }, 500);
 
     addIncorrectScore();
@@ -203,7 +208,7 @@ function setNextQuestion() {
   } else {
     endGame();
   }
-};
+}
 
 
 //***HELP BOX***
@@ -224,7 +229,7 @@ function showVisualClue() {
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
-};
+}
 
 //***audio clue***
 
@@ -244,14 +249,16 @@ function showAudioClue() {
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
-};
+}
+
 //BUG FIX - function to pause the clue audio if user subits an answer https://stackoverflow.com/questions/14834520/html5-audio-stop-function
+
 function audioPause() {
   let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
 
   cluePlayer.pause;
   cluePlayer.currentTime = 0;
-};
+}
 
 //***multi choice clue***
 
@@ -279,7 +286,7 @@ function showMultiClue() {
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
-};
+}
 
 
 //***END GAME***
@@ -300,12 +307,12 @@ function endGame() {
     document.getElementById("congrats-text").innerText = "Good effort";
   } else if (correctAnswers >= 6) {
     document.getElementById("congrats-text").innerText = "Congratulations";
-  };
+  }
 
   document.getElementById("player-name").innerText = userName;
   document.getElementById("correct-answers").innerText = correctAnswers;
   document.getElementById("num-of-questions").innerText = numOfQuestions;
-};
+}
 
 
 
@@ -413,7 +420,7 @@ var isMuted = false;
 
 muteBtn.onclick = function () {
   muteAudio();
-}
+};
 
 function muteAudio() {
 
@@ -440,7 +447,7 @@ function muteAudio() {
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
-};
+}
 
 //*********REFRESH PAGE BUTTON**********
 

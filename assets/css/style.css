@@ -18,6 +18,11 @@
         margin-right: auto;
     }
 
+    a {
+        color: darkblue;
+        text-decoration: underline;
+    }
+
     /***** LOGO/HEADER AREA *****/
     .bulb-logo {
         background-color: #E7E6E1;
