@@ -99,12 +99,25 @@ Consideration is given to the fact that users of the game will have suffered som
 
 *	Design adheres to current norms and conventions e.g clear navigation icons.
 
-## Layout and Features
+## Design Layout and Features
+
+I made a decision to use as much 'vanilla' Javascript as possible when building this game. I felt that I had a better understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
+
+### Start Page
+* Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept numbers or only blank spaces, and users will be alerted if they have not met those conditions. When the conditions have been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
+
+### Main Page
+
+### End Page
 
 
 
 
 ## Wireframes 
+
+### Layout Design
+
+### Functionality Design
 
 
 ## Features left to implement
