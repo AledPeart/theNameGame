@@ -530,24 +530,33 @@ I also tested my JSON file using [JSONLint] (https://jsonlint.com/) which confir
 
 At the time of submission the results are showing no errors (see screenshots below)
 
-![index.html](…)  
-![style.css](…)   
-![script.js](…)  
-![questions.json](…)   
-![404.html](…)
+![index.html](…)      
+
+
+![style.css](…)         
+
+
+![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)  
+
+
+![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)   
+
+
+![404.html](…)   
+
 
 ## Lighthouse Testing
 
 I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The initial test gave me the following results:   
 
-![Lighthouse screenshot](…)   
+![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-before.png)   
 
 I implemented the following recommendations made in the report:
 1. Increased the contrast and visibilty of external links by darkening the colour and underlining them
 2. Adding __rel="noopener"__ to external links in order to reduce the site's  vulnerabilit
 Following these changes I re-ran the Lighthouse tests and the improved scores can be seen below   
 
-![Lighthouse screenshot](…)
+![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-after.png)
 
 ## Test Results and Bugs
 
