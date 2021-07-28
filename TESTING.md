@@ -66,7 +66,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As a user I want to receive clear instructions on how the game works**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-9-instructions.png) 
 
 -	Users can click the information icon to see comprehensive game instructions.
 -	Users can close the modal box easily and re-visit it at any point in the game
@@ -89,7 +89,6 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As the owner I want to test the users word retrieval**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
 
 -	Fully functioning game with a clear layout and purpose
 -	Users interact with the game by trying to name the pictures they see on screen
@@ -98,22 +97,18 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As the owner I want the user to be shown a series of ‘high frequency nouns’**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
-
 -	Everyday ‘high frequency’ nouns are used 
 - Common and objects specifically chosen for the game 
 
 
 ### **As the owner I want the user to be offered some additional prompts if they are unable to name an object.**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
-
 -	Multiple hints offered to users to prompt and guide them towards the answer
 
 
 ### **As the owner I want the additional prompts offered to the user to be both visual and auditory**.  
 
-![supporting screenshot](https://github.com/AledPeart)
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-7-clues.png)
 
 -	Visual and auditory hints have been used 
 -	Hints offered in different forms to aid the different neural pathways that the user maybe having difficulty with
@@ -121,21 +116,17 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 
 ### **As the owner I want a breakdown of the users correct and incorrect answers**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-6-end-screen.png) 
 
 -	End game screen shows a breakdown of the correct and incorrect answers
 
 
 ### **As the owner I want to receive the users overall score on completing the game**.  
 
-![supporting screenshot](https://github.com/AledPeart) 
-
 -	End game screen shows the users overall score
 
 
 ### **As the owner I want a breakdown of the additional prompts given to the user in order to assess which neural pathways the user was having difficulty with**.  
-
-![supporting screenshot](https://github.com/AledPeart) 
 
 -	It is intended that the functionality to store this data and provide therapists with a breakdown of which prompts the users needed, and the corresponding neural pathways that may be affected will be part of a future update.
 
