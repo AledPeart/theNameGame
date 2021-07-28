@@ -62,7 +62,7 @@ let startBtn = document.getElementById("start-btn")
 function verify() {
   let usersName = document.getElementById("enter-name-box").value;
   if (!/[a-zA-Z]/.test(usersName)) {
-    alert("Please enter your username");
+    alert("Please enter your name");
     document.getElementById("enter-name-box").focus();
   } 
   else {
