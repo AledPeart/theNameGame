@@ -1,4 +1,8 @@
+![The Name Game Landing Page-mockup](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-13-mockup.png)
+
+
 [View deployed site here](https://aledpeart.github.io/theNameGame/index.html)
+
 
 
 # theNameGame
