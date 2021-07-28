@@ -22,10 +22,10 @@ let globalCounter = 0;
 
 //Start Btn onclick 
 startBtn.onclick = function() {
-  // checkForInput();
-  clickSound.play();
-  startGame();
-  displayUserName ();
+  verify();
+  // clickSound.play();
+  // startGame();
+  // displayUserName ();
 };
 
 
@@ -57,6 +57,19 @@ let startBtn = document.getElementById("start-btn")
   } else {
     startBtn.disabled = false;
 }
+};
+
+function verify() {
+  let usersName = document.getElementById("enter-name-box").value;
+  if (!/[a-zA-Z]/.test(usersName)) {
+    alert("Please enter your username");
+    document.getElementById("enter-name-box").focus();
+  } 
+  else {
+    clickSound.play();
+    startGame();
+    displayUserName ();
+  }
 };
 
 
