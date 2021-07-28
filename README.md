@@ -1,3 +1,5 @@
+[View deployed site here](https://aledpeart.github.io/theNameGame/index.html)
+
 
 # theNameGame
 
