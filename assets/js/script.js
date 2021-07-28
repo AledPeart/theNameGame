@@ -43,7 +43,7 @@ function resize() {
 // ***Check for input Function ensures user must enter a name***
 
 
-
+//**SOURCE https://stackoverflow.com/questions/7741123/html5-input-type-required-without-a-form-does-it-work */
 let nameBox = document.getElementById("enter-name-box");
 nameBox.addEventListener('input', checkInput);
 
@@ -59,6 +59,8 @@ let startBtn = document.getElementById("start-btn")
 }
 };
 
+
+//**SOURCE https://stackoverflow.com/questions/23476532/check-if-string-contains-only-letters-in-javascript */ **BUG**
 function verify() {
   let usersName = document.getElementById("enter-name-box").value;
   if (!/[a-zA-Z]/.test(usersName)) {
@@ -97,7 +99,9 @@ submitButton.onclick = function() {
 
     visualHelpButton.disabled = false; //resets the help buttons for the next question
     audioHelpButton.disabled = false;
-    multiHelpButton.disabled = false;  
+    multiHelpButton.disabled = false; 
+    
+    audioPause ();
 };
 
 //function to increment global counter by +1
@@ -183,6 +187,7 @@ function setNextQuestion() {
     document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
     document.getElementById("audio-clue").classList.add("box-hide"); //adds box cover to the audio controls again
     
+    
 
     if (globalCounter < 10) {
         document.getElementById("question-image").src=questions[globalCounter].image; 
@@ -234,6 +239,13 @@ function setNextQuestion() {
         if (screen.width >= 576) {
           document.getElementById("answer-field").focus();// returns the cursor to the answer field but not for mobile
       }
+      };
+//BUG FIX - function to pause the clue audio if user subits an answer https://stackoverflow.com/questions/14834520/html5-audio-stop-function
+      function audioPause() {
+        let cluePlayer = document.getElementById("audio-clue").src=questions[globalCounter].audioclue;
+
+        cluePlayer.pause;
+        cluePlayer.currentTime = 0;
       };
 
 //***multi choice clue***
