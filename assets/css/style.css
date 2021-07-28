@@ -72,17 +72,17 @@
         text-transform: uppercase;
     }
 
-    .intro-text{
+    .intro-text {
         padding: 20px;
         font-size: 1.25rem;
     }
 
     @media screen and (max-width: 992px) {
-    .intro-text{
-        padding: 10px;
-        font-size: .75rem;
+        .intro-text {
+            padding: 10px;
+            font-size: .75rem;
+        }
     }
-}
 
 
     #enter-name-box {
@@ -118,6 +118,7 @@
         #answer-field {
             margin: 5px !important;
         }
+
         .game-section {
             height: 450px;
             padding-top: 10px;
@@ -126,7 +127,8 @@
         #enter-name-box {
             max-width: 90%;
         }
-        #submit-button{
+
+        #submit-button {
             margin-top: 5px;
         }
     }
@@ -210,9 +212,11 @@
 
     /**** media query to ensure that on mobile devices the icons are pushed up from the bottom of the screen****/
     @media screen and (max-width: 576px) {
-       .tick-icon-sm, .cross-icon-sm {
-           margin-bottom: 15px;
-       }
+
+        .tick-icon-sm,
+        .cross-icon-sm {
+            margin-bottom: 15px;
+        }
     }
 
     .answer-field {
