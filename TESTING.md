@@ -142,13 +142,28 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 * __Test__- Does the start screen appear when the web page is loaded, and is the layout as expected?   
 __Result__– The result was as expected.
 
+* __Test__– Does the cursor external link work correctly and open in a new window?   
+__Result__– The result was as expected.
+
 * __Test__– Does the cursor automatically appear in the name field?   
 __Result__– The result was as expected.
 
 * __Test__– Does the name field allow the user to enter their name?   
 __Result__– The result was as expected.
 
+* __Test__– Does the input field require the user to enter their name?   
+__Result__– The result was not as expected.
+
+* __Test__– Is the submit button disabled until the user has entered something in the name field?   
+__Result__– The result was as expected.
+
 * __Test__– Does the ‘Enter’ key on the keyboard replicate a click of the ‘Start Game’ button?   
+__Result__– The result was as expected.
+
+* __Test__– Is the user required to only enter letters  in the name field?   
+__Result__– The result was as expected.
+
+* __Test__– If the user enters something other than letters in the name field, are shown the alert box?   
 __Result__– The result was as expected.
 
 * __Test__– When clicked, does the ‘Start Game’ button launch the main game?   
@@ -161,7 +176,6 @@ __Result__– The result was as expected.
 
 * __Test__- Does the game screen appear when the web page is loaded, and is the layout as expected?   
 __Result__– The result was as expected.
-
 
 
 #### Does the game logo and the 3 navigation items appear and perform as expected?
