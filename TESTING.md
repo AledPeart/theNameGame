@@ -1,6 +1,6 @@
 # The Name Game - Testing 
 
-[README.md](https://github.com/AledPeart/MS1-Aled-Garfield-Photography/blob/master/README.md)
+[README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md)
 
 I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and (***INSERT JS TESTING HERE). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
@@ -135,7 +135,6 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 ## Manual Functionality Testing
 
 ### Start Screen
-
 
 #### Does the start screen load and perform as expected?
 
@@ -530,7 +529,10 @@ I also tested my JSON file using [JSONLint] (https://jsonlint.com/) which confir
 
 At the time of submission the results are showing no errors (see screenshots below)
 
-![index.html](…)      
+![index.html](…)  
+
+
+![404.html](…)  
 
 
 ![style.css](…)         
@@ -542,7 +544,7 @@ At the time of submission the results are showing no errors (see screenshots bel
 ![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)   
 
 
-![404.html](…)   
+ 
 
 
 ## Lighthouse Testing
