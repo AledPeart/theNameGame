@@ -138,7 +138,14 @@ The site is designed to be fully responsive and for the layout to adapt dependin
 
 
 
-## Wireframes 
+## Wireframes
+These are my wireframes, they were created using [Balsamiq](https://balsamiq.com/) and show the planned layout and how it will differ at different screen widths.   
+
+* [Start Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/1%20start%20game%20page.png)     
+* [Game Page - Mobile](https://github.com/AledPeart/theNameGame/blob/master/assets/images/2%20main%20page%20-%20mobile.png)     
+* [Game Page - Medium](https://github.com/AledPeart/theNameGame/blob/master/assets/images/3%20main%20page%20-%20med.png)     
+* [Game Page - Large](https://github.com/AledPeart/theNameGame/blob/master/assets/images/4%20main%20page%20-%20large.png)     
+* [End Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/5%20end%20page.png)     
 
 ### Layout Design
 
@@ -168,7 +175,7 @@ The site is designed to be fully responsive and for the layout to adapt dependin
 
 
 ## Testing
-You can view my separate TESTING.md file [here]()
+You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
 
 
 ## Deployment
