@@ -107,8 +107,29 @@ I made a decision to use as much 'vanilla' Javascript as possible when building 
 * Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept numbers or only blank spaces, and users will be alerted if they have not met those conditions. When the conditions have been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
 
 ### Main Page
+The main game page has 3 distinct areas, the ‘game area’ the ‘help area’ and the ‘scoreboard’. The game logo will be displayed in the top left corner of the screen and in the top right hand corner there are 3 menu buttons. I chose to use icons for these rather than text as I feel it keeps the design clean and more importantly they are intuitive and accessible for the intended audience. The first icon allows users to toggle the game sounds on and off. The second icon launches a modal, which contains more detailed guidance on how to play the game. The third Icon allows users to reset the game, and takes them back to the start page. 
+
+The game area displays an image to the user, and gives them a corresponding question e.g. an image of a cat, and the question “Can you name this animal?” Below the question is a clearly defined input field for the user to type and submit their answer. It is worth noting here that I am aware it is good programming practice to validate or require all user inputs, however on this occasion I deliberately chose not to require the user to submit an answer. In the context of this game, and it’s users, I do think it is beneficial that the users – if they do not know the answer and have not been able to decide upon an answer after viewing the clues, be compelled to submit an answer. I see that as a poor user experience. There is additional functionality that I would like to add here, but unfortunately it was beyond the scope and time constraints of this project. I discuss these in more detail in the ‘Features left to Implement’ section. 
+
+When a user submits their answer, it is first converted into lowercase (so that the use of capitals does not affect the answer) and checked against the correct answer. The user is then given audio and visual feedback on whether the answer was correct. The feedback given is in the form of a brief audio clip, and a green tick symbol/red cross symbol, which appears briefly on the screen. The answer is then logged as correct or incorrect on the scoreboard, and the next question is loaded.
+
+If the user is struggling to name the image they can access up to 3 clues from the ‘help’ area by clicking on the corresponding button, which then reveals the clue underneath. The buttons contain text and a symbol to reinforce their meaning. The 3 clues are quite distinct and correspond to each specific question:
+
+* Visual Clues - show the user the first letter of the correct answer with the rest of the letters replaced with a dash, similar to a crossword answer.
+* Audio Clues - play the user a short audio description of the item in the picture.
+* Choice Clues – Show the user 3 possible answers, one of which is the correct answer.
+
+The clues have been specifically designed to stimulate the different neural pathways that aphasia can affect. Knowing which clues the user was reliant upon can help the therapist to identify patterns and indicate which areas a therapy plan should focus on.
 
 ### End Page
+
+Once the user has answered 10 questions, the end page is loaded. A message is displayed informing the user that the game has ended, and the user is congratulated and given their score out of 10. The user message is adapted depending on the users score to offer a more individual e=experience to the user. There is also a ‘Play Again’ button displayed that resets the game and takes the user back to the start page.
+
+### Responsiveness
+
+The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Here I will summarize how the layout described above will adapt on smaller screen sizes.
+
+
 
 
 
