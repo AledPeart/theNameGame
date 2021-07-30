@@ -99,6 +99,15 @@ Consideration is given to the fact that users of the game will have suffered som
 
 *	Design adheres to current norms and conventions e.g clear navigation icons.
 
+## Wireframes
+These are my initial wireframes, they were created using [Balsamiq](https://balsamiq.com/) and show the planned layout and how it will differ at different screen widths.   
+
+* [Start Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/1%20start%20game%20page.png)     
+* [Game Page - Mobile](https://github.com/AledPeart/theNameGame/blob/master/assets/images/2%20main%20page%20-%20mobile.png)     
+* [Game Page - Medium](https://github.com/AledPeart/theNameGame/blob/master/assets/images/3%20main%20page%20-%20med.png)     
+* [Game Page - Large](https://github.com/AledPeart/theNameGame/blob/master/assets/images/4%20main%20page%20-%20large.png)     
+* [End Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/5%20end%20page.png)     
+
 ## Design Layout and Features
 
 I made a decision to use as much 'vanilla' Javascript as possible when building this game. I felt that I had a better understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
@@ -131,25 +140,20 @@ Once the user has answered 10 questions, the end page is loaded. A message is di
 
 ### Responsiveness
 
-The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Here I will summarize how the layout described above will adapt on smaller screen sizes.
+The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Utilizing the bootstrap classes, the layout of the site adapts to smaller screens by progressively stacking the content into single columns as the screen size decreases. This is most prevalent on the main game page when the screen width drops below 992px wide. At this point the logo and the icons stack on top of each other in a single columns, as do the picture box and the question section. At the bottom of the layout the help section is stacked on top of the scoreboard.
 
-
-
-
-
-
-## Wireframes
-These are my wireframes, they were created using [Balsamiq](https://balsamiq.com/) and show the planned layout and how it will differ at different screen widths.   
-
-* [Start Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/1%20start%20game%20page.png)     
-* [Game Page - Mobile](https://github.com/AledPeart/theNameGame/blob/master/assets/images/2%20main%20page%20-%20mobile.png)     
-* [Game Page - Medium](https://github.com/AledPeart/theNameGame/blob/master/assets/images/3%20main%20page%20-%20med.png)     
-* [Game Page - Large](https://github.com/AledPeart/theNameGame/blob/master/assets/images/4%20main%20page%20-%20large.png)     
-* [End Page](https://github.com/AledPeart/theNameGame/blob/master/assets/images/5%20end%20page.png)     
-
-### Layout Design
+There are also some design changes that happen at this breakpoint. The correct and incorrect graphic icons are significantly reduced in size, and are both initially displayed. When the user submits their answer the appropriate icon is removed and then revealed again when the next question loads. This change was made in order to keep as much of the screen visible on a mobile device as possible and to prevent boxes from jumping about, which made for a poor user experience. A further design change takes place when the screen width is below 576px, the picture reduces in size and the question text is also reduced. The question text, rather than changing with each picture, remains static - “What can you see? Type your answer below” – again this is to keep as much of the screen visible on a mobile device as possible to make for a better user experience.
 
 ### Functionality Design
+
+A great piece of advice from my mentor Can Sucullu, was to really plan out how I would approach building this game. Being a Javascript novice it was difficult to know here to begin, but Can advised that like most things I would need a beginning, middle and an end. Then, to really think about what the game needed to do and how I would use Javascript to achieve this, and to break everything down in to steps. Using Balsamiq I created the flow chart below, and it proved an invaluable blueprint for building the game. Focusing on small ‘chunks’ at a time allowed me to slowly piece together my code without becoming overwhelmed.
+
+![Functional Design Diagram](https://github.com/AledPeart/theNameGame/blob/master/assets/images/functional%20game%20design.png)
+
+The steps laid out in the diagram are tied closely to the layout and design as I have detailed above so I will not repeat that here. From a functional perspective, I opted to use a global counter, which is set to 0 initially and then increments by +1 each time the user submits an answer. The global counter is used to reference and load the questions, images, clues and answers, which I have stored locally in a JSON file. I chose to use a JSON as opposed to an array it my Javascript file as it is deemed to be more stable and scalable in the future.
+An ‘event-listener’ has been to set for each click of the submit answer button, which triggers a function to check the users answer, and to set the next question. The answer is checked against the corresponding answer in the JSON file using the global counter as a reference. An ‘if ‘statement has been set and if the user answer is correct, a series of functions are triggered to display the correct answer icon, play the correct answer audio clip and to increment the correct score total on the scoreboard. Alternatively if the user answer is not correct a series of functions are triggered to display the incorrect answer icon, play the incorrect answer audio clip and to increment the incorrect score total on the scoreboard. A timeout function has been set here to allow the answer to be checked before the next question function is run. Within this function another ‘if’ statement checks that the global counter is less than 10, if it is then the above cycle is repeated. When the counter reaches 10 the game has ended and the user is taken to the end game screen, and the end of game message is displayed.
+The content of the clues in the help section have also been linked to the global counter, and they are revealed to the user on clicking the relevant help buttons.
+
 
 
 ## Features left to implement
