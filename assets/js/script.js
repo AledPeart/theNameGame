@@ -1,5 +1,5 @@
 /*jshint esversion: 6 */ //to correct JSHint issue with using 'let'
-/* global questions:true */ //workaround which shows JSHint that questions is a global variable. More detail in README.md
+/* global questions:true */ //workaround which shows JSHint that questions is a global variable. More detail in the Bugs section of README.md
 /* jshint expr: true */ 
 
 //***START PAGE BOX***
@@ -63,11 +63,11 @@ function checkInput() {
 }
 
 
-//**SOURCE https://stackoverflow.com/questions/23476532/check-if-string-contains-only-letters-in-javascript */ **BUG**
+//**SOURCE https://stackoverflow.com/questions/23476532/check-if-string-contains-only-letters-in-javascript 
 function verify() {
   let usersName = document.getElementById("enter-name-box").value;
   if (!/[a-zA-Z]/.test(usersName)) {
-    alert("Please enter your name");
+    alert("Please try again, but using only letters.");
     document.getElementById("enter-name-box").focus();
   } else {
     clickSound.play();
@@ -94,7 +94,7 @@ let submitButton = document.getElementById("submit-button");
 //Onclick event listener for the submit button
 submitButton.onclick = function () {
   checkAnswer();
-  setTimeout(function () { //delays the counter and increment functions until the correct/incorrect animations have run
+  setTimeout(function () { //delays the counter and next question functions until the correct/incorrect animations have run
     incrementCounter();
     setNextQuestion();
   }, 500);
@@ -221,7 +221,7 @@ let visualHelpButton = document.getElementById("visual-help-button");
 visualHelpButton.onclick = function () {
   showVisualClue();
   clickSound.play();
-  this.disabled = true;
+    
 };
 
 function showVisualClue() {
@@ -257,7 +257,7 @@ function audioPause() {
   let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
 
   cluePlayer.pause;
-  cluePlayer.currentTime = 0;
+  // cluePlayer.currentTime = 0;
 }
 
 //***multi choice clue***
@@ -316,73 +316,6 @@ function endGame() {
 
 
 
-// question bank stored as an array ***DELETE ONCE JSON FILE IS WORKING***
-// var questions = [
-//     {      
-//           question: "Can you name this animal?",
-//           image: "assets/images/cat.jpg",
-//          answer: "cat",
-//          visualclue: "C _ _",
-//          audioclue: "assets/audio/cat-audio.mp3"
-//     },
-//     {
-//         question: "What do you see in the picture?",
-//         image: "assets/images/car.jpg",
-//         answer: "car",
-//         visualclue: "C _ _",
-//         audioclue: "assets/audio/file_example_MP3_700KB.mp3"
-//     },
-//     {
-//         question: "Can you name this object?",
-//         image: "assets/images/ball.jpg",
-//          answer: "ball",
-//          visualclue: "B _ _ _"
-//     },
-//     {      
-//         question: "Can you name this fruit?",
-//         image: "assets/images/orange.png",
-//        answer: "orange",
-//        visualclue: "O _ _ _ _ _"
-//   },
-//   {      
-//     question: "What do you see in the picture?",
-//     image: "assets/images/flower.jpg",
-//    answer: "flower",
-//    visualclue: "F _ _ _ _ _"
-// },
-// {
-//     question: "Can you name this object?",
-//     image: "assets/images/train.jpg",
-//      answer: "train",
-//      visualclue: "T _ _ _ _"
-// },
-// {      
-//     question: "What do you see in the picture?",
-//     image: "assets/images/moon.jpg",
-//    answer: "moon",
-//    visualclue: "M _ _ _"
-// },
-// {      
-//     question: "Can you name this animal?",
-//     image: "assets/images/rabbit.jpg",
-//    answer: "rabbit",
-//    visualclue: "R _ _ _ _ _"
-// },
-// {      
-//     question: "What do you see in the picture?",
-//     image: "assets/images/hat.jpg",
-//    answer: "hat",
-//    visualclue: "H _ _"
-// },
-// {
-//     question: "Can you name this object?",
-//     image: "assets/images/pencil.jpg",
-//      answer: "pencil",
-//      visualclue: "P _ _ _ _ _"
-// }
-// ]
-
-
 //following code enables the user to submit the answer using the enter button on the keyboard ***CREDIT***W3Schools**
 
 let answerField = document.getElementById("answer-field"); // targets the answer field
@@ -402,15 +335,6 @@ nameField.addEventListener("keyup", function (event) {
     document.getElementById("start-btn").click();
   }
 });
-
-//same as above but for play again button ***CREDIT***W3Schools** not working
-
-// endBtn.addEventListener("keyup", function(event) {
-//   if (event.keyCode === 13) { 
-//     event.preventDefault();
-//     document.getElementById("end-btn").click();
-//   }
-// });
 
 // ***TURN ON MUTE BUTTON*** - source https://forums.tumult.com/t/muting-audio-or-video/1705
 
