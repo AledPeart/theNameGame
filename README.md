@@ -158,14 +158,34 @@ The content of the clues in the help section have also been linked to the global
 
 ## Features left to implement
 
+There are a number of features that I would like to add to the project. It is really exciting that there is so much scope to develop and improve this project.
+
+* Currently there are only 10 questions stored in the JSON file. I would like to expand this; furthermore I would like to develop categories of questions e.g. animals, weather, colors, foods etc.
+
+*****Is it likely that someone would have difficulty with a particular type of object Cat?*****
+
+* I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on how the users previous answers.
+
+* I would like users to be able to create an account, which stores information such as scores and the number and types of clues they needed in a database. This could then, with permission, be accessed and used by a therapist to help formulate a therapy plan for the user.
+
+* Expand the help section. I would like there to be more clues and hints available, and also for users to access a second clue of a certain type if they need to. This could also be written so that progressively easier clues are offered if the user needs them. As an example the visual clue could reveal an additional letter of the answer with each click of a button.
+
+* I mentioned in the design and layout section that at this time I decided to allow the users to submit a blank answer if they so chose, and my reasons for doing so. It is intended that future functionality will direct users who do not submit an answer to try a clue in the help section initially, and if they have already done so, that this is recorded for the therapist. To take this further I intend for the visual (crossword style) clues described above to appear in the answer field, if needed, to aid users further.
+
+* There is scope to offer the game in a number of different languages to cater to as many users as possible.
+
+* I would like to include more information, articles, videos etc. and provide more external links to useful sites and resources to help people who are afflicted by aphasia. 
+
+
 
 ## Technologies Used
 
-* HTML 5 – page content and structure
+* HTML 5 – Page content and structure
 * CSS3 – Styling
-* [JQuery](https://jquery.com/) - 
+* Javascript - interative programming
+* [JQuery](https://jquery.com/) - DOM manipulation
 * [Popper.js](https://popper.js.org/) - 
-* [Bootstrap](https://getbootstrap.com/) (v4.3.1) – Navigation bar, page layout and responsive design.
+* [Bootstrap](https://getbootstrap.com/) (v4.3.1) – page layout and responsive design.
 * [Git](https://git-scm.com/) - Version control tracking
 * [Github](https://github.com/) - Project hosting
 * [Gitpod](https://www.gitpod.io/) - Development
@@ -175,8 +195,11 @@ The content of the clues in the help section have also been linked to the global
 * [Google Fonts](https://fonts.google.com/) – Typography
 * [Font Awesome](https://fontawesome.com/) – Icons
 * [Photoshop](https://www.photoshop.com/en) - Image re-sizing
-
-
+* [W3](https://validator.w3.org/) - HTML Code validation
+* [we](https://jigsaw.w3.org/css-validator/) - CSS Code validation
+* [JSHint](https://jshint.com/)- JS Code validation
+* [JSONLint](https://jsonlint.com/)- JSON Code validation
+* [AutoPrefixer](https://autoprefixer.github.io/) - To ensure correct and current CSS prefixes are used.
 
 ## Testing
 You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
@@ -217,16 +240,34 @@ Full details of these summarised steps can be found [here](https://docs.github.c
 ## Credits
 
 * This project was created from a [Code Institute](https://codeinstitute.net/) student template
-* [Bootstrap](https://getbootstrap.com/) Components used for the navigation bar, form, and the Bootstrap Grid system was used to streamline layouts and responsive design.
-* Ideas and knowledge gleamed from 
+* [Bootstrap](https://getbootstrap.com/) Modal, buttons, and the Bootstrap Grid system was used to streamline layouts and responsive design.
+* Ideas and knowledge gleamed from: 
   * [W3 Schools](https://www.w3schools.com/)
   * [CSS-Tricks](https://css-tricks.com/)
   * [Bootstrap](https://getbootstrap.com/)
+  * [Stack Overflow](https://stackoverflow.com/) - (specific credits have been added as comment in the code)
+  * [MDN](https://developer.mozilla.org/en-US/)
   * Duckett, J. 2011. HTML and CSS: Design and Build Websites. John Wiley & Sons Inc.
-* Fonts [Google Fonts](https://fonts.google.com/)
-* Icons [Font Awesome](https://fontawesome.com/)
+  * Duckett, J. 2014. Javascript & JQuery. John Wiley & Sons Inc.
+  * [Stroke Association](https://www.stroke.org.uk) - Information regarding aphasia.
+
 
 ## Media and Content
+
+* Fonts [Google Fonts](https://fonts.google.com/)
+* Icons [Font Awesome](https://fontawesome.com/)
+* Images[Pixy](https://pixy.org/)
+* Images[Freepik](https://www.freepik.com/)
+* Logo[Looka](https://looka.com/)
+* Logo[Flaticon](https://www.flaticon.com/)
+* Audio [Zapsplat](https://www.zapsplat.com/)
+* Color choice [Colorhunt](https://colorhunt.co/)
+
+## Acknowledgements
+
+* My mentor, Can Sucullu - for his knowledge, patience and guidance.
+* My wife Catrin, for the original idea, recording the descriptive audio files and for her input as a Speech Therapist.
+* Code institure tutors, for their help and guidance (at all hours of the day/night).
 
 
 
