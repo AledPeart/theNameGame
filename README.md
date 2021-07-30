@@ -236,6 +236,18 @@ Full details of these summarised steps can be found [here](https://docs.github.c
 
 ## Bugs
 
+I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing.
+
+* Multi Choice Clue
+The multiple-choice clue was appearing multiple times when clicked; essentially the on-click function was being run over and over again, causing this to happen. 
+
+![bug screenshot 1](https://github.com/AledPeart/theNameGame/blob/master/assets/images/bug1.png)   
+
+In order to fix this I was able to find a way to disable the button after it had been clicked once (on Stack overflow – full credit in the code), by using
+```this.disabled = true;```  
+This solution works well as the user has already accessed the clue and the code is reset for the next question
+
+
 
 ## Credits
 
@@ -267,7 +279,7 @@ Full details of these summarised steps can be found [here](https://docs.github.c
 
 * My mentor, Can Sucullu - for his knowledge, patience and guidance.
 * My wife Catrin, for the original idea, recording the descriptive audio files and for her input as a Speech Therapist.
-* Code institure tutors, for their help and guidance (at all hours of the day/night).
+* Code institute tutors, for their help and guidance (at all hours of the day/night).
 
 
 
