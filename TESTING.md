@@ -1,6 +1,6 @@
 # The Name Game - Testing 
 
-[README.md](https://github.com/AledPeart/MS1-Aled-Garfield-Photography/blob/master/README.md)
+[README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md)
 
 I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and (***INSERT JS TESTING HERE). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
@@ -135,7 +135,6 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 ## Manual Functionality Testing
 
 ### Start Screen
-
 
 #### Does the start screen load and perform as expected?
 
@@ -480,5 +479,88 @@ __Result__– The result was as expected.
 
 * __Test__– The text boxes should be stacked appropriately in 3 columns and adhere to the intended design   
 __Result__– The result was as expected.
+
+
+## Cross-Browser Testing
+
+I have tested this web application across different browsers at different device sizes. The other browsers I have tested are Safari and Firefox, which combined with Chrome, account for almost 90% of browser usage (source: (www.browserstack.com) I tested the site on these browsers, and on the physical devices, which I have access to, namely:
+
+*	A large screen desktop
+*	Laptop
+*	Tablet
+*	Mobile device
+
+I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below:
+
+### Large Screen Desktop
+
+__Firefox__ – No issues found   
+__Safari__ – No issues found 
+
+### Laptop
+
+__Firefox__ – No issues found    
+__Safari__ – No issues found
+
+### Tablet 
+
+__Firefox__ – No issues found   
+__Safari__ No issues found
+
+### Mobile 
+
+__Firefox__ – No issues found  
+__Safari__ – No issues found  
+
+
+## HTML, CSS and JavascriptValidation
+
+While developing I have regularly validated my HTML and CSS using [W3C Markup](https://validator.w3.org/), [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSHint]( https://jshint.com/).  
+Errors and Warnings that were highlighted to me that I addressed during the project were:
+* Missing closing </div> tags
+* __section__ tags that did not have an __h1__ or an __h2__ as a direct child
+* Incorrect use of __type__ attribute for audio files
+*Missing __alt__ tag on an image
+* Missing __:__ and __}__ in my __style.css__ file
+* Missing and unnecessary semicolons in my __script.js__ file
+* An unused, and an undefined variable in my __script.js__ file
+
+I also tested my JSON file using [JSONLint] (https://jsonlint.com/) which confirmed it to be valid JSON.
+
+At the time of submission the results are showing no errors (see screenshots below)
+
+![index.html](…)  
+
+
+![404.html](…)  
+
+
+![style.css](…)         
+
+
+![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)  
+
+
+![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)   
+
+
+ 
+
+
+## Lighthouse Testing
+
+I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The initial test gave me the following results:   
+
+![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-before.png)   
+
+I implemented the following recommendations made in the report:
+1. Increased the contrast and visibilty of external links by darkening the colour and underlining them
+2. Adding __rel="noopener"__ to external links in order to reduce the site's  vulnerabilit
+Following these changes I re-ran the Lighthouse tests and the improved scores can be seen below   
+
+![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-after.png)
+
+## Test Results and Bugs
+
 
 
