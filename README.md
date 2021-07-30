@@ -238,15 +238,81 @@ Full details of these summarised steps can be found [here](https://docs.github.c
 
 I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing.
 
-* Multi Choice Clue
+**Multi Choice Clue**    
 The multiple-choice clue was appearing multiple times when clicked; essentially the on-click function was being run over and over again, causing this to happen. 
 
 ![bug screenshot 1](https://github.com/AledPeart/theNameGame/blob/master/assets/images/bug1.png)   
 
-In order to fix this I was able to find a way to disable the button after it had been clicked once (on Stack overflow – full credit in the code), by using
-```this.disabled = true;```  
-This solution works well as the user has already accessed the clue and the code is reset for the next question
+In order to fix this I was able to find a way to disable the button after it had been clicked once (on Stack overflow – full credit in the code), by using    
 
+```this.disabled = true;```       
+
+This solution works well as the user has already accessed the clue and the code is reset for the next question.
+
+**Audio File**
+I discovered that the audio clue file would not automatically stop when the user had submitted an answer. This is not an issue if the user waits until the audio has finished before submitting an answer but if they submit an answer before the audio has finished, the next question is set and all the while the audio continues to play. I was able to fix this issue by adding writing following function to my code, which was adapted from a similar issue I discovered on Stack Overflow (full credit in the code). 
+
+```
+function audioPause() {
+  let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
+  cluePlayer.pause;
+}
+```
+
+This function has been set to run when the user clicks the button to submit their answer, and effectively pauses the audio before it is reset when the next question loads.
+
+**Username Validation**
+
+The username field on the start game page requires the user to submit an entry otherwise the submit button does not activate. However during testing I discovered that users were able to enter a blank space, and unwittingly bypass those controls. The reason being that the code that controls this: 
+```
+if ((nameBox).value == "") {
+    startBtn.disabled = true;
+  ```
+    
+ recognises a blank space as not equaling _""_. In order to ensure that users were not able to do this I created a new function to verify the users input:
+ ```
+ function verify() {
+  let usersName = document.getElementById("enter-name-box").value;
+  if (!/[a-zA-Z]/.test(usersName)) {
+    alert("Please try again, but using only letters.");
+    document.getElementById("enter-name-box").focus();
+  } else {
+    clickSound.play();
+    startGame();
+    displayUserName();
+  }
+}
+```
+This function uses an if statement to test that the username entered only contains letters between _a-z_ (and recognises uppercase too). If it does not the user is alerted that they should try again, only using letters, else the subsequent functions run, and the user is taken to the main game page. (the function was a mended from a similar one on Stack Overflow, full credit in the code)
+
+**Image Load Speed**
+
+I discovered that y questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds.
+
+**Cursor Issue on Mobile devices**
+
+When testing on mobile devices I noticed that the following code to place the cursor automatically in the appropriate answer field was not having the desired effect.
+
+```document.getElementById("enter-name-box").focus();```
+
+This is a nice feature when the user is using a keyboard and makes for a pleasant user experience, but on mobile devices this would automatically load the devices screen keyboard which would cover the intended entry field making for a frustrating experience. I decided to disable this feature on mobile devices, as I feel when using a handheld device people are much more accustomed to using the screen and placing the cursor where they want it, and overall it made for a better experience. To achieve this I added the following if statement to the existing code:
+```
+if (screen.width >= 576) {
+    document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
+  }
+```
+**JSHint**
+
+When validating my Javascript code in JSHint, I was given a number of warnings regarding 
+* using _let_ to define variables 
+* issues with global variables being seen as undefined
+* the use of expressions within a function
+
+After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code.
+
+/*jshint esversion: 6 */ 
+/* global questions:true */ 
+/* jshint expr: true */ 
 
 
 ## Credits
