@@ -4,7 +4,7 @@
           "image": "assets/images/cat.jpg",
          "answer": "cat",
          "visualclue": "C _ _",
-         "audioclue": "assets/audio/cat-audio.ogg",
+         "audioclue": "assets/audio/file_example_MP3_700KB.mp3",
          "multichoice": [
              "Dog",
              "Cat",
