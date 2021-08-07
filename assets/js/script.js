@@ -44,7 +44,7 @@ function resize() {
   }
 }
 
-// ***Check for input Function ensures user must enter a name***
+// ***Check for input Function ensures user must enter a name, and not a blank space***
 
 
 //**SOURCE https://stackoverflow.com/questions/7741123/html5-input-type-required-without-a-form-does-it-work */
