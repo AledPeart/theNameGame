@@ -4,7 +4,7 @@
           "image": "assets/images/cat.jpg",
          "answer": "cat",
          "visualclue": "C _ _",
-         "audioclue": "assets/audio/file_example_MP3_700KB.mp3",
+         "audioclue": "assets/audio/cat-audio.mp3",
          "multichoice": [
              "Dog",
              "Cat",
@@ -16,7 +16,7 @@
         "image": "assets/images/car.jpg",
         "answer": "car",
         "visualclue": "C _ _",
-         "audioclue": "assets/audio/car-audio.ogg",
+         "audioclue": "assets/audio/car-audio.mp3",
          "multichoice": [
             "Bus",
             "Lorry",
@@ -28,7 +28,7 @@
         "image": "assets/images/ball.jpg",
          "answer": "ball",
          "visualclue": "B _ _ _",
-         "audioclue": "assets/audio/ball-audio.ogg",
+         "audioclue": "assets/audio/ball-audio.mp3",
          "multichoice": [
             "Ball",
             "Club",
@@ -40,7 +40,7 @@
         "image": "assets/images/orange.png",
        "answer": "orange",
        "visualclue": "O _ _ _ _ _",
-         "audioclue": "assets/audio/orange-audio.ogg",
+         "audioclue": "assets/audio/orange-audio.mp3",
          "multichoice": [
             "Pear",
             "Orange",
@@ -52,7 +52,7 @@
     "image": "assets/images/flower.jpg",
    "answer": "flower",
    "visualclue": "F _ _ _ _ _",
-    "audioclue": "assets/audio/flower-audio.ogg",
+    "audioclue": "assets/audio/flower-audio.mp3",
     "multichoice": [
         "Tree",
         "Bush",
@@ -64,7 +64,7 @@
     "image": "assets/images/train.jpg",
      "answer": "train",
      "visualclue": "T _ _ _ _",
-    "audioclue": "assets/audio/train-audio.ogg",
+    "audioclue": "assets/audio/train-audio.mp3",
     "multichoice": [
         "Train",
         "Boat",
@@ -76,7 +76,7 @@
     "image": "assets/images/moon.jpg",
    "answer": "moon",
    "visualclue": "M _ _ _",
-    "audioclue": "assets/audio/moon-audio.ogg",
+    "audioclue": "assets/audio/moon-audio.mp3",
     "multichoice": [
         "Moon",
         "Star",
@@ -88,7 +88,7 @@
     "image": "assets/images/rabbit.jpg",
    "answer": "rabbit",
    "visualclue": "R _ _ _ _ _",
-    "audioclue": "assets/audio/rabbit-audio.ogg",
+    "audioclue": "assets/audio/rabbit-audio.mp3",
     "multichoice": [
         "Squirrel",
         "Rabbit",
@@ -100,7 +100,7 @@
     "image": "assets/images/hat.jpg",
    "answer": "hat",
    "visualclue": "H _ _",
-    "audioclue": "assets/audio/hat-audio.ogg",
+    "audioclue": "assets/audio/hat-audio.mp3",
     "multichoice": [
         "Hat",
         "Scarf",
@@ -112,7 +112,7 @@
     "image": "assets/images/pencil.jpg",
      "answer": "pencil",
      "visualclue": "P _ _ _ _ _",
-    "audioclue": "assets/audio/pencil-audio.ogg",
+    "audioclue": "assets/audio/pencil-audio.mp3",
     "multichoice": [
         "Paint",
         "Chalk",
