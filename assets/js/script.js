@@ -6,6 +6,7 @@
 
 window.onload = function () {
   document.getElementById("enter-name-box").focus(); // Puts the cursor in the answer field
+  document.getElementById("enter-name-box").value = ""; // Enures the box is empty (Firefox bug fix, user's name from previous game was being loaded)
 };
 
 
