@@ -68,7 +68,7 @@ function checkInput() {
 function verify() {
   let usersName = document.getElementById("enter-name-box").value;
   if (!/[a-zA-Z]/.test(usersName)) {
-    alert("Please try again, but using only letters.");
+    alert("Please enter your name in the box.");
     document.getElementById("enter-name-box").focus();
   } else {
     clickSound.play();
@@ -247,6 +247,7 @@ audioHelpButton.onclick = function () {
 function showAudioClue() {
   document.getElementById("audio-clue").classList.remove("box-hide");
   document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
+  document.getElementById("audio-href").innerHTML = questions[globalCounter].audioclue;
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
