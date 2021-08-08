@@ -200,7 +200,7 @@ There are a number of features that I would like to add to the project. It is re
 * CSS3 – Styling
 * Javascript - interative programming
 * [JQuery](https://jquery.com/) - DOM manipulation
-* [Popper.js](https://popper.js.org/) - 
+* [Popper.js](https://popper.js.org/) - Dynamic positioning (Bootstrap)
 * [Bootstrap](https://getbootstrap.com/) (v4.3.1) – page layout and responsive design.
 * [Git](https://git-scm.com/) - Version control tracking
 * [Github](https://github.com/) - Project hosting
