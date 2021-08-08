@@ -5,450 +5,431 @@
 * Browsers: last 4 version
 */
 
-    /***** GENERIC/SITE WIDE *****/
-
-    body {
-        background-color: #E7E6E1;
-    }
-
-    .box-hide {
-        display: none;
-    }
-
-    .box-cover {
-        visibility: hidden;
-    }
-
-    .btn {
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    a {
-        color: darkblue;
-        text-decoration: underline;
-    }
-
-    /***** LOGO/HEADER AREA *****/
-    .bulb-logo {
-        background-color: #E7E6E1;
-        height: 80px;
-        width: 80px;
-    }
-
-    .game-logo {
-        font-family: 'Jomhuria', cursive;
-        font-size: 60px;
-        padding-left: 20px;
-        text-transform: uppercase;
-    }
-
-    .btn-icon {
-        font-size: 2.25rem;
-    }
-
-    #mute-button {
-        font-size: 3rem;
-    }
-
-    .mute-btn-faded {
-        opacity: 40%;
-    }
-
-    #myModalLabel {
-        font-family: 'Jomhuria', cursive;
-        font-size: 3.5rem;
-        margin-left: auto;
-        text-transform: uppercase;
-    }
-
-    /**** media query to ensure that on mobile devices the logo text does not wrap****/
-    @media screen and (max-width: 776px) {
-
-        #enter-name-text {
-            font-size: 2rem;
-        }
-
-        .game-logo {
-            font-size: 3rem;
-            padding-left: 0;
-        }
-
-        .btn-icon {
-            font-size: 1rem;
-        }
-
-        #mute-button {
-            font-size: 1.5rem;
-        }
-    }
-
-    /***** START BOX *****/
-    .enter-name {
-        font-family: 'Jomhuria', cursive;
-        font-size: 2.5rem;
-        text-transform: uppercase;
-    }
-
-    .intro-text {
-        padding: 20px;
-        font-size: 1.25rem;
-    }
-
-    @media screen and (max-width: 992px) {
-        .intro-text {
-            padding: 10px;
-            font-size: .75rem;
-        }
-    }
-
-
-    #enter-name-box {
-        max-width: 40%;
-    }
-
-    /**** media query to ensure that on mobile devices enter name field increases in size ****/
-    @media screen and (max-width: 760px) {
-        #enter-name-box {
-            max-width: 80%;
-        }
-    }
-
-    #start-btn {
-        margin-bottom: 20px;
-    }
-
-    /***** MAIN GAME *****/
-
-    .page-box {
-        border: 5px solid #ffbe5c;
-    }
-
-    .game-section {
-        background-color: #E7E6E1;
-        padding: 20px;
-        padding-bottom: 50px;
-        border-radius: 10px;
-    }
-
-    /**** media query to ensure that on mobile devices game section reduces in size****/
-    @media screen and (max-width: 576px) {
-        #answer-field {
-            margin: 5px !important;
-        }
-
-        .game-section {
-            height: 450px;
-            padding-top: 10px;
-        }
-
-        #enter-name-box {
-            max-width: 90%;
-        }
-
-        #submit-button {
-            margin-top: 5px;
-        }
-    }
-
-    .picture-box {
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        width: 85%;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1%;
-    }
-
-    /**** media query to ensure that on mobile devices the picture box height is responsive****/
-    @media screen and (max-width: 576px) {
-        .picture-box {
-            height: 250px;
-            width: 250px;
-        }
-    }
-
-    .question-image {
-        border-radius: 10px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #question-box {
-        font-size: 1.5em;
-        font-family: 'Roboto', sans-serif;
-    }
-
-    .question-box {
-        text-align: center;
-    }
-
-    .question-text {
-        font-family: 'Roboto', sans-serif;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 500;
-        line-height: normal;
-        margin-bottom: 0;
-        width: 80%;
-        background-color: #E7E6E1;
-        border-radius: 10px;
-    }
-
-    .answer-box {
-        background-color: #E7E6E1;
-        font-size: 1.5em;
-        border-radius: 10px;
-        -webkit-box-sizing: border-box;
-                box-sizing: border-box;
-        max-height: 350px;
-        max-width: 350px;
-        margin-left: auto;
-        margin-right: auto;
-        padding: 1%;
-    }
-
-    .tick-icon {
-        font-size: 10rem;
-        color: #50CB93;
-    }
-
-    .cross-icon {
-        font-size: 10rem;
-        color: #F54748;
-    }
-
-    .tick-icon-sm {
-        font-size: 3rem;
-        color: #50CB93;
-        padding: 5px;
-    }
-
-    .cross-icon-sm {
-        font-size: 3rem;
-        color: #F54748;
-        padding: 5px;
-    }
-
-    /**** media query to ensure that on mobile devices the icons are pushed up from the bottom of the screen****/
-    @media screen and (max-width: 576px) {
-
-        .tick-icon-sm,
-        .cross-icon-sm {
-            margin-bottom: 15px;
-        }
-    }
-
-    .answer-field {
-        background-color: #f9f9f9;
-        border: 2px solid #ffc107;
-    }
-
-    .btn-enter {
-        margin: 20px;
-    }
-
-    .horizontal-rule {
-        border-top: 3px solid #ffc107;
-        width: 50%;
-    }
-
-    /***** HELP SECTION *****/
-    .bottom-section {
-        overflow: hidden;
-    }
-
-    .help-section {
-        background-color: #E7E6E1;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .help-section h1 {
-        font-family: 'Jomhuria', cursive, sans-serif;
-    }
-
-    .help-box {
-        background-color: #F9F9F9;
-        border-radius: 10px;
-        height: auto;
-        min-height: 25vh;
-    }
-
-    #multi-help-button {
-        margin-bottom: 10px;
-    }
-
-    .horizontal-rule-help {
-        color: #ffc107;
-        border: none;
-        border-top: 2px solid;
-        width: 10rem;
-    }
-
-    /**** media query to remove the hr from larger devices****/
-    @media screen and (min-width: 992px) {
-        .horizontal-rule-help {
-            display: none;
-        }
-    }
-
-    #visual-clue {
-        font-size: 1.5rem;
-        padding-top: 20px;
-    }
-
-    /****media query to remove padding on smaller devices - asthetic****/
-    @media screen and (max-width: 992px) {
-        #visual-clue {
-            padding-top: 0;
-            margin: 0;
-        }
-    }
-
-    #audio-clue {
-        max-width: 80%;
-        padding-top: 25px;
-    }
-
-    #multi-choice-clue {
-        font-size: 1.5rem;
-    }
-
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
-
-    li {
-        padding-top: 5px;
-    }
-
-    .clue-icon {
-        font-size: 1.5rem;
-    }
-
-    /***** SCORE SECTION *****/
-
-    #correct {
-        color: #50CB93;
-        font-size: 1.5rem;
-    }
-
-    #incorrect {
-        color: #F54748;
-        font-size: 1.5rem;
-    }
-
-    /**** media query to reduce text size on mobile devices****/
-    @media screen and (max-width: 760px) {
-        .scores>p {
-            font-size: 1rem;
-        }
-
-        #user-name {
-            font-size: 1rem;
-        }
-
-        #player {
-            font-size: 1rem;
-        }
-
-        #correct {
-            font-size: 1.25rem;
-        }
-
-        #incorrect {
-            font-size: 1.25rem;
-        }
-    }
-
-    .score-section {
-        background-color: #E7E6E1;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .score-section h1 {
-        font-family: 'Jomhuria', cursive;
-    }
-
-    .scores {
-        font-size: 1.5rem;
-    }
-
-    #user-name {
-        font-weight: 600;
-    }
-
-    .score-box {
-        background-color: #F9F9F9;
-        border-radius: 10px;
-        height: auto;
-        min-height: 25vh;
-    }
-
-    /***** END SECTION *****/
-
-    #end-box {
-        margin: auto;
-    }
-
-    #end-btn {
-        margin-bottom: 20px;
-    }
-
-    .end-bulb-logo {
-        background-color: #E7E6E1;
-        height: 80px;
-        width: 80px;
-    }
-
-    .end-game-logo {
-        font-family: 'Jomhuria', cursive;
-        font-size: 60px;
-        padding-left: 20px;
-        text-transform: uppercase;
-    }
-
-    .congrats-text {
+/***** GENERIC/SITE WIDE *****/
+
+body {
+    background-color: #E7E6E1;
+}
+
+.box-hide {
+    display: none;
+}
+
+.box-cover {
+    visibility: hidden;
+}
+
+.btn {
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+a {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/***** LOGO/HEADER AREA *****/
+.bulb-logo {
+    background-color: #E7E6E1;
+    height: 80px;
+    width: 80px;
+}
+
+.game-logo {
+    font-family: 'Jomhuria', cursive;
+    font-size: 60px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.btn-icon {
+    font-size: 2.25rem;
+}
+
+#mute-button {
+    font-size: 3rem;
+}
+
+.mute-btn-faded {
+    opacity: 40%;
+}
+
+#myModalLabel {
+    font-family: 'Jomhuria', cursive;
+    font-size: 3.5rem;
+    margin-left: auto;
+    text-transform: uppercase;
+}
+
+/**** media query to ensure that on mobile devices the logo text does not wrap****/
+@media screen and (max-width: 776px) {
+    #enter-name-text {
         font-size: 2rem;
     }
-
-    /**** media query to reduce text size on mobile devices****/
-    @media screen and (max-width: 576px) {
-        .end-game-logo {
-            font-size: 3rem;
-        }
-
-        .congrats-text {
-            font-size: 1.5rem;
-        }
+    .game-logo {
+        font-size: 3rem;
+        padding-left: 0;
     }
-
-     /***** 404 Page *****/
-
-    .not-found-heading{
-        font-size: 60px;
-        padding-left: 20px;
-        text-transform: uppercase;
+    .btn-icon {
+        font-size: 1rem;
     }
-    
-     .not-found-text{
-        font-size: 2.5rem;
-        text-transform: uppercase;
-     }
-
-      /**** media query to reduce text size on mobile devices****/
-    @media screen and (max-width: 576px) {
-        .not-found-heading{
-            font-size: 30px;
-        }
-
-        .not-found-text{
-            font-size: 15px;
-        }
+    #mute-button {
+        font-size: 1.5rem;
     }
-     
+}
+
+/***** START BOX *****/
+.enter-name {
+    font-family: 'Jomhuria', cursive;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.intro-text {
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 992px) {
+    .intro-text {
+        padding: 10px;
+        font-size: .75rem;
+    }
+}
+
+#enter-name-box {
+    max-width: 40%;
+}
+
+/**** media query to ensure that on mobile devices enter name field increases in size ****/
+@media screen and (max-width: 760px) {
+    #enter-name-box {
+        max-width: 80%;
+    }
+}
+
+#start-btn {
+    margin-bottom: 20px;
+}
+
+/***** MAIN GAME *****/
+
+.page-box {
+    border: 5px solid #ffbe5c;
+}
+
+.game-section {
+    background-color: #E7E6E1;
+    padding: 20px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+}
+
+/**** media query to ensure that on mobile devices game section reduces in size****/
+@media screen and (max-width: 576px) {
+    #answer-field {
+        margin: 5px !important;
+    }
+    .game-section {
+        height: 450px;
+        padding-top: 10px;
+    }
+    #enter-name-box {
+        max-width: 90%;
+    }
+    #submit-button {
+        margin-top: 5px;
+    }
+}
+
+.picture-box {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+/**** media query to ensure that on mobile devices the picture box height is responsive****/
+@media screen and (max-width: 576px) {
+    .picture-box {
+        height: 250px;
+        width: 250px;
+    }
+}
+
+.question-image {
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question-box {
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+}
+
+.question-box {
+    text-align: center;
+}
+
+.question-text {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0;
+    width: 80%;
+    background-color: #E7E6E1;
+    border-radius: 10px;
+}
+
+.answer-box {
+    background-color: #E7E6E1;
+    font-size: 1.5em;
+    border-radius: 10px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    max-height: 350px;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.tick-icon {
+    font-size: 10rem;
+    color: #50CB93;
+}
+
+.cross-icon {
+    font-size: 10rem;
+    color: #F54748;
+}
+
+.tick-icon-sm {
+    font-size: 3rem;
+    color: #50CB93;
+    padding: 5px;
+}
+
+.cross-icon-sm {
+    font-size: 3rem;
+    color: #F54748;
+    padding: 5px;
+}
+
+/**** media query to ensure that on mobile devices the icons are pushed up from the bottom of the screen****/
+@media screen and (max-width: 576px) {
+    .tick-icon-sm,
+    .cross-icon-sm {
+        margin-bottom: 15px;
+    }
+}
+
+.answer-field {
+    background-color: #f9f9f9;
+    border: 2px solid #ffc107;
+}
+
+.btn-enter {
+    margin: 20px;
+}
+
+.horizontal-rule {
+    border-top: 3px solid #ffc107;
+    width: 50%;
+}
+
+/***** HELP SECTION *****/
+.bottom-section {
+    overflow: hidden;
+}
+
+.help-section {
+    background-color: #E7E6E1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.help-section h1 {
+    font-family: 'Jomhuria', cursive, sans-serif;
+}
+
+.help-box {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    height: auto;
+    min-height: 25vh;
+}
+
+#multi-help-button {
+    margin-bottom: 10px;
+}
+
+.horizontal-rule-help {
+    color: #ffc107;
+    border: none;
+    border-top: 2px solid;
+    width: 10rem;
+}
+
+/**** media query to remove the hr from larger devices****/
+@media screen and (min-width: 992px) {
+    .horizontal-rule-help {
+        display: none;
+    }
+}
+
+#visual-clue {
+    font-size: 1.5rem;
+    padding-top: 20px;
+}
+
+/****media query to remove padding on smaller devices - asthetic****/
+@media screen and (max-width: 992px) {
+    #visual-clue {
+        padding-top: 0;
+        margin: 0;
+    }
+}
+
+#audio-clue {
+    max-width: 80%;
+    padding-top: 25px;
+}
+
+#multi-choice-clue {
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    padding-top: 5px;
+}
+
+.clue-icon {
+    font-size: 1.5rem;
+}
+
+/***** SCORE SECTION *****/
+#correct {
+    color: #50CB93;
+    font-size: 1.5rem;
+}
+
+#incorrect {
+    color: #F54748;
+    font-size: 1.5rem;
+}
+
+/**** media query to reduce text size on mobile devices****/
+@media screen and (max-width: 760px) {
+    .scores>p {
+        font-size: 1rem;
+    }
+    #user-name {
+        font-size: 1rem;
+    }
+    #player {
+        font-size: 1rem;
+    }
+    #correct {
+        font-size: 1.25rem;
+    }
+    #incorrect {
+        font-size: 1.25rem;
+    }
+}
+
+.score-section {
+    background-color: #E7E6E1;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.score-section h1 {
+    font-family: 'Jomhuria', cursive;
+}
+
+.scores {
+    font-size: 1.5rem;
+}
+
+#user-name {
+    font-weight: 600;
+}
+
+.score-box {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    height: auto;
+    min-height: 25vh;
+}
+
+/***** END SECTION *****/
+#end-box {
+    margin: auto;
+}
+
+#end-btn {
+    margin-bottom: 20px;
+}
+
+.end-bulb-logo {
+    background-color: #E7E6E1;
+    height: 80px;
+    width: 80px;
+}
+
+.end-game-logo {
+    font-family: 'Jomhuria', cursive;
+    font-size: 60px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.congrats-text {
+    font-size: 2rem;
+}
+
+/**** media query to reduce text size on mobile devices****/
+@media screen and (max-width: 576px) {
+    .end-game-logo {
+        font-size: 3rem;
+    }
+    .congrats-text {
+        font-size: 1.5rem;
+    }
+}
+
+/***** 404 Page *****/
+.not-found-heading {
+    font-size: 60px;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.not-found-text {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+/**** media query to reduce text size on mobile devices****/
+@media screen and (max-width: 576px) {
+    .not-found-heading {
+        font-size: 30px;
+    }
+    .not-found-text {
+        font-size: 15px;
+    }
+}

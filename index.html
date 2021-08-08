@@ -8,7 +8,6 @@
     <meta name="description" content="A simple picture naming game to help people suffering with dysphasia">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
 
-
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link
@@ -17,7 +16,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jomhuria&display=swap" rel="stylesheet">
-
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
@@ -43,14 +41,15 @@
             </div>
             <div class="col-lg-4 ml-auto text-center">
                 <button type="button" data-type="submit" id="mute-button" class="btn-icon btn btn-sm btn-enter my-0"><i
-                        id="mute-btn-icon" class="fas fa-volume-off"></i></button>
+                        id="mute-btn-icon" class="fas fa-volume-off"></i>
+                </button>
                 <button type="button" id="info-button" class="btn-icon btn btn-sm btn-enter my-0" data-toggle="modal"
-                    data-target="#myModal"><i id="info-btn-icon" class="fas fa-info"></i></button>
+                    data-target="#myModal"><i id="info-btn-icon" class="fas fa-info"></i>
+                </button>
                 <button type="button" data-type="submit" id="refresh-button"
-                    class="btn-icon btn btn-sm btn-enter my-0"><i id="refresh-btn-icon"
-                        class="fas fa-redo"></i></button>
+                    class="btn-icon btn btn-sm btn-enter my-0"><i id="refresh-btn-icon" class="fas fa-redo"></i>
+                </button>
             </div>
-
 
             <!-- Modal BOOTSTRAP-->
             <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
@@ -85,7 +84,6 @@
         </div>
     </div>
 
-
     <!--GAME SECTION-->
 
     <div id="main-page-box" class="container page-box">
@@ -103,7 +101,8 @@
                     <p>The Name Game is an interactive picture naming game specifically designed to help people affected
                         by aphasia to practice and improve their language finding abilities. If you would like to know
                         more about aphasia and the challenges faced by people who are affected you can click <a
-                            href="https://www.stroke.org.uk/what-is-aphasia" target="_blank" rel="noopener">here.</a><br>
+                            href="https://www.stroke.org.uk/what-is-aphasia" target="_blank"
+                            rel="noopener">here.</a><br>
                         During the game you will be shown a series of everyday objects, the challenge is to name the
                         objects correctly. In order to help you a series of visual and audio prompts can be used. The
                         prompts have been specifically designed to target the neural pathways in the brain that aphasia
@@ -123,7 +122,6 @@
                     <button type="button" data-type="submit" id="start-btn" disabled
                         class="btn btn-warning btn-lg">Start Game</button>
                 </div>
-
 
             </div>
         </div>
@@ -146,6 +144,7 @@
                         <div class="row d-none d-sm-block">
                             <p id="question-box" class="question-box col mt-5 sm-mb-3">Can you name this animal?</p>
                         </div>
+
                         <div class="question-box row mb-2 d-sm-none justify-content-center">
                             <p class="question-text col-md-4">What can you see? type your answer below.</p>
                         </div>
@@ -190,9 +189,8 @@
                                 <div class="col-lg-4">
                                     <button id="audio-help-button" class="btn btn-warning btn-lg">Audio
                                         <i class="fas fa-volume-up clue-icon"></i></button>
-                                    <audio id="audio-clue" src="assets/audio/cat-audio.mp3" class="box-hide"
-                                        controls>
-                                        <p>Something went wrong! Maybe your browser does not support this audio.</p>  <!--Default text in case there is a browser issue with the audio-->
+                                    <audio id="audio-clue" src="assets/audio/cat-audio.mp3" class="box-hide" controls>
+                                        <p>Something went wrong! Maybe your browser does not support this audio.</p> <!--Default text in case there is a browser issue with the audio-->
                                     </audio>
                                 </div>
 
@@ -250,8 +248,7 @@
                         scored <span id="correct-answers"> </span> out of <span id="num-of-questions"> </span></p>
                 </div>
                 <div class="row justify-content-center">
-                    <button type="button" value="Reset" id="end-btn" class="btn btn-warning btn-lg">Play
-                        Again</button>
+                    <button type="button" value="Reset" id="end-btn" class="btn btn-warning btn-lg">Play Again</button>
                 </div>
             </div>
         </div>
@@ -280,5 +277,4 @@
     </script>
 
 </body>
-
 </html>
