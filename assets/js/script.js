@@ -140,9 +140,9 @@ function checkAnswer() {
   if (correctAnswer) {
     //display tick icon if correct
 
-    if (screen.width > 993) {
+    if (screen.width >= 992) {
       tickIcon.classList.remove("box-hide");
-    } else if (screen.width < 992) {
+    } else if (screen.width <= 991) {
       crossIconSm.classList.add("box-cover");
     }
 
@@ -156,9 +156,9 @@ function checkAnswer() {
     addCorrectScore();
   } else {
     ////display cross icon if incorrect
-    if (screen.width > 993) {
+    if (screen.width >= 992) {
       crossIcon.classList.remove("box-hide");
-    } else if (screen.width < 992) {
+    } else if (screen.width <= 991) {
       tickIconSm.classList.add("box-cover");
     }
 
@@ -247,7 +247,6 @@ audioHelpButton.onclick = function () {
 function showAudioClue() {
   document.getElementById("audio-clue").classList.remove("box-hide");
   document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
-  document.getElementById("audio-href").innerHTML = questions[globalCounter].audioclue;
   if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
