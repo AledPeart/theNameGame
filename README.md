@@ -18,14 +18,14 @@ theNameGame is a picture naming web application, which helps people affected by 
    - [Design Objectives](#design-objectives)
    - [UX Design Goals](#ux-design-goals)
 4. [Wireframes](#wireframes)
-5. [Layout and Features](#layout-and-features)
+5. [Design Layout and Features](#design-layout-and-features)
 6. [Features left to implement](#features-left-to-implement)
 7. [Technologies Used](#technologies-used)
 8. [Testing](#testing)
 9. [Deployment](#deployment)
-10. [Bugs](#bugs)
-11. [Credits](#credits)
-12. [Media and Content](#media-and-content)
+10. [Credits](#credits)
+11. [Media and Content](#media-and-content)
+12. [Acknowledgements](#acknowledgements)
 
 ## Aims of the project
 
