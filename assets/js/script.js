@@ -72,9 +72,6 @@ function verify() {
 }
 
 
-
-
-
 //***Start Game Function***
 
 function startGame() {
@@ -252,7 +249,7 @@ function audioPause() {
   let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
 
   cluePlayer.pause;
-  // cluePlayer.currentTime = 0;
+  cluePlayer.currentTime = 0;
 }
 
 //***multi choice clue***
