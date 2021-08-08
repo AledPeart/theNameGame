@@ -95,7 +95,7 @@ submitButton.onclick = function () {
   audioHelpButton.disabled = false;
   multiHelpButton.disabled = false;
 
-  // audioPause();
+  audioPause();
 };
 
 //function to increment global counter by +1
@@ -245,12 +245,11 @@ function showAudioClue() {
 
 //BUG FIX - function to pause the clue audio if user subits an answer https://stackoverflow.com/questions/14834520/html5-audio-stop-function
 
-// function audioPause() {
-//   let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
-
-//   cluePlayer.pause;
-//   cluePlayer.currentTime = 0;
-// }
+function audioPause() {
+  let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
+  cluePlayer.pause;
+  cluePlayer.currentTime = 0;
+}
 
 //***multi choice clue***
 
