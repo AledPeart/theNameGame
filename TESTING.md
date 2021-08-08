@@ -564,19 +564,24 @@ I also tested my JSON file using [JSONLint] (https://jsonlint.com/) which confir
 
 At the time of submission the results are showing no errors (see screenshots below)
 
-![index.html](…)  
+![index.html](https://github.com/AledPeart/theNameGame/blob/master/assets/images/index.html-screenshot)     
 
 
-![404.html](…)  
+
+![404.html](https://github.com/AledPeart/theNameGame/blob/master/assets/images/404.html-screenshot)     
 
 
-![style.css](…)         
+
+![style.css](https://github.com/AledPeart/theNameGame/blob/master/assets/images/css-screenshot)          
 
 
-![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)  
+
+![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)    
 
 
-![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)   
+
+![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)      
+
 
 
  
