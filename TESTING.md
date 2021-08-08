@@ -331,6 +331,17 @@ __Result__– The result was as expected.
 * __Test__– Does the ‘Play Again’ button display and when clicked does it send the user to the start game screen?   
 __Result__– The result was as expected.
 
+### 404 Page
+
+#### Does the 404 page load and perform as expected?
+
+* __Test__- Does the 404 page appear when user is directed to a non existant page, and is the layout as expected?      
+__Result__– The result was as expected.
+
+* __Test__- Does the link provided send the user back to the start screen?       
+__Result__– The result was as expected.
+
+
 
 ## Responsiveness 
 
@@ -385,6 +396,11 @@ __Result__– The result was as expected.
 * __Test__– The text boxes should be stacked appropriately and adhere to the intended design   
 __Result__– The result was as expected.
 
+#### 404 Page
+
+* __Test__- The game logo should appear at the top of the screen above the 'page not found' message and the re-direct button. The text should reduce in size and be in proportion to the screen.     
+__Result__– The result was as expected.
+
 
 ### Medium	
 
@@ -427,6 +443,12 @@ __Result__– The result was as expected.
 
 * __Test__– The text boxes should be stacked appropriately in 3 columns and adhere to the intended design   
 __Result__– The result was as expected.
+
+#### 404 Page
+
+* __Test__- The game logo should appear at the top of the screen above the 'page not found' message and the re-direct button. The text should have increased in size.        
+__Result__– The result was as expected.
+
 
 
 ### Large	
@@ -479,6 +501,12 @@ __Result__– The result was as expected.
 
 * __Test__– The text boxes should be stacked appropriately in 3 columns and adhere to the intended design   
 __Result__– The result was as expected.
+
+#### 404 Page
+
+* __Test__- The game logo should appear at the top of the screen above the 'page not found' message and the re-direct button.      
+__Result__– The result was as expected.
+
 
 
 ## Cross-Browser Testing
