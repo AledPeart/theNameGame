@@ -200,6 +200,8 @@ There are a number of features that I would like to add to the project. It is re
 * [JSHint](https://jshint.com/)- JS Code validation
 * [JSONLint](https://jsonlint.com/)- JSON Code validation
 * [AutoPrefixer](https://autoprefixer.github.io/) - To ensure correct and current CSS prefixes are used.
+* [CloudConvert](https://cloudconvert.com) - converting audio files.
+OGG to MP3 | 
 
 ## Testing
 You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
@@ -287,7 +289,7 @@ This function uses an if statement to test that the username entered only contai
 
 **Image Load Speed**
 
-I discovered that y questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds.
+I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
 
 **Cursor Issue on Mobile devices**
 
@@ -313,6 +315,40 @@ After a general internet search and a look at the experiences of my fellow stude
 /*jshint esversion: 6 */ 
 /* global questions:true */ 
 /* jshint expr: true */ 
+
+**Correct and Incorrect Answer Icons Not Displaying**      
+When testing my deployed site on different browsers, I discovered an error in my code that meant the correct and incorrect answer icons, would not display at the large breakpoint. After investigating I realised that the following _if_ statement (intended to display reduced icons on smaller screens) was incorrectly written so that at screen widths of 992 and 993 px, icons would not be displayed:
+
+```
+    if (screen.width > 993) {
+      crossIcon.classList.remove("box-hide");
+    } else if (screen.width < 992) {
+      tickIconSm.classList.add("box-cover");
+    }
+```
+By ammending the statement to include a greater than or equal to operator, the issue was resolved:  
+     
+    
+    if (screen.width >= 992) {
+      crossIcon.classList.remove("box-hide");
+    } else if (screen.width <= 991) {
+      tickIconSm.classList.add("box-cover");
+    } 
+    
+**Audio File Issue - Safari**
+
+My audio files were not playing when the site was tested on the _Safari_ browser. I had been using _ogg_ files, but these were not readable by _Safari_, so I converted all the _ogg_ files to the _mp3_ format instead which are readable by all modern browswers.
+
+**Name Field pre-filled - Firefox**
+When testing the application using the _Firefox_ browser I discovered that upon refreshing the game the user's name was pre-filled automatically in the _enter name_ field
+
+![firefox bug screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/firefox-bug.png)  
+
+I was able to resolve this by adding the following code to the _window.onload_ function to ensure the field was blank:
+
+```document.getElementById("enter-name-box").value = "";```
+
+
 
 
 ## Credits
