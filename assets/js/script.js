@@ -16,9 +16,6 @@ let endBtn = document.getElementById("end-btn");
 
 
 
-// let userNameBtn = document.getElementById("enter-name-btn");
-
-
 //global counter variable that can be passed in to other functions as needed
 let globalCounter = 0;
 
@@ -26,9 +23,6 @@ let globalCounter = 0;
 //Start Btn onclick 
 startBtn.onclick = function () {
   verify();
-  // clickSound.play();
-  // startGame();
-  // displayUserName ();
 };
 
 
