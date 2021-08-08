@@ -677,11 +677,14 @@ When validating my Javascript code in JSHint, I was given a number of warnings r
 * issues with global variables being seen as undefined
 * the use of expressions within a function
 
-After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code.
+After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code. An additional line was added which allows the use of an expression within the _audioPause_ function:
 
-/*jshint esversion: 6 */ 
-/* global questions:true */ 
-/* jshint expr: true */ 
+```/*jshint esversion: 6 */```  source:[slack forum](https://code-institute-room.slack.com/archives/C0L316Z96/p1621775494226400?thread_ts=1621773144.225600&cid=C0L316Z96)    
+
+```/* global questions:true */```   source:[jshint](https://jshint.com/docs/)   
+
+```/* jshint expr: true */```  source: [stackoverflow](https://stackoverflow.com/questions/8108184/why-does-jshint-not-recognize-an-assignment-as-an-expression)     
+
 
 #### Correct and Incorrect Answer Icons Not Displaying    
 When testing my deployed site on different browsers, I discovered an error in my code that meant the correct and incorrect answer icons, would not display at the large breakpoint. After investigating I realised that the following _if_ statement (intended to display reduced icons on smaller screens) was incorrectly written so that at screen widths of 992 and 993 px, icons would not be displayed:
