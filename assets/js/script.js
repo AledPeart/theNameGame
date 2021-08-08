@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */ //to correct JSHint issue with using 'let'
+/*jshint esversion: 6 */  //to correct JSHint issue with using 'let'
 /* global questions:true */ //workaround which shows JSHint that questions is a global variable. More detail in the Bugs section of README.md
 /* jshint expr: true */ 
 
