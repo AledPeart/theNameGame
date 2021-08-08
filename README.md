@@ -10,6 +10,22 @@
 theNameGame is a picture naming web application, which helps people affected by aphasia to practice and improve their language finding abilities.
 
 ## __Table of Contents__
+1. [Aims of the project](#aims-of-the-project)
+2. [What is Aphasia](#what-is-aphasia)
+3. [User Experience](#user-experience)
+   - [User Stories](#user-stories)
+   - [Owner Stories](#owner-stories)
+   - [Design Objectives](#design-objectives)
+   - [UX Design Goals](#ux-design-goals)
+4. [Wireframes](#wireframes)
+5. [Layout and Features](#layout-and-features)
+6. [Features left to implement](#features-left-to-implement)
+7. [Technologies Used](#technologies-used)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+10. [Bugs](#bugs)
+11. [Credits](#credits)
+12. [Media and Content](#media-and-content)
 
 ## Aims of the project
 
