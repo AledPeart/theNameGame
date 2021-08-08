@@ -4,7 +4,21 @@
 
 I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
-## User/Patient Stories
+## __Table of Contents__
+1. [User Stories](#user-stories)
+2. [Owner Stories](#owner-stories)
+3. [Manual Functionality Testing](#manual-functionality-testing)
+4. [Responsiveness](#responsiveness)
+5. [Cross Browser Testing](#cross-browser-testing)
+6. [Code Validation](#code-validation)
+7. [Lighthouse Testing](#lighthouse-testing)
+8. [Testing Results and Bugs](#testing-results-and-bugs)
+   - [Resolved Bugs](#resolved-bugs)
+   - [Unresolved Bugs](#unresolved-bugs)
+
+
+
+## User Stories
 
  ### **As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies**.  
  
@@ -84,7 +98,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 -	The icon changes to give users visual feedback as to whether the game is muted or not
 
 
-## Owner/Therapist Stories
+## Owner Stories
 
 
 ### **As the owner I want to test the users word retrieval**.  
@@ -548,7 +562,7 @@ __Firefox__ – When reloading the game the start screen name field would pre-po
 
 __Safari__ – Audio clue files not playing. Audio controls in Safari displaying a 'pause' icon when it should have displayed a play icon.
 
-## HTML, CSS and JavascriptValidation
+## Code Validation
 
 While developing I have regularly validated my HTML and CSS using [W3C Markup](https://validator.w3.org/), [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSHint]( https://jshint.com/).  
 Errors and Warnings that were highlighted to me that I addressed during the project were:
