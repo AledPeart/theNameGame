@@ -206,36 +206,6 @@ OGG to MP3 |
 ## Testing
 You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
 
-
-## Deployment
-This project was developed using [Gitpod](https://www.gitpod.io/) and was committed and pushed to [Github](https://github.com/) using the following terminal commands within Gitpod:
-
-- _git add_ 
-- _git commit –m “commit message”_
-- _git push_
-
-#### In order to deploy the project to GitHub Pages the following steps were followed:
-
-1. Select the __theNameGame__ repository from within Github.
-2. Select the _settings_ tab.
-3. Select the _pages_ tab from the options on the left of the screen.
-4. Using the dropdown menu change the source from _none_ to _master_ branch.
-5. Click _save_.
-6. You will now see a message that your site is ready to be published.
-7. If you wait a few moments and refresh the browser another message will confirm that your site is published at the provided address
-
-In order to clone and run this project locally, you will need to follow these steps:
-
-1. On the main repository page in __Github__, click the button to download the _Code_ (located at the top above the list of files)
-2. Under the _HTTPS_ tab copy the URL for the repository
-3. Open the Terminal in your preferred __IDE__.
-4. Change the current working directory to the location that you would like the new cloned directory.
-5. Type _git clone_ into the terminal and then paste the URL that you copied earlier.
-6. Hit _enter_ to create your clone.
-
-Full details of these summarised steps can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
- 
-
 ## Bugs
 
 I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing, as well as some that are as yet unresolved.
@@ -367,10 +337,39 @@ Having searched on _Slack_ I found other students with a similar issue and a [fo
 
 #### Safari Audio Controls Issue
 
-I detected an issue when using the audio controls in _Safari_. On occasion the pause button would display instead of the audio button  
+I detected an issue when using the audio controls in _Safari_. The _audioPause_ function will reset the audio clue if the user enters an answer midway through the clue being played in _Firefox_ and _Chrome_, however in _Safari_ when re-opening the clue on a subsequent question the audio control _pause_ button is initially dislayed instead of the _play_ button. This means the user has to toggle the button to make the clue play. The correct clue does play, but in order to fully resove this issue I will need to investigate it further.
 
 
 
+## Deployment
+This project was developed using [Gitpod](https://www.gitpod.io/) and was committed and pushed to [Github](https://github.com/) using the following terminal commands within Gitpod:
+
+- _git add_ 
+- _git commit –m “commit message”_
+- _git push_
+
+#### In order to deploy the project to GitHub Pages the following steps were followed:
+
+1. Select the __theNameGame__ repository from within Github.
+2. Select the _settings_ tab.
+3. Select the _pages_ tab from the options on the left of the screen.
+4. Using the dropdown menu change the source from _none_ to _master_ branch.
+5. Click _save_.
+6. You will now see a message that your site is ready to be published.
+7. If you wait a few moments and refresh the browser another message will confirm that your site is published at the provided address
+
+In order to clone and run this project locally, you will need to follow these steps:
+
+1. On the main repository page in __Github__, click the button to download the _Code_ (located at the top above the list of files)
+2. Under the _HTTPS_ tab copy the URL for the repository
+3. Open the Terminal in your preferred __IDE__.
+4. Change the current working directory to the location that you would like the new cloned directory.
+5. Type _git clone_ into the terminal and then paste the URL that you copied earlier.
+6. Hit _enter_ to create your clone.
+
+Full details of these summarised steps can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
+
+It is worth noting here that during one of our sessions my mentor highlited to me that my early commit messages for this project lacked a consistent structure and detail. I have since improved this ensuring that my commit messages adhere to a consistent structure and are sufficiently detailed, so that the development process is clear to other developers.  
 
 ## Credits
 
