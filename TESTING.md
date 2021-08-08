@@ -494,23 +494,23 @@ I followed the same testing criteria that I used for my Manual Testing, but I ha
 
 ### Large Screen Desktop
 
-__Firefox__ – No issues found   
-__Safari__ – No issues found 
+__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game   
+__Safari__ – Audio clue files not playing
 
 ### Laptop
 
-__Firefox__ – No issues found    
-__Safari__ – No issues found
+__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game    
+__Safari__ – Audio clue files not playing
 
 ### Tablet 
 
-__Firefox__ – No issues found   
-__Safari__ No issues found
+__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game   
+__Safari__ Audio clue files not playing
 
 ### Mobile 
 
-__Firefox__ – No issues found  
-__Safari__ – No issues found  
+__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game 
+__Safari__ – Audio clue files not playing  
 
 
 ## HTML, CSS and JavascriptValidation
