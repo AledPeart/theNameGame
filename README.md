@@ -238,9 +238,11 @@ Full details of these summarised steps can be found [here](https://docs.github.c
 
 ## Bugs
 
-I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing.
+I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing, as well as some that are as yet unresolved.
 
-**Multi Choice Clue**    
+### Resolved Bugs
+
+#### Multi Choice Clue   
 The multiple-choice clue was appearing multiple times when clicked; essentially the on-click function was being run over and over again, causing this to happen. 
 
 ![bug screenshot 1](https://github.com/AledPeart/theNameGame/blob/master/assets/images/bug1.png)   
@@ -251,7 +253,7 @@ In order to fix this I was able to find a way to disable the button after it had
 
 This solution works well as the user has already accessed the clue and the code is reset for the next question.
 
-**Audio File**
+#### Audio File
 I discovered that the audio clue file would not automatically stop when the user had submitted an answer. This is not an issue if the user waits until the audio has finished before submitting an answer but if they submit an answer before the audio has finished, the next question is set and all the while the audio continues to play. I was able to fix this issue by adding writing following function to my code, which was adapted from a similar issue I discovered on Stack Overflow (full credit in the code). 
 
 ```
@@ -263,7 +265,7 @@ function audioPause() {
 
 This function has been set to run when the user clicks the button to submit their answer, and effectively pauses the audio before it is reset when the next question loads.
 
-**Username Validation**
+#### Username Validation
 
 The username field on the start game page requires the user to submit an entry otherwise the submit button does not activate. However during testing I discovered that users were able to enter a blank space, and unwittingly bypass those controls. The reason being that the code that controls this: 
 ```
@@ -287,11 +289,11 @@ if ((nameBox).value == "") {
 ```
 This function uses an if statement to test that the username entered only contains letters between _a-z_ (and recognises uppercase too). If it does not the user is alerted that they should try again, only using letters, else the subsequent functions run, and the user is taken to the main game page. (the function was a mended from a similar one on Stack Overflow, full credit in the code)
 
-**Image Load Speed**
+#### Image Load Speed
 
 I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
 
-**Cursor Issue on Mobile devices**
+#### Cursor Issue on Mobile devices
 
 When testing on mobile devices I noticed that the following code to place the cursor automatically in the appropriate answer field was not having the desired effect.
 
@@ -303,7 +305,7 @@ if (screen.width >= 576) {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
 ```
-**JSHint**
+#### JSHint
 
 When validating my Javascript code in JSHint, I was given a number of warnings regarding 
 * using _let_ to define variables 
@@ -316,7 +318,7 @@ After a general internet search and a look at the experiences of my fellow stude
 /* global questions:true */ 
 /* jshint expr: true */ 
 
-**Correct and Incorrect Answer Icons Not Displaying**      
+#### Correct and Incorrect Answer Icons Not Displaying    
 When testing my deployed site on different browsers, I discovered an error in my code that meant the correct and incorrect answer icons, would not display at the large breakpoint. After investigating I realised that the following _if_ statement (intended to display reduced icons on smaller screens) was incorrectly written so that at screen widths of 992 and 993 px, icons would not be displayed:
 
 ```
@@ -335,11 +337,11 @@ By ammending the statement to include a greater than or equal to operator, the i
       tickIconSm.classList.add("box-cover");
     } 
     
-**Audio File Issue - Safari**
+#### Audio File Issue - Safari
 
 My audio files were not playing when the site was tested on the _Safari_ browser. I had been using _ogg_ files, but these were not readable by _Safari_, so I converted all the _ogg_ files to the _mp3_ format instead which are readable by all modern browswers.
 
-**Name Field pre-filled - Firefox**
+#### Name Field pre-filled - Firefox
 When testing the application using the _Firefox_ browser I discovered that upon refreshing the game the user's name was pre-filled automatically in the _enter name_ field
 
 ![firefox bug screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/firefox-bug.png)  
@@ -347,6 +349,25 @@ When testing the application using the _Firefox_ browser I discovered that upon 
 I was able to resolve this by adding the following code to the _window.onload_ function to ensure the field was blank:
 
 ```document.getElementById("enter-name-box").value = "";```
+
+### Unresolved Bugs
+
+Limited time meant I had to prioritise the resolution of the larger bugs and issues I found, meaning that some of the smaller issues I discovered, which I felt were not impacting the functionality of the application, or the users experience are as yet unresolved. I have detailed them below and intend to address them as part of future updates.
+
+#### Images and Questions load speeds
+
+When testing deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
+
+#### Permissions Policy Issue
+The folowing warning message is diplayed in the console when using the _Chrome_ browser     
+
+```Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'```
+
+Having searched on _Slack_ I found other students with a similar issue and a [forum post](https://github.community/t/i-have-no-idea-what-the-interest-cohort-is/179780) explaining the cause, as a measure _GitHub Pages_ have taken to disable Google's FLoC policy and protect user's privacy. This matter is beyond my control, and at the time of writing the warning was still appearing in the console in Chrome's DevTools.
+
+#### Safari Audio Controls Issue
+
+I detected an issue when using the audio controls in _Safari_. On occasion the pause button would display instead of the audio button  
 
 
 
