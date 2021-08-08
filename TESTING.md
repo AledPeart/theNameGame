@@ -2,7 +2,7 @@
 
 [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md)
 
-I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and (***INSERT JS TESTING HERE). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
+I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
 ## User/Patient Stories
 
@@ -564,19 +564,24 @@ I also tested my JSON file using [JSONLint] (https://jsonlint.com/) which confir
 
 At the time of submission the results are showing no errors (see screenshots below)
 
-![index.html](…)  
+![index.html](https://github.com/AledPeart/theNameGame/blob/master/assets/images/index.html-screenshot)     
 
 
-![404.html](…)  
+
+![404.html](https://github.com/AledPeart/theNameGame/blob/master/assets/images/404.html-screenshot)     
 
 
-![style.css](…)         
+
+![style.css](https://github.com/AledPeart/theNameGame/blob/master/assets/images/css-screenshot)          
 
 
-![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)  
+
+![script.js](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-11-jshint.png)    
 
 
-![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)   
+
+![questions.json](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-10-json.png)      
+
 
 
  
@@ -593,9 +598,142 @@ I implemented the following recommendations made in the report:
 2. Adding __rel="noopener"__ to external links in order to reduce the site's  vulnerabilit
 Following these changes I re-ran the Lighthouse tests and the improved scores can be seen below   
 
-![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-after.png)
+![Lighthouse screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-12-lighthouse-after.png)     
 
-## Test Results and Bugs
+
+## Testing Results and Bugs
+
+I was regularly testing my code during the development process and as such a number of bugs and errors were found and fixed that way. I have detailed the more significant ones here, and those that were found during testing, as well as some that are as yet unresolved.
+
+### Resolved Bugs
+
+#### Multi Choice Clue   
+The multiple-choice clue was appearing multiple times when clicked; essentially the on-click function was being run over and over again, causing this to happen. 
+
+![bug screenshot 1](https://github.com/AledPeart/theNameGame/blob/master/assets/images/bug1.png)   
+
+In order to fix this I was able to find a way to disable the button after it had been clicked once (on Stack overflow – full credit in the code), by using    
+
+```this.disabled = true;```       
+
+This solution works well as the user has already accessed the clue and the code is reset for the next question.
+
+#### Audio File
+I discovered that the audio clue file would not automatically stop when the user had submitted an answer. This is not an issue if the user waits until the audio has finished before submitting an answer but if they submit an answer before the audio has finished, the next question is set and all the while the audio continues to play. I was able to fix this issue by adding writing following function to my code, which was adapted from a similar issue I discovered on Stack Overflow (full credit in the code). 
+
+```
+function audioPause() {
+  let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
+  cluePlayer.pause;
+}
+```
+
+This function has been set to run when the user clicks the button to submit their answer, and effectively pauses the audio before it is reset when the next question loads.
+
+#### Username Validation
+
+The username field on the start game page requires the user to submit an entry otherwise the submit button does not activate. However during testing I discovered that users were able to enter a blank space, and unwittingly bypass those controls. The reason being that the code that controls this: 
+```
+if ((nameBox).value == "") {
+    startBtn.disabled = true;
+  ```
+    
+ recognises a blank space as not equaling _""_. In order to ensure that users were not able to do this I created a new function to verify the users input:
+ ```
+ function verify() {
+  let usersName = document.getElementById("enter-name-box").value;
+  if (!/[a-zA-Z]/.test(usersName)) {
+    alert("Please try again, but using only letters.");
+    document.getElementById("enter-name-box").focus();
+  } else {
+    clickSound.play();
+    startGame();
+    displayUserName();
+  }
+}
+```
+This function uses an if statement to test that the username entered only contains letters between _a-z_ (and recognises uppercase too). If it does not the user is alerted that they should try again, only using letters, else the subsequent functions run, and the user is taken to the main game page. (the function was a mended from a similar one on Stack Overflow, full credit in the code)
+
+#### Image Load Speed
+
+I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
+
+#### Cursor Issue on Mobile devices
+
+When testing on mobile devices I noticed that the following code to place the cursor automatically in the appropriate answer field was not having the desired effect.
+
+```document.getElementById("enter-name-box").focus();```
+
+This is a nice feature when the user is using a keyboard and makes for a pleasant user experience, but on mobile devices this would automatically load the devices screen keyboard which would cover the intended entry field making for a frustrating experience. I decided to disable this feature on mobile devices, as I feel when using a handheld device people are much more accustomed to using the screen and placing the cursor where they want it, and overall it made for a better experience. To achieve this I added the following if statement to the existing code:
+```
+if (screen.width >= 576) {
+    document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
+  }
+```
+#### JSHint
+
+When validating my Javascript code in JSHint, I was given a number of warnings regarding 
+* using _let_ to define variables 
+* issues with global variables being seen as undefined
+* the use of expressions within a function
+
+After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code.
+
+/*jshint esversion: 6 */ 
+/* global questions:true */ 
+/* jshint expr: true */ 
+
+#### Correct and Incorrect Answer Icons Not Displaying    
+When testing my deployed site on different browsers, I discovered an error in my code that meant the correct and incorrect answer icons, would not display at the large breakpoint. After investigating I realised that the following _if_ statement (intended to display reduced icons on smaller screens) was incorrectly written so that at screen widths of 992 and 993 px, icons would not be displayed:
+
+```
+    if (screen.width > 993) {
+      crossIcon.classList.remove("box-hide");
+    } else if (screen.width < 992) {
+      tickIconSm.classList.add("box-cover");
+    }
+```
+By ammending the statement to include a greater than or equal to operator, the issue was resolved:  
+     
+    
+    if (screen.width >= 992) {
+      crossIcon.classList.remove("box-hide");
+    } else if (screen.width <= 991) {
+      tickIconSm.classList.add("box-cover");
+    } 
+    
+#### Audio File Issue - Safari
+
+My audio files were not playing when the site was tested on the _Safari_ browser. I had been using _ogg_ files, but these were not readable by _Safari_, so I converted all the _ogg_ files to the _mp3_ format instead which are readable by all modern browswers.
+
+#### Name Field pre-filled - Firefox
+When testing the application using the _Firefox_ browser I discovered that upon refreshing the game the user's name was pre-filled automatically in the _enter name_ field
+
+![firefox bug screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/firefox-bug.png)  
+
+I was able to resolve this by adding the following code to the _window.onload_ function to ensure the field was blank:
+
+```document.getElementById("enter-name-box").value = "";```
+
+### Unresolved Bugs
+
+Limited time meant I had to prioritise the resolution of the larger bugs and issues I found, meaning that some of the smaller issues I discovered, which I felt were not impacting the functionality of the application, or the users experience are as yet unresolved. I have detailed them below and intend to address them as part of future updates.
+
+#### Images and Questions load speeds
+
+When testing deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
+
+#### Permissions Policy Issue
+The folowing warning message is diplayed in the console when using the _Chrome_ browser     
+
+```Error with Permissions-Policy header: Unrecognized feature: 'interest-cohort'```
+
+Having searched on _Slack_ I found other students with a similar issue and a [forum post](https://github.community/t/i-have-no-idea-what-the-interest-cohort-is/179780) explaining the cause, as a measure _GitHub Pages_ have taken to disable Google's FLoC policy and protect user's privacy. This matter is beyond my control, and at the time of writing the warning was still appearing in the console in Chrome's DevTools.
+
+#### Safari Audio Controls Issue
+
+I detected an issue when using the audio controls in _Safari_. The _audioPause_ function will reset the audio clue if the user enters an answer midway through the clue being played in _Firefox_ and _Chrome_, however in _Safari_ when re-opening the clue on a subsequent question the audio control _pause_ button is initially dislayed instead of the _play_ button. This means the user has to toggle the button to make the clue play. The correct clue does play, but in order to fully resove this issue I will need to investigate it further.
+
 
 
 
