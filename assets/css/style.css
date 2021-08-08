@@ -109,7 +109,7 @@
     }
 
     /**** media query to ensure that on mobile devices enter name field increases in size ****/
-    @media screen and (max-width: 992px) {
+    @media screen and (max-width: 760px) {
         #enter-name-box {
             max-width: 80%;
         }
