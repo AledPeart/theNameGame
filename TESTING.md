@@ -490,28 +490,35 @@ I have tested this web application across different browsers at different device
 *	Tablet
 *	Mobile device
 
-I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below:
+I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below, in terms of the application's responsiveness and functionality. The bugs discovered and their investigation are detailed in the [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md) :
 
-### Large Screen Desktop
+### Responsiveness
 
-__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game   
-__Safari__ – Audio clue files not playing
+#### Large Screen Desktop
 
-### Laptop
+__Firefox__ – No Issues Found   
+__Safari__ –  No Issues Found   
 
-__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game    
-__Safari__ – Audio clue files not playing
+#### Laptop
 
-### Tablet 
+__Firefox__ –  No Issues Found      
+__Safari__ –  No Issues Found   
 
-__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game   
-__Safari__ Audio clue files not playing
+#### Tablet 
 
-### Mobile 
+__Firefox__ –  Correct and Incorrect Icons not displaying at the intersection of the medium/large breakpoint     
+__Safari__   Correct and Incorrect Icons not displaying at the intersection of the medium/large breakpoint    
 
-__Firefox__ – When reloading the game the start screen would pre-populate with the user's name from the previous game 
-__Safari__ – Audio clue files not playing  
+#### Mobile 
 
+__Firefox__ –  No Issues Found   
+__Safari__ –  No Issues Found     
+
+### Functionality 
+
+__Firefox__ – When reloading the game the start screen name field would pre-populate with the user's name from the previous game.
+
+__Safari__ – Audio clue files not playing. Audio controls in Safari displaying a 'pause' icon when it should have displayed a play icon.
 
 ## HTML, CSS and JavascriptValidation
 
