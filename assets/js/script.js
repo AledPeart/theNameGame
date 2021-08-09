@@ -1,6 +1,6 @@
-/*jshint esversion: 6 */  //to correct JSHint issue with using 'let'
+/*jshint esversion: 6 */ //to correct JSHint issue with using 'let'
 /* global questions:true */ //workaround which shows JSHint that questions is a global variable. More detail in the Bugs section of README.md
-/* jshint expr: true */ 
+/* jshint expr: true */
 
 //***START PAGE BOX***
 
@@ -9,25 +9,17 @@ window.onload = function () {
   document.getElementById("enter-name-box").value = ""; // Enures the box is empty (Firefox bug fix, user's name from previous game was being loaded)
 };
 
-
-//defining variables to use to load startBox/gameBox/endBox ***DO I NEED THESE OR SHOULD I USE THEM?***
-let startBtn = document.getElementById("start-btn");
-let endBtn = document.getElementById("end-btn");
-
-
-
 //global counter variable that can be passed in to other functions as needed
 let globalCounter = 0;
-
+let startBtn = document.getElementById("start-btn");
+let endBtn = document.getElementById("end-btn");
 
 //Start Btn onclick 
 startBtn.onclick = function () {
   verify();
 };
 
-
 // to center the site logo an smaller screens ***CODE taken from https://stackoverflow.com/questions/39557244/run-code-if-screen-has-certain-width***
-
 window.addEventListener('resize', resize);
 
 function resize() {
@@ -38,26 +30,21 @@ function resize() {
   }
 }
 
-// ***Check for input Function ensures user must enter a name, and not a blank space***
-
-
+// ***Check Input Function ensures user must enter a name, and not a blank space***
 //**SOURCE https://stackoverflow.com/questions/7741123/html5-input-type-required-without-a-form-does-it-work */
 let nameBox = document.getElementById("enter-name-box");
 nameBox.addEventListener('input', checkInput);
 
 function checkInput() {
-
   let startBtn = document.getElementById("start-btn");
-
   if ((nameBox).value == "") {
     startBtn.disabled = true;
-
   } else {
     startBtn.disabled = false;
   }
 }
 
-
+// ***Function to ensure user must enter a name, and not just a blank space***
 //**SOURCE https://stackoverflow.com/questions/23476532/check-if-string-contains-only-letters-in-javascript 
 function verify() {
   let usersName = document.getElementById("enter-name-box").value;
@@ -71,9 +58,7 @@ function verify() {
   }
 }
 
-
 //***Start Game Function***
-
 function startGame() {
   document.getElementById("logo-box").classList.remove("box-cover"); //removes the box-cover class from the logo-box
   document.getElementById("game-box").classList.remove("box-hide"); //removes the box-hide class from the game-box
@@ -109,9 +94,7 @@ function displayUserName() {
   document.getElementById("user-name").innerText = userName;
 }
 
-
 //***CHECK ANSWER***
-
 //function to check the users input answer
 function checkAnswer() {
 
@@ -119,8 +102,8 @@ function checkAnswer() {
   let correctAudio = document.getElementById("audio-correct"); // defines variables for the audio files
   let incorrectAudio = document.getElementById("audio-incorrect"); //Audio file from Zapsplat.com
 
-  //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
-  let answer = questions[globalCounter].answer;
+
+  let answer = questions[globalCounter].answer; //answer is the correct answer - corresponding to the variable 'globalCounter' from the questions array
   let correctAnswer = userAnswer === answer;
 
   let tickIcon = document.getElementById("tick-icon");
@@ -128,8 +111,7 @@ function checkAnswer() {
   let tickIconSm = document.getElementById("tick-icon-sm");
   let crossIconSm = document.getElementById("cross-icon-sm");
 
-  if (correctAnswer) {
-    //display tick icon if correct
+  if (correctAnswer) { //display tick icon if correct
 
     if (screen.width >= 992) {
       tickIcon.classList.remove("box-hide");
@@ -145,8 +127,7 @@ function checkAnswer() {
     }, 500);
 
     addCorrectScore();
-  } else {
-    ////display cross icon if incorrect
+  } else { ////display cross icon if incorrect
     if (screen.width >= 992) {
       crossIcon.classList.remove("box-hide");
     } else if (screen.width <= 991) {
@@ -156,7 +137,7 @@ function checkAnswer() {
     incorrectAudio.play();
 
     setTimeout(function () {
-      crossIcon.classList.add("box-hide"); 
+      crossIcon.classList.add("box-hide");
       tickIconSm.classList.remove("box-cover");
     }, 500);
 
@@ -164,32 +145,25 @@ function checkAnswer() {
   }
 
   //***ADD SCORES***
-
   //function to add correct score
-
   function addCorrectScore() {
     let oldScore = document.getElementById("correct").innerText;
     document.getElementById("correct").innerText = ++oldScore;
   }
 
   //function to add incorrect score
-
   function addIncorrectScore() {
     let oldScore = document.getElementById("incorrect").innerText;
     document.getElementById("incorrect").innerText = ++oldScore;
   }
 }
 
-//***SET NEXT QUESTION*** */
-
+//***SET NEXT QUESTION*** *
 //function to set the next question by loading the image relative to the global counter
-
 function setNextQuestion() {
   document.getElementById("answer-field").value = ""; // Erases the last typed answer
   document.getElementById("answer-field").focus(); // Puts the cursor in the answer field
   document.getElementById("audio-clue").classList.add("box-hide"); //adds box cover to the audio controls again
-
-
 
   if (globalCounter < 10) {
     document.getElementById("question-image").src = questions[globalCounter].image;
@@ -203,17 +177,13 @@ function setNextQuestion() {
 }
 
 
-//***HELP BOX***
-
-//***visual clues***
-
+//***Help box***
 //function to reveal a clue onclick of the Visual Help Btn
 let visualHelpButton = document.getElementById("visual-help-button");
 
 visualHelpButton.onclick = function () {
   showVisualClue();
   clickSound.play();
-    
 };
 
 function showVisualClue() {
@@ -224,7 +194,6 @@ function showVisualClue() {
 }
 
 //***audio clue***
-
 //function to reveal a clue onclick of the Audio Help Btn
 let audioHelpButton = document.getElementById("audio-help-button");
 let clickSound = document.getElementById("audio-click");
@@ -244,7 +213,6 @@ function showAudioClue() {
 }
 
 //BUG FIX - function to pause the clue audio if user subits an answer https://stackoverflow.com/questions/14834520/html5-audio-stop-function
-
 function audioPause() {
   let cluePlayer = document.getElementById("audio-clue").src = questions[globalCounter].audioclue;
   cluePlayer.pause;
@@ -252,7 +220,6 @@ function audioPause() {
 }
 
 //***multi choice clue***
-
 //function to reveal a clue onclick of the Multi Choice Help Btn
 let multiHelpButton = document.getElementById("multi-help-button");
 
@@ -260,13 +227,11 @@ multiHelpButton.onclick = function () {
   showMultiClue();
   clickSound.play();
   this.disabled = true; //disables the button after initial click **credit*** https://stackoverflow.com/questions/2323948/disabling-the-button-after-once-click
-  //***BUG***** code displaying mutiple times
 };
 
+//function to loop through my juson and populate the multi choice clue **credit*** https://stackoverflow.com/questions/54507913/how-to-use-a-for-loop-to-console-log-each-item-of-an-array
 function showMultiClue() {
   document.getElementById("multi-choice-clue").classList.remove("box-cover");
-
-  // *****attempt to populate the multi choice with a list item*****
   const multiChoice = questions[globalCounter].multichoice;
   for (let i = 0; i < multiChoice.length; i++) {
     const listItem = document.createElement('li');
@@ -278,7 +243,6 @@ function showMultiClue() {
     document.getElementById("answer-field").focus(); // returns the cursor to the answer field but not for mobile
   }
 }
-
 
 //***END GAME***
 //function to load end-box on completion of quiz and display the scores
@@ -305,10 +269,7 @@ function endGame() {
   document.getElementById("num-of-questions").innerText = numOfQuestions;
 }
 
-
-
 //following code enables the user to submit the answer using the enter button on the keyboard ***CREDIT***W3Schools**
-
 let answerField = document.getElementById("answer-field"); // targets the answer field
 answerField.addEventListener("keyup", function (event) { // Executes a function when the user releases the enter key on the keyboard
   if (event.keyCode === 13) { //default keycode for the enter button
@@ -327,11 +288,9 @@ nameField.addEventListener("keyup", function (event) {
   }
 });
 
-// ***TURN ON MUTE BUTTON*** - source https://forums.tumult.com/t/muting-audio-or-video/1705
-
+// ***Mute button*** - source https://forums.tumult.com/t/muting-audio-or-video/1705
 let muteBtn = document.getElementById("mute-button");
 var isMuted = false;
-
 
 muteBtn.onclick = function () {
   muteAudio();
@@ -364,25 +323,20 @@ function muteAudio() {
   }
 }
 
-//*********REFRESH PAGE BUTTON**********
-
+//*********Refresh page button**********
 let refreshBtn = document.getElementById("refresh-button");
-
 refreshBtn.onclick = function () {
   clickSound.play();
   location.reload();
 };
 
-//FUNCTION TO RESET THE GAME BUT NOT WORKING- start game removed now working **bug Fix
+//function to reset game
 endBtn.onclick = function () {
   clickSound.play();
   window.location.reload();
 };
 
-
-
-//***JSON*** source - Book(J Duckett et al)****/
-
+//***JSON*** source - Book(J Duckett et al)****
 var xhr = new XMLHttpRequest();
 xhr.onload = function () {
   if (xhr.status === 200) {
