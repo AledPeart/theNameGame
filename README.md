@@ -156,7 +156,9 @@ Once the user has answered 10 questions, the end page is loaded. A message is di
 
 ### Responsiveness
 
-The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Utilizing the bootstrap classes, the layout of the site adapts to smaller screens by progressively stacking the content into single columns as the screen size decreases. This is most prevalent on the main game page when the screen width drops below 992px wide. At this point the logo and the icons stack on top of each other in a single columns, as do the picture box and the question section. At the bottom of the layout the help section is stacked on top of the scoreboard.
+The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Utilizing the bootstrap classes, the layout of the site adapts to smaller screens by progressively stacking the content into single columns as the screen size decreases. This is most prevalent on the main game page when the screen width drops below 992px wide. At this point the logo and the icons stack on top of each other in a single columns, as do the picture box and the question section. At the bottom of the layout the help section is stacked on top of the scoreboard.    
+
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-14-responsive.png) 
 
 There are also some design changes that happen at this breakpoint. The correct and incorrect graphic icons are significantly reduced in size, and are both initially displayed. When the user submits their answer the appropriate icon is removed and then revealed again when the next question loads. This change was made in order to keep as much of the screen visible on a mobile device as possible and to prevent boxes from jumping about, which made for a poor user experience. A further design change takes place when the screen width is below 576px, the picture reduces in size and the question text is also reduced. The question text, rather than changing with each picture, remains static - “What can you see? Type your answer below” – again this is to keep as much of the screen visible on a mobile device as possible to make for a better user experience.
 
@@ -166,7 +168,7 @@ A great piece of advice from my mentor Can Sucullu, was to really plan out how I
 
 ![Functional Design Diagram](https://github.com/AledPeart/theNameGame/blob/master/assets/images/functional%20game%20design.png)
 
-The steps laid out in the diagram are tied closely to the layout and design as I have detailed above so I will not repeat that here. From a functional perspective, I opted to use a global counter, which is set to 0 initially and then increments by +1 each time the user submits an answer. The global counter is used to reference and load the questions, images, clues and answers, which I have stored locally in a JSON file. I chose to use a JSON as opposed to an array it my Javascript file as it is deemed to be more stable and scalable in the future.
+The steps laid out in the diagram are tied closely to the layout and design as I have detailed above so I will not repeat that here. From a functional perspective, I opted to use a global counter, which is set to 0 initially and then increments by +1 each time the user submits an answer. The global counter is used to reference and load the questions, images, clues and answers, which I have stored locally in a JSON file. I chose to use a JSON as opposed to an array in my Javascript file as it is deemed to be more stable and scalable in the future.
 An ‘event-listener’ has been to set for each click of the submit answer button, which triggers a function to check the users answer, and to set the next question. The answer is checked against the corresponding answer in the JSON file using the global counter as a reference. An ‘if ‘statement has been set and if the user answer is correct, a series of functions are triggered to display the correct answer icon, play the correct answer audio clip and to increment the correct score total on the scoreboard. Alternatively if the user answer is not correct a series of functions are triggered to display the incorrect answer icon, play the incorrect answer audio clip and to increment the incorrect score total on the scoreboard. A timeout function has been set here to allow the answer to be checked before the next question function is run. Within this function another ‘if’ statement checks that the global counter is less than 10, if it is then the above cycle is repeated. When the counter reaches 10 the game has ended and the user is taken to the end game screen, and the end of game message is displayed.
 The content of the clues in the help section have also been linked to the global counter, and they are revealed to the user on clicking the relevant help buttons.
 
@@ -178,7 +180,7 @@ There are a number of features that I would like to add to the project. It is re
 
 * Currently there are only 10 questions stored in the JSON file. I would like to expand this; furthermore I would like to develop categories of questions e.g. animals, weather, colors, foods etc.
 
-* I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on how the users previous answers.
+* I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on the users previous answers.
 
 * I would like users to be able to create an account, which stores information such as scores and the number and types of clues they needed in a database. This could then, with permission, be accessed and used by a therapist to help formulate a therapy plan for the user.
 
@@ -188,7 +190,7 @@ There are a number of features that I would like to add to the project. It is re
 
 * There is scope to offer the game in a number of different languages to cater to as many users as possible.
 
-* I would like to include more information, articles, videos etc. and provide more external links to useful sites and resources to help people who are afflicted by aphasia. 
+* I would like to include more information, articles, videos etc, and provide more external links to useful sites and resources to help people who are afflicted by aphasia. 
 
 
 
@@ -196,7 +198,7 @@ There are a number of features that I would like to add to the project. It is re
 
 * HTML 5 – Page content and structure
 * CSS3 – Styling
-* Javascript - interative programming
+* Javascript - Interative programming
 * [JQuery](https://jquery.com/) - DOM manipulation
 * [Popper.js](https://popper.js.org/) - Dynamic positioning (Bootstrap)
 * [Bootstrap](https://getbootstrap.com/) (v4.3.1) – page layout and responsive design.
@@ -209,8 +211,8 @@ There are a number of features that I would like to add to the project. It is re
 * [Google Fonts](https://fonts.google.com/) – Typography
 * [Font Awesome](https://fontawesome.com/) – Icons
 * [Photoshop](https://www.photoshop.com/en) - Image re-sizing
-* [W3](https://validator.w3.org/) - HTML Code validation
-* [we](https://jigsaw.w3.org/css-validator/) - CSS Code validation
+* [W3C](https://validator.w3.org/) - HTML Code validation
+* [w3C](https://jigsaw.w3.org/css-validator/) - CSS Code validation
 * [JSHint](https://jshint.com/)- JS Code validation
 * [JSONLint](https://jsonlint.com/)- JSON Code validation
 * [AutoPrefixer](https://autoprefixer.github.io/) - To ensure correct and current CSS prefixes are used.
@@ -241,8 +243,8 @@ In order to clone and run this project locally, you will need to follow these st
 1. On the main repository page in __Github__, click the button to download the _Code_ (located at the top above the list of files)
 2. Under the _HTTPS_ tab copy the URL for the repository
 3. Open the Terminal in your preferred __IDE__.
-4. Change the current working directory to the location that you would like the new cloned directory.
-5. Type _git clone_ into the terminal and then paste the URL that you copied earlier.
+4. Change the current working directory to the location that you would like for the new cloned directory.
+5. Type _git clone_ into the terminal and then paste in the URL that you copied earlier.
 6. Hit _enter_ to create your clone.
 
 Full details of these summarised steps can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
