@@ -39,11 +39,11 @@ The user will be asked to name a series of common objects. If a user is unable t
 
 ## User Experience
 
-Here I will address the aims and goals of the application from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the website.
+Here I will address the aims and goals of the application from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the application.
 
 ### User stories
 
-* As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies
+* As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies.
 
 * As a user I want the web application to be clear and uncluttered and present information to me in a cohesive manner.
 
@@ -57,17 +57,17 @@ Here I will address the aims and goals of the application from both the perspect
 
 * As a user I want to receive clear confirmation if my answer is correct or incorrect and see my score as I progress through the game.
 
-* As a user I want to receive clear instructions on how the game works
+* As a user I want to receive clear instructions on how the game works.
 
-* As a user I want to be able to refresh the game and start again
+* As a user I want to be able to refresh the game and start again.
 
-* As a user I want to be able to 'mute' the sound during the game
+* As a user I want to be able to 'mute' the sound during the game.
 
 ### Owner stories
 
 * As the owner I want to test the users word retrieval.
 
-* As the owner I want the user to be shown a series of ‘high frequency nouns’
+* As the owner I want the user to be shown a series of ‘high frequency nouns’.
 
 * As the owner I want the user to be offered some additional prompts if they are unable to name an object.
 
@@ -87,11 +87,11 @@ Consideration is given to the fact that users of the game will have suffered som
 
 * A clear, well thought out design, which is clean intuitive, and uncluttered.
 
-* Has clearly defined areas.
+* Clearly defined areas.
 
-* Uses high contrast colors to aid visual clarity
+* Uses high contrast colors to aid visual clarity.
 
-* Icons and symbols used to reinforce text e.g ✓  and  ✗ 
+* Icons and symbols used to reinforce text e.g ✓  and  ✗ .
 
 * Colors used to add meaning, and provide visual feedback to users e.g. green for correct, red for incorrect.
 
@@ -124,10 +124,12 @@ These are my initial wireframes, they were created using [Balsamiq](https://bals
 
 ## Design Layout and Features
 
-I made a decision to use as much 'vanilla' Javascript as possible when building this game. I felt that I had a better understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
+I made a decision to use as much 'vanilla' Javascript as possible when building this game. On completing the taught module, I felt that I had a good understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
 
 ### Start Page
-* Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept numbers or only blank spaces, and users will be alerted if they have not met those conditions. When the conditions have been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
+Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept only blank spaces, and users will be alerted if they have not met that condition. When the condition has been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
+
+![supporting screenshot]() 
 
 ### Main Page
 The main game page has 3 distinct areas, the ‘game area’ the ‘help area’ and the ‘scoreboard’. The game logo will be displayed in the top left corner of the screen and in the top right hand corner there are 3 menu buttons. I chose to use icons for these rather than text as I feel it keeps the design clean and more importantly they are intuitive and accessible for the intended audience. The first icon allows users to toggle the game sounds on and off. The second icon launches a modal, which contains more detailed guidance on how to play the game. The third Icon allows users to reset the game, and takes them back to the start page. 
@@ -267,10 +269,10 @@ It is worth noting here that during one of our sessions my mentor highlited to m
 
 * Fonts [Google Fonts](https://fonts.google.com/)
 * Icons [Font Awesome](https://fontawesome.com/)
-* Images[Pixy](https://pixy.org/)
-* Images[Freepik](https://www.freepik.com/)
-* Logo[Looka](https://looka.com/)
-* Logo[Flaticon](https://www.flaticon.com/)
+* Images [Pixy](https://pixy.org/)
+* Images [Freepik](https://www.freepik.com/)
+* Logo [Looka](https://looka.com/)
+* Logo [Flaticon](https://www.flaticon.com/)
 * Audio [Zapsplat](https://www.zapsplat.com/)
 * Color choice [Colorhunt](https://colorhunt.co/)
 
