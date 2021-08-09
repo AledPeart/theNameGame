@@ -10,26 +10,40 @@
 theNameGame is a picture naming web application, which helps people affected by aphasia to practice and improve their language finding abilities.
 
 ## __Table of Contents__
+1. [What is Aphasia?](#what-is-aphasia)
+2. [Aims of the project](#aims-of-the-project)
+3. [User Experience](#user-experience)
+   - [User Stories](#user-stories)
+   - [Owner Stories](#owner-stories)
+   - [Design Objectives](#design-objectives)
+   - [UX Design Goals](#ux-design-goals)
+4. [Wireframes](#wireframes)
+5. [Design Layout and Features](#design-layout-and-features)
+6. [Features left to implement](#features-left-to-implement)
+7. [Technologies Used](#technologies-used)
+8. [Testing](#testing)
+9. [Deployment](#deployment)
+10. [Credits](#credits)
+11. [Media and Content](#media-and-content)
+12. [Acknowledgements](#acknowledgements)
+
+## What is Aphasia?
+Aphasia is a language and communication disorder, which affects the language centers of the brain. The most common cause is a stroke, but it can be also result from a head injury, brain tumor and other neurological illnesses.
+Aphasia can affect a person’s ability to express what they want to say. Sufferers will often liken it to having a word on the ‘tip of your tongue’, but being unable to recall it.  A common method Speech and Language Therapists use to help people with aphasia find their words is to ask a patient to name a common object. If a patient cannot name the object independantly they are given a series of clues or hints in order to help stimulate the neural pathways in the brain that may be causing the word finding difficulty. Source:(www.stroke.org.uk)
 
 ## Aims of the project
 
-The aim of this project is to build a picture naming game, which specifically helps people affected by expressive dysphasia to practice and improve their language finding abilities. The project will consider the needs of the patient/user and of the therapist/owner and their respective desired outcomes. 
-
-The user will be asked to name a series of common objects. If a user is unable to identify the object initially they will be given a series of prompts or clues in order to help them. At the end of the task the user will receive a score showing how many correct and incorrect answers they achieved. The owner will be also be able to access the score, and importantly information showing the prompts required by the user.
-
-## What is Aphasia
-Aphasia is a language and communication disorder, which affects the language centers of the brain. The most common cause is a stroke, but it can be also result from a head injury, brain tumor and other neurological illnesses.
-Expressive dysphasia is a form of aphasia that affects a person’s ability to express what they want to say. Sufferers will often liken it to having a word on the ‘tip of your tongue’, but being unable to recall it. (www.stroke.org.uk)
-
+The aim of this project is to build a picture naming game, which specifically helps people affected by aphasia to practice and improve their language finding abilities. The project will consider the needs of the patient/user and of the therapist/owner and their respective desired outcomes. 
+The user will be asked to name a series of common objects. If a user is unable to identify the object initially they will be given a series of prompts or clues in order to help them. At the end of the task the user will receive a score showing how many correct and incorrect answers they achieved. The game allows the user to practice independently and by doing so they will gradually need fewer and fewer clues to name a given object, and ultimately none at all.
 
 
 ## User Experience
 
-Here I will address the aims and goals of the website from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the website.
+Here I will address the aims and goals of the application from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the application.
 
 ### User stories
 
-* As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies
+* As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies.
 
 * As a user I want the web application to be clear and uncluttered and present information to me in a cohesive manner.
 
@@ -43,17 +57,17 @@ Here I will address the aims and goals of the website from both the perspectives
 
 * As a user I want to receive clear confirmation if my answer is correct or incorrect and see my score as I progress through the game.
 
-* As a user I want to receive clear instructions on how the game works
+* As a user I want to receive clear instructions on how the game works.
 
-* As a user I want to be able to refresh the game and start again
+* As a user I want to be able to refresh the game and start again.
 
-* As a user I want to be able to 'mute' the sound during the game
+* As a user I want to be able to 'mute' the sound during the game.
 
 ### Owner stories
 
 * As the owner I want to test the users word retrieval.
 
-* As the owner I want the user to be shown a series of ‘high frequency nouns’
+* As the owner I want the user to be shown a series of ‘high frequency nouns’.
 
 * As the owner I want the user to be offered some additional prompts if they are unable to name an object.
 
@@ -73,11 +87,11 @@ Consideration is given to the fact that users of the game will have suffered som
 
 * A clear, well thought out design, which is clean intuitive, and uncluttered.
 
-* Has clearly defined areas.
+* Clearly defined areas.
 
-* Uses high contrast colors to aid visual clarity
+* Uses high contrast colors to aid visual clarity.
 
-* Icons and symbols used to reinforce text e.g ✓  and  ✗ 
+* Icons and symbols used to reinforce text e.g ✓  and  ✗ .
 
 * Colors used to add meaning, and provide visual feedback to users e.g. green for correct, red for incorrect.
 
@@ -110,17 +124,19 @@ These are my initial wireframes, they were created using [Balsamiq](https://bals
 
 ## Design Layout and Features
 
-I made a decision to use as much 'vanilla' Javascript as possible when building this game. I felt that I had a better understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
+I made a decision to use as much 'vanilla' Javascript as possible when building this game. On completing the taught module, I felt that I had a good understanding of JQuery but that I had was not fully comfortable with some of the fundamental syntax and core concepts, so I saw this a great opportunity to re-enforce the learning from the preceding course modules and bolster my understanding. I opted to use Bootstrap as much as possible in order to ensure my design and build were consistent and responsive.
 
 ### Start Page
-* Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept numbers or only blank spaces, and users will be alerted if they have not met those conditions. When the conditions have been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
+Upon loading the game the user will be presented with an introductory/start page. This page will display the game logo and will have some text to welcome users to the site. There will also be a short paragraph to explain a little bit about aphasia as well as how the game works and how it can help people who are affected by aphasia. In order to begin the game users will be asked to enter their name, which will be used during the game to display their score on the scoreboard. This input field will be validated and require that a name is entered. It will not accept only blank spaces, and users will be alerted if they have not met that condition. When the condition has been met the user will be taken to the main game page. In an attempt to keep the design as simple and straightforward as possible I wanted to keep this as a one page application and have therefore used Javascript and CSS to display and hide sections of my page as required.
+
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-start.png) 
 
 ### Main Page
 The main game page has 3 distinct areas, the ‘game area’ the ‘help area’ and the ‘scoreboard’. The game logo will be displayed in the top left corner of the screen and in the top right hand corner there are 3 menu buttons. I chose to use icons for these rather than text as I feel it keeps the design clean and more importantly they are intuitive and accessible for the intended audience. The first icon allows users to toggle the game sounds on and off. The second icon launches a modal, which contains more detailed guidance on how to play the game. The third Icon allows users to reset the game, and takes them back to the start page. 
 
 ![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-1-game.png) 
 
-The game area displays an image to the user, and gives them a corresponding question e.g. an image of a cat, and the question “Can you name this animal?” Below the question is a clearly defined input field for the user to type and submit their answer. It is worth noting here that I am aware it is good programming practice to validate or require all user inputs, however on this occasion I deliberately chose not to require the user to submit an answer. In the context of this game, and it’s users, I do think it is beneficial that the users – if they do not know the answer and have not been able to decide upon an answer after viewing the clues, be compelled to submit an answer. I see that as a poor user experience. There is additional functionality that I would like to add here, but unfortunately it was beyond the scope and time constraints of this project. I discuss these in more detail in the ‘Features left to Implement’ section. 
+The game area displays an image to the user, and gives them a corresponding question e.g. an image of a cat, and the question “Can you name this animal?” Below the question is a clearly defined input field for the user to type and submit their answer. It is worth noting here that I am aware it is good programming practice to validate or require all user inputs, however on this occasion I deliberately chose not to require the user to submit an answer. In the context of this game, and it’s users, I do think it is beneficial that the users – if they do not know the answer and have not been able to decide upon an answer after viewing the clues, be compelled to submit an answer. I imagine that would be frustrating, and I see that as a poor user experience. There is additional functionality that I would like to add here, but unfortunately it was beyond the scope and time constraints of this project. I discuss these in more detail in the [Features left to implement](#features-left-to-implement) section. 
 
 When a user submits their answer, it is first converted into lowercase (so that the use of capitals does not affect the answer) and checked against the correct answer. The user is then given audio and visual feedback on whether the answer was correct. The feedback given is in the form of a brief audio clip, and a green tick symbol/red cross symbol, which appears briefly on the screen. The answer is then logged as correct or incorrect on the scoreboard, and the next question is loaded.
 
@@ -128,19 +144,21 @@ If the user is struggling to name the image they can access up to 3 clues from t
 
 ![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-7-clues.png) 
 
-* Visual Clues - show the user the first letter of the correct answer with the rest of the letters replaced with a dash, similar to a crossword answer.
-* Audio Clues - play the user a short audio description of the item in the picture.
-* Choice Clues – Show the user 3 possible answers, one of which is the correct answer.
+* Visual Clues - show the user the first letter of the correct answer with the rest of the letters replaced with a dash, similar to a crossword answer. In therapy terms this would be an example of an orthographic cue
+* Audio Clues - play the user a short audio description of the item in the picture. This would also be an example of an semantic cue.
+* Choice Clues – Show the user 3 possible answers, one of which is the correct answer. This would also be an example of an orthographic cue. Source: (https://tactustherapy.com/)
 
 The clues have been specifically designed to stimulate the different neural pathways that aphasia can affect. Knowing which clues the user was reliant upon can help the therapist to identify patterns and indicate which areas a therapy plan should focus on.
 
 ### End Page
 
-Once the user has answered 10 questions, the end page is loaded. A message is displayed informing the user that the game has ended, and the user is congratulated and given their score out of 10. The user message is adapted depending on the users score to offer a more individual e=experience to the user. There is also a ‘Play Again’ button displayed that resets the game and takes the user back to the start page.
+Once the user has answered 10 questions, the end page is loaded. A message is displayed informing the user that the game has ended, and the user is congratulated and given their score out of 10. The user message is adapted depending on the users score to offer a more individual experience to the user. There is also a ‘Play Again’ button displayed that resets the game and takes the user back to the start page.
 
 ### Responsiveness
 
-The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Utilizing the bootstrap classes, the layout of the site adapts to smaller screens by progressively stacking the content into single columns as the screen size decreases. This is most prevalent on the main game page when the screen width drops below 992px wide. At this point the logo and the icons stack on top of each other in a single columns, as do the picture box and the question section. At the bottom of the layout the help section is stacked on top of the scoreboard.
+The site is designed to be fully responsive and for the layout to adapt depending on the size of the user’s device to offer the best possible experience. Utilizing the bootstrap classes, the layout of the site adapts to smaller screens by progressively stacking the content into single columns as the screen size decreases. This is most prevalent on the main game page when the screen width drops below 992px wide. At this point the logo and the icons stack on top of each other in a single columns, as do the picture box and the question section. At the bottom of the layout the help section is stacked on top of the scoreboard.    
+
+![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-14-responsive.png) 
 
 There are also some design changes that happen at this breakpoint. The correct and incorrect graphic icons are significantly reduced in size, and are both initially displayed. When the user submits their answer the appropriate icon is removed and then revealed again when the next question loads. This change was made in order to keep as much of the screen visible on a mobile device as possible and to prevent boxes from jumping about, which made for a poor user experience. A further design change takes place when the screen width is below 576px, the picture reduces in size and the question text is also reduced. The question text, rather than changing with each picture, remains static - “What can you see? Type your answer below” – again this is to keep as much of the screen visible on a mobile device as possible to make for a better user experience.
 
@@ -150,7 +168,7 @@ A great piece of advice from my mentor Can Sucullu, was to really plan out how I
 
 ![Functional Design Diagram](https://github.com/AledPeart/theNameGame/blob/master/assets/images/functional%20game%20design.png)
 
-The steps laid out in the diagram are tied closely to the layout and design as I have detailed above so I will not repeat that here. From a functional perspective, I opted to use a global counter, which is set to 0 initially and then increments by +1 each time the user submits an answer. The global counter is used to reference and load the questions, images, clues and answers, which I have stored locally in a JSON file. I chose to use a JSON as opposed to an array it my Javascript file as it is deemed to be more stable and scalable in the future.
+The steps laid out in the diagram are tied closely to the layout and design as I have detailed above so I will not repeat that here. From a functional perspective, I opted to use a global counter, which is set to 0 initially and then increments by +1 each time the user submits an answer. The global counter is used to reference and load the questions, images, clues and answers, which I have stored locally in a JSON file. I chose to use a JSON as opposed to an array in my Javascript file as it is deemed to be more stable and scalable in the future.
 An ‘event-listener’ has been to set for each click of the submit answer button, which triggers a function to check the users answer, and to set the next question. The answer is checked against the corresponding answer in the JSON file using the global counter as a reference. An ‘if ‘statement has been set and if the user answer is correct, a series of functions are triggered to display the correct answer icon, play the correct answer audio clip and to increment the correct score total on the scoreboard. Alternatively if the user answer is not correct a series of functions are triggered to display the incorrect answer icon, play the incorrect answer audio clip and to increment the incorrect score total on the scoreboard. A timeout function has been set here to allow the answer to be checked before the next question function is run. Within this function another ‘if’ statement checks that the global counter is less than 10, if it is then the above cycle is repeated. When the counter reaches 10 the game has ended and the user is taken to the end game screen, and the end of game message is displayed.
 The content of the clues in the help section have also been linked to the global counter, and they are revealed to the user on clicking the relevant help buttons.
 
@@ -162,9 +180,7 @@ There are a number of features that I would like to add to the project. It is re
 
 * Currently there are only 10 questions stored in the JSON file. I would like to expand this; furthermore I would like to develop categories of questions e.g. animals, weather, colors, foods etc.
 
-*****Is it likely that someone would have difficulty with a particular type of object Cat?*****
-
-* I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on how the users previous answers.
+* I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on the users previous answers.
 
 * I would like users to be able to create an account, which stores information such as scores and the number and types of clues they needed in a database. This could then, with permission, be accessed and used by a therapist to help formulate a therapy plan for the user.
 
@@ -174,7 +190,7 @@ There are a number of features that I would like to add to the project. It is re
 
 * There is scope to offer the game in a number of different languages to cater to as many users as possible.
 
-* I would like to include more information, articles, videos etc. and provide more external links to useful sites and resources to help people who are afflicted by aphasia. 
+* I would like to include more information, articles, videos etc, and provide more external links to useful sites and resources to help people who are afflicted by aphasia. 
 
 
 
@@ -182,9 +198,9 @@ There are a number of features that I would like to add to the project. It is re
 
 * HTML 5 – Page content and structure
 * CSS3 – Styling
-* Javascript - interative programming
+* Javascript - Interative programming
 * [JQuery](https://jquery.com/) - DOM manipulation
-* [Popper.js](https://popper.js.org/) - 
+* [Popper.js](https://popper.js.org/) - Dynamic positioning (Bootstrap)
 * [Bootstrap](https://getbootstrap.com/) (v4.3.1) – page layout and responsive design.
 * [Git](https://git-scm.com/) - Version control tracking
 * [Github](https://github.com/) - Project hosting
@@ -195,13 +211,12 @@ There are a number of features that I would like to add to the project. It is re
 * [Google Fonts](https://fonts.google.com/) – Typography
 * [Font Awesome](https://fontawesome.com/) – Icons
 * [Photoshop](https://www.photoshop.com/en) - Image re-sizing
-* [W3](https://validator.w3.org/) - HTML Code validation
-* [we](https://jigsaw.w3.org/css-validator/) - CSS Code validation
+* [W3C](https://validator.w3.org/) - HTML Code validation
+* [w3C](https://jigsaw.w3.org/css-validator/) - CSS Code validation
 * [JSHint](https://jshint.com/)- JS Code validation
 * [JSONLint](https://jsonlint.com/)- JSON Code validation
 * [AutoPrefixer](https://autoprefixer.github.io/) - To ensure correct and current CSS prefixes are used.
 * [CloudConvert](https://cloudconvert.com) - converting audio files.
-OGG to MP3 | 
 
 ## Testing
 You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
@@ -228,8 +243,8 @@ In order to clone and run this project locally, you will need to follow these st
 1. On the main repository page in __Github__, click the button to download the _Code_ (located at the top above the list of files)
 2. Under the _HTTPS_ tab copy the URL for the repository
 3. Open the Terminal in your preferred __IDE__.
-4. Change the current working directory to the location that you would like the new cloned directory.
-5. Type _git clone_ into the terminal and then paste the URL that you copied earlier.
+4. Change the current working directory to the location that you would like for the new cloned directory.
+5. Type _git clone_ into the terminal and then paste in the URL that you copied earlier.
 6. Hit _enter_ to create your clone.
 
 Full details of these summarised steps can be found [here](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
@@ -249,16 +264,17 @@ It is worth noting here that during one of our sessions my mentor highlited to m
   * Duckett, J. 2011. HTML and CSS: Design and Build Websites. John Wiley & Sons Inc.
   * Duckett, J. 2014. Javascript & JQuery. John Wiley & Sons Inc.
   * [Stroke Association](https://www.stroke.org.uk) - Information regarding aphasia.
+  * [Tactus Therapy](https://tactustherapy.com/)
 
 
 ## Media and Content
 
 * Fonts [Google Fonts](https://fonts.google.com/)
 * Icons [Font Awesome](https://fontawesome.com/)
-* Images[Pixy](https://pixy.org/)
-* Images[Freepik](https://www.freepik.com/)
-* Logo[Looka](https://looka.com/)
-* Logo[Flaticon](https://www.flaticon.com/)
+* Images [Pixy](https://pixy.org/)
+* Images [Freepik](https://www.freepik.com/)
+* Logo [Looka](https://looka.com/)
+* Logo [Flaticon](https://www.flaticon.com/)
 * Audio [Zapsplat](https://www.zapsplat.com/)
 * Color choice [Colorhunt](https://colorhunt.co/)
 

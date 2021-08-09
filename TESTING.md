@@ -1,10 +1,25 @@
 # The Name Game - Testing 
 
+[View deployed site here](https://aledpeart.github.io/theNameGame/index.html)
 [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md)
 
-I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
+I have tested my deployed site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md). I have also manually tested the deployed site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
-## User/Patient Stories
+## __Table of Contents__
+1. [User Stories](#user-stories)
+2. [Owner Stories](#owner-stories)
+3. [Manual Functionality Testing](#manual-functionality-testing)
+4. [Responsiveness](#responsiveness)
+5. [Cross Browser Testing](#cross-browser-testing)
+6. [Code Validation](#code-validation)
+7. [Lighthouse Testing](#lighthouse-testing)
+8. [Testing Results and Bugs](#testing-results-and-bugs)
+   - [Resolved Bugs](#resolved-bugs)
+   - [Unresolved Bugs](#unresolved-bugs)
+
+
+
+## User Stories
 
  ### **As a user I want to access a fully functioning web application that enables me to practice and improve my word finding strategies**.  
  
@@ -84,7 +99,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 -	The icon changes to give users visual feedback as to whether the game is muted or not
 
 
-## Owner/Therapist Stories
+## Owner Stories
 
 
 ### **As the owner I want to test the users word retrieval**.  
@@ -98,7 +113,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 ### **As the owner I want the user to be shown a series of ‘high frequency nouns’**.  
 
 -	Everyday ‘high frequency’ nouns are used 
-- Common and objects specifically chosen for the game 
+- Common evryday objects specifically chosen for the game 
 
 
 ### **As the owner I want the user to be offered some additional prompts if they are unable to name an object.**.  
@@ -159,10 +174,10 @@ __Result__– The result was as expected.
 * __Test__– Does the ‘Enter’ key on the keyboard replicate a click of the ‘Start Game’ button?   
 __Result__– The result was as expected.
 
-* __Test__– Is the user required to only enter letters  in the name field?   
+* __Test__– Is the user required to not only enter blank spaces in the name field?   
 __Result__– The result was as expected.
 
-* __Test__– If the user enters something other than letters in the name field, are shown the alert box?   
+* __Test__– If the user enters only blank spaces, are they shown the alert box?   
 __Result__– The result was as expected.
 
 * __Test__– When clicked, does the ‘Start Game’ button launch the main game?   
@@ -345,7 +360,7 @@ __Result__– The result was as expected.
 
 ## Responsiveness 
 
-I have tested my site across 5 screen widths in order to best replicate the breadth of modern viewing devices, in order to ensure that the site responds and performs as expected. For the purpose of testing in this document I have written results relating to 3 screen widths. This is to avoid unnecessary repetition, and is also in line with the Bootstrap ‘breakpoints’ I adhered to when building the website:
+I have tested my site across various screen widths in order to best replicate the breadth of modern viewing devices, in order to ensure that the site responds and performs as expected. For the purpose of testing in this document I have written results relating to 3 screen widths. This is to avoid unnecessary repetition, and is also in line with the Bootstrap ‘breakpoints’ I adhered to when building the website:
 
 * Small		<768px  
 * Medium	768-992px  
@@ -518,7 +533,7 @@ I have tested this web application across different browsers at different device
 *	Tablet
 *	Mobile device
 
-I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below, in terms of the application's responsiveness and functionality. The bugs discovered and their investigation are detailed in the [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md) :
+I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below, in terms of the application's responsiveness and functionality. 
 
 ### Responsiveness
 
@@ -548,14 +563,14 @@ __Firefox__ – When reloading the game the start screen name field would pre-po
 
 __Safari__ – Audio clue files not playing. Audio controls in Safari displaying a 'pause' icon when it should have displayed a play icon.
 
-## HTML, CSS and JavascriptValidation
+## Code Validation
 
 While developing I have regularly validated my HTML and CSS using [W3C Markup](https://validator.w3.org/), [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSHint]( https://jshint.com/).  
 Errors and Warnings that were highlighted to me that I addressed during the project were:
-* Missing closing </div> tags
+* Missing closing __</div>__ tags
 * __section__ tags that did not have an __h1__ or an __h2__ as a direct child
 * Incorrect use of __type__ attribute for audio files
-*Missing __alt__ tag on an image
+* Missing __alt__ tag on an image
 * Missing __:__ and __}__ in my __style.css__ file
 * Missing and unnecessary semicolons in my __script.js__ file
 * An unused, and an undefined variable in my __script.js__ file
@@ -652,11 +667,11 @@ if ((nameBox).value == "") {
   }
 }
 ```
-This function uses an if statement to test that the username entered only contains letters between _a-z_ (and recognises uppercase too). If it does not the user is alerted that they should try again, only using letters, else the subsequent functions run, and the user is taken to the main game page. (the function was a mended from a similar one on Stack Overflow, full credit in the code)
+This function uses an if statement to test that the username entered contains letters between _a-z_ (and recognises uppercase too), and therefore will not allow only blank spaces. If a blank space is entered, the user is alerted that they should try again, else the subsequent functions run, and the user is taken to the main game page (Function amended from a similar one on Stack Overflow, full credit in the code).
 
 #### Image Load Speed
 
-I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
+I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. These had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had been set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
 
 #### Cursor Issue on Mobile devices
 
@@ -677,11 +692,14 @@ When validating my Javascript code in JSHint, I was given a number of warnings r
 * issues with global variables being seen as undefined
 * the use of expressions within a function
 
-After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code.
+After a general internet search and a look at the experiences of my fellow students on Slack as well as a chat with the tutor team, I settled on adding the following comments to the top of my script.js file to ensure that JSHint was aware that ES6 was being used, and that the _questions_ variable was defined globally as part of my xhr code. An additional line was added which allows the use of an expression within the _audioPause_ function:
 
-/*jshint esversion: 6 */ 
-/* global questions:true */ 
-/* jshint expr: true */ 
+```/*jshint esversion: 6 */```  source:[slack forum](https://code-institute-room.slack.com/archives/C0L316Z96/p1621775494226400?thread_ts=1621773144.225600&cid=C0L316Z96)    
+
+```/* global questions:true */```   source:[jshint](https://jshint.com/docs/)   
+
+```/* jshint expr: true */```  source: [stackoverflow](https://stackoverflow.com/questions/8108184/why-does-jshint-not-recognize-an-assignment-as-an-expression)     
+
 
 #### Correct and Incorrect Answer Icons Not Displaying    
 When testing my deployed site on different browsers, I discovered an error in my code that meant the correct and incorrect answer icons, would not display at the large breakpoint. After investigating I realised that the following _if_ statement (intended to display reduced icons on smaller screens) was incorrectly written so that at screen widths of 992 and 993 px, icons would not be displayed:
@@ -719,9 +737,9 @@ I was able to resolve this by adding the following code to the _window.onload_ f
 
 Limited time meant I had to prioritise the resolution of the larger bugs and issues I found, meaning that some of the smaller issues I discovered, which I felt were not impacting the functionality of the application, or the users experience are as yet unresolved. I have detailed them below and intend to address them as part of future updates.
 
-#### Images and Questions load speeds
+#### Images and Questions Load Speeds
 
-When testing deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
+When testing the deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
 
 #### Permissions Policy Issue
 The folowing warning message is diplayed in the console when using the _Chrome_ browser     
