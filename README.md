@@ -213,7 +213,6 @@ There are a number of features that I would like to add to the project. It is re
 * [JSONLint](https://jsonlint.com/)- JSON Code validation
 * [AutoPrefixer](https://autoprefixer.github.io/) - To ensure correct and current CSS prefixes are used.
 * [CloudConvert](https://cloudconvert.com) - converting audio files.
-OGG to MP3 | 
 
 ## Testing
 You can view my separate TESTING.md file [here](https://github.com/AledPeart/theNameGame/blob/master/TESTING.md)
@@ -261,6 +260,7 @@ It is worth noting here that during one of our sessions my mentor highlited to m
   * Duckett, J. 2011. HTML and CSS: Design and Build Websites. John Wiley & Sons Inc.
   * Duckett, J. 2014. Javascript & JQuery. John Wiley & Sons Inc.
   * [Stroke Association](https://www.stroke.org.uk) - Information regarding aphasia.
+  * [Tactus Therapy](https://tactustherapy.com/)
 
 
 ## Media and Content
