@@ -2,7 +2,7 @@
 
 [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md)
 
-I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/…………./README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
+I have tested my site to ensure that it achieves the intended aims of the owner and the expectations of the users by meeting the user stories detailed in the [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md). I have also manually tested my site across a number of different devices and browsers to ensure that the design, layout and functionality respond as intended. In addition the validity of my HTML, CSS and Javascript have been checked using the [W3C Markup](https://validator.w3.org/) , [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSONLint](https://jsonlint.com/). Finally I have used [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools to test the accessibility and performance of my site. The specific tests and results are detailed below:
 
 ## __Table of Contents__
 1. [User Stories](#user-stories)
@@ -112,7 +112,7 @@ I have tested my site to ensure that it achieves the intended aims of the owner 
 ### **As the owner I want the user to be shown a series of ‘high frequency nouns’**.  
 
 -	Everyday ‘high frequency’ nouns are used 
-- Common and objects specifically chosen for the game 
+- Common evryday objects specifically chosen for the game 
 
 
 ### **As the owner I want the user to be offered some additional prompts if they are unable to name an object.**.  
@@ -173,10 +173,10 @@ __Result__– The result was as expected.
 * __Test__– Does the ‘Enter’ key on the keyboard replicate a click of the ‘Start Game’ button?   
 __Result__– The result was as expected.
 
-* __Test__– Is the user required to only enter letters  in the name field?   
+* __Test__– Is the user required to not only enter blank spaces in the name field?   
 __Result__– The result was as expected.
 
-* __Test__– If the user enters something other than letters in the name field, are shown the alert box?   
+* __Test__– If the user enters only blank spaces, are they shown the alert box?   
 __Result__– The result was as expected.
 
 * __Test__– When clicked, does the ‘Start Game’ button launch the main game?   
@@ -359,7 +359,7 @@ __Result__– The result was as expected.
 
 ## Responsiveness 
 
-I have tested my site across 5 screen widths in order to best replicate the breadth of modern viewing devices, in order to ensure that the site responds and performs as expected. For the purpose of testing in this document I have written results relating to 3 screen widths. This is to avoid unnecessary repetition, and is also in line with the Bootstrap ‘breakpoints’ I adhered to when building the website:
+I have tested my site across various screen widths in order to best replicate the breadth of modern viewing devices, in order to ensure that the site responds and performs as expected. For the purpose of testing in this document I have written results relating to 3 screen widths. This is to avoid unnecessary repetition, and is also in line with the Bootstrap ‘breakpoints’ I adhered to when building the website:
 
 * Small		<768px  
 * Medium	768-992px  
@@ -532,7 +532,7 @@ I have tested this web application across different browsers at different device
 *	Tablet
 *	Mobile device
 
-I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below, in terms of the application's responsiveness and functionality. The bugs discovered and their investigation are detailed in the [README.md](https://github.com/AledPeart/theNameGame/blob/master/README.md) :
+I followed the same testing criteria that I used for my Manual Testing, but I have not detailed the results of the tests in full here as I feel it would prove too lengthy for it’s intended purpose. I have however summarized the results and the issues encountered below, in terms of the application's responsiveness and functionality. 
 
 ### Responsiveness
 
@@ -566,10 +566,10 @@ __Safari__ – Audio clue files not playing. Audio controls in Safari displaying
 
 While developing I have regularly validated my HTML and CSS using [W3C Markup](https://validator.w3.org/), [CSS Validation Service](https://jigsaw.w3.org/css-validator/) and [JSHint]( https://jshint.com/).  
 Errors and Warnings that were highlighted to me that I addressed during the project were:
-* Missing closing </div> tags
+* Missing closing __</div>__ tags
 * __section__ tags that did not have an __h1__ or an __h2__ as a direct child
 * Incorrect use of __type__ attribute for audio files
-*Missing __alt__ tag on an image
+* Missing __alt__ tag on an image
 * Missing __:__ and __}__ in my __style.css__ file
 * Missing and unnecessary semicolons in my __script.js__ file
 * An unused, and an undefined variable in my __script.js__ file
@@ -666,7 +666,7 @@ if ((nameBox).value == "") {
   }
 }
 ```
-This function uses an if statement to test that the username entered only contains letters between _a-z_ (and recognises uppercase too). If it does not the user is alerted that they should try again, only using letters, else the subsequent functions run, and the user is taken to the main game page. (the function was a mended from a similar one on Stack Overflow, full credit in the code)
+This function uses an if statement to test that the username entered contains letters between _a-z_ (and recognises uppercase too), and therefore will not allow only blank spaces. If a blank space is entered, the user is alerted that they should try again, else the subsequent functions run, and the user is taken to the main game page (Function amended from a similar one on Stack Overflow, full credit in the code).
 
 #### Image Load Speed
 
