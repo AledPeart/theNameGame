@@ -1,23 +1,22 @@
-[
-    {      
-          "question": "Can you name this animal?",
-          "image": "assets/images/cat.jpg",
-         "answer": "cat",
-         "visualclue": "C _ _",
-         "audioclue": "assets/audio/cat-audio.mp3",
-         "multichoice": [
-             "Dog",
-             "Cat",
-             "Bird"
-         ]
+[{
+        "question": "Can you name this animal?",
+        "image": "assets/images/cat.jpg",
+        "answer": "cat",
+        "visualclue": "C _ _",
+        "audioclue": "assets/audio/cat-audio.mp3",
+        "multichoice": [
+            "Dog",
+            "Cat",
+            "Bird"
+        ]
     },
     {
         "question": "What do you see in the picture?",
         "image": "assets/images/car.jpg",
         "answer": "car",
         "visualclue": "C _ _",
-         "audioclue": "assets/audio/car-audio.mp3",
-         "multichoice": [
+        "audioclue": "assets/audio/car-audio.mp3",
+        "multichoice": [
             "Bus",
             "Lorry",
             "Car"
@@ -26,97 +25,97 @@
     {
         "question": "Can you name this object?",
         "image": "assets/images/ball.jpg",
-         "answer": "ball",
-         "visualclue": "B _ _ _",
-         "audioclue": "assets/audio/ball-audio.mp3",
-         "multichoice": [
+        "answer": "ball",
+        "visualclue": "B _ _ _",
+        "audioclue": "assets/audio/ball-audio.mp3",
+        "multichoice": [
             "Ball",
             "Club",
             "Racket"
         ]
     },
-    {      
+    {
         "question": "Can you name this fruit?",
         "image": "assets/images/orange.png",
-       "answer": "orange",
-       "visualclue": "O _ _ _ _ _",
-         "audioclue": "assets/audio/orange-audio.mp3",
-         "multichoice": [
+        "answer": "orange",
+        "visualclue": "O _ _ _ _ _",
+        "audioclue": "assets/audio/orange-audio.mp3",
+        "multichoice": [
             "Pear",
             "Orange",
             "Apple"
         ]
-  },
-  {      
-    "question": "What do you see in the picture?",
-    "image": "assets/images/flower.jpg",
-   "answer": "flower",
-   "visualclue": "F _ _ _ _ _",
-    "audioclue": "assets/audio/flower-audio.mp3",
-    "multichoice": [
-        "Tree",
-        "Bush",
-        "Flower"
-    ]
-},
-{
-    "question": "Can you name this object?",
-    "image": "assets/images/train.jpg",
-     "answer": "train",
-     "visualclue": "T _ _ _ _",
-    "audioclue": "assets/audio/train-audio.mp3",
-    "multichoice": [
-        "Train",
-        "Boat",
-        "Aeroplane"
-    ]
-},
-{      
-    "question": "What do you see in the picture?",
-    "image": "assets/images/moon.jpg",
-   "answer": "moon",
-   "visualclue": "M _ _ _",
-    "audioclue": "assets/audio/moon-audio.mp3",
-    "multichoice": [
-        "Moon",
-        "Star",
-        "Sun"
-    ]
-},
-{      
-    "question": "Can you name this animal?",
-    "image": "assets/images/rabbit.jpg",
-   "answer": "rabbit",
-   "visualclue": "R _ _ _ _ _",
-    "audioclue": "assets/audio/rabbit-audio.mp3",
-    "multichoice": [
-        "Squirrel",
-        "Rabbit",
-        "Tortoise"
-    ]
-},
-{      
-    "question": "What do you see in the picture?",
-    "image": "assets/images/hat.jpg",
-   "answer": "hat",
-   "visualclue": "H _ _",
-    "audioclue": "assets/audio/hat-audio.mp3",
-    "multichoice": [
-        "Hat",
-        "Scarf",
-        "Helmet"
-    ]
-},
-{
-    "question": "Can you name this object?",
-    "image": "assets/images/pencil.jpg",
-     "answer": "pencil",
-     "visualclue": "P _ _ _ _ _",
-    "audioclue": "assets/audio/pencil-audio.mp3",
-    "multichoice": [
-        "Paint",
-        "Chalk",
-        "Pencil"
-    ]
-}
+    },
+    {
+        "question": "What do you see in the picture?",
+        "image": "assets/images/flower.jpg",
+        "answer": "flower",
+        "visualclue": "F _ _ _ _ _",
+        "audioclue": "assets/audio/flower-audio.mp3",
+        "multichoice": [
+            "Tree",
+            "Bush",
+            "Flower"
+        ]
+    },
+    {
+        "question": "Can you name this object?",
+        "image": "assets/images/train.jpg",
+        "answer": "train",
+        "visualclue": "T _ _ _ _",
+        "audioclue": "assets/audio/train-audio.mp3",
+        "multichoice": [
+            "Train",
+            "Boat",
+            "Aeroplane"
+        ]
+    },
+    {
+        "question": "What do you see in the picture?",
+        "image": "assets/images/moon.jpg",
+        "answer": "moon",
+        "visualclue": "M _ _ _",
+        "audioclue": "assets/audio/moon-audio.mp3",
+        "multichoice": [
+            "Moon",
+            "Star",
+            "Sun"
+        ]
+    },
+    {
+        "question": "Can you name this animal?",
+        "image": "assets/images/rabbit.jpg",
+        "answer": "rabbit",
+        "visualclue": "R _ _ _ _ _",
+        "audioclue": "assets/audio/rabbit-audio.mp3",
+        "multichoice": [
+            "Squirrel",
+            "Rabbit",
+            "Tortoise"
+        ]
+    },
+    {
+        "question": "What do you see in the picture?",
+        "image": "assets/images/hat.jpg",
+        "answer": "hat",
+        "visualclue": "H _ _",
+        "audioclue": "assets/audio/hat-audio.mp3",
+        "multichoice": [
+            "Hat",
+            "Scarf",
+            "Helmet"
+        ]
+    },
+    {
+        "question": "Can you name this object?",
+        "image": "assets/images/pencil.jpg",
+        "answer": "pencil",
+        "visualclue": "P _ _ _ _ _",
+        "audioclue": "assets/audio/pencil-audio.mp3",
+        "multichoice": [
+            "Paint",
+            "Chalk",
+            "Pencil"
+        ]
+    }
 ]

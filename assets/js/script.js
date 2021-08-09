@@ -11,6 +11,7 @@ window.onload = function () {
 
 //global counter variable that can be passed in to other functions as needed
 let globalCounter = 0;
+
 let startBtn = document.getElementById("start-btn");
 let endBtn = document.getElementById("end-btn");
 
