@@ -10,8 +10,8 @@
 theNameGame is a picture naming web application, which helps people affected by aphasia to practice and improve their language finding abilities.
 
 ## __Table of Contents__
-1. [Aims of the project](#aims-of-the-project)
-2. [What is Aphasia](#what-is-aphasia)
+1. [What is Aphasia?](#what-is-aphasia)
+2. [Aims of the project](#aims-of-the-project)
 3. [User Experience](#user-experience)
    - [User Stories](#user-stories)
    - [Owner Stories](#owner-stories)
@@ -27,21 +27,19 @@ theNameGame is a picture naming web application, which helps people affected by 
 11. [Media and Content](#media-and-content)
 12. [Acknowledgements](#acknowledgements)
 
+## What is Aphasia?
+Aphasia is a language and communication disorder, which affects the language centers of the brain. The most common cause is a stroke, but it can be also result from a head injury, brain tumor and other neurological illnesses.
+Aphasia can affect a person’s ability to express what they want to say. Sufferers will often liken it to having a word on the ‘tip of your tongue’, but being unable to recall it.  A common method Speech and Language Therapists use to help people with aphasia find their words is to ask a patient to name a common object. If a patient cannot name the object independantly they are given a series of clues or hints in order to help stimulate the neural pathways in the brain that may be causing the word finding difficulty. Source:(www.stroke.org.uk)
+
 ## Aims of the project
 
-The aim of this project is to build a picture naming game, which specifically helps people affected by expressive dysphasia to practice and improve their language finding abilities. The project will consider the needs of the patient/user and of the therapist/owner and their respective desired outcomes. 
-
-The user will be asked to name a series of common objects. If a user is unable to identify the object initially they will be given a series of prompts or clues in order to help them. At the end of the task the user will receive a score showing how many correct and incorrect answers they achieved. The owner will be also be able to access the score, and importantly information showing the prompts required by the user.
-
-## What is Aphasia
-Aphasia is a language and communication disorder, which affects the language centers of the brain. The most common cause is a stroke, but it can be also result from a head injury, brain tumor and other neurological illnesses.
-Expressive dysphasia is a form of aphasia that affects a person’s ability to express what they want to say. Sufferers will often liken it to having a word on the ‘tip of your tongue’, but being unable to recall it. (www.stroke.org.uk)
-
+The aim of this project is to build a picture naming game, which specifically helps people affected by aphasia to practice and improve their language finding abilities. The project will consider the needs of the patient/user and of the therapist/owner and their respective desired outcomes. 
+The user will be asked to name a series of common objects. If a user is unable to identify the object initially they will be given a series of prompts or clues in order to help them. At the end of the task the user will receive a score showing how many correct and incorrect answers they achieved. The game allows the user to practice independently and by doing so they will gradually need fewer and fewer clues to name a given object, and ultimately none at all.
 
 
 ## User Experience
 
-Here I will address the aims and goals of the website from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the website.
+Here I will address the aims and goals of the application from both the perspectives of the user/patient and of the owner/therapist. I will also address how user experience is key to the design of the website.
 
 ### User stories
 
@@ -144,9 +142,9 @@ If the user is struggling to name the image they can access up to 3 clues from t
 
 ![supporting screenshot](https://github.com/AledPeart/theNameGame/blob/master/assets/images/screen-shot-7-clues.png) 
 
-* Visual Clues - show the user the first letter of the correct answer with the rest of the letters replaced with a dash, similar to a crossword answer.
-* Audio Clues - play the user a short audio description of the item in the picture.
-* Choice Clues – Show the user 3 possible answers, one of which is the correct answer.
+* Visual Clues - show the user the first letter of the correct answer with the rest of the letters replaced with a dash, similar to a crossword answer. In therapy terms this would be an example of an orthographic cue
+* Audio Clues - play the user a short audio description of the item in the picture. This would also be an example of an semantic cue.
+* Choice Clues – Show the user 3 possible answers, one of which is the correct answer. This would also be an example of an orthographic cue. Source: (https://tactustherapy.com/)
 
 The clues have been specifically designed to stimulate the different neural pathways that aphasia can affect. Knowing which clues the user was reliant upon can help the therapist to identify patterns and indicate which areas a therapy plan should focus on.
 
@@ -177,8 +175,6 @@ The content of the clues in the help section have also been linked to the global
 There are a number of features that I would like to add to the project. It is really exciting that there is so much scope to develop and improve this project.
 
 * Currently there are only 10 questions stored in the JSON file. I would like to expand this; furthermore I would like to develop categories of questions e.g. animals, weather, colors, foods etc.
-
-*****Is it likely that someone would have difficulty with a particular type of object Cat?*****
 
 * I would also like to set difficulty levels so that there is a progression for users to work through, there is also the scope for the quiz to dynamically increase or decease the difficulty of the questions based on how the users previous answers.
 
