@@ -670,7 +670,7 @@ This function uses an if statement to test that the username entered contains le
 
 #### Image Load Speed
 
-I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. these had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
+I discovered that the questions and images were loading at differen speeds, and this made for a poor user experience. Fortunately I was able to rectify this quite easily by adjusting the timeout settings in my _script.js_ file. These had been set initially to allow the _correct_ and _incorrect_ graphic icon to display before the next question had been set. By adjusting these settings I was able to achieve the effect I wanted and align the picture and question load speeds. I was satisfied with this outcome but when testing the deployed site on different browsers the results were mixed - this issue remains unresolved and I have given more detail below.
 
 #### Cursor Issue on Mobile devices
 
@@ -736,9 +736,9 @@ I was able to resolve this by adding the following code to the _window.onload_ f
 
 Limited time meant I had to prioritise the resolution of the larger bugs and issues I found, meaning that some of the smaller issues I discovered, which I felt were not impacting the functionality of the application, or the users experience are as yet unresolved. I have detailed them below and intend to address them as part of future updates.
 
-#### Images and Questions load speeds
+#### Images and Questions Load Speeds
 
-When testing deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
+When testing the deployed site on different browsers I became aware that the questions and images were being loaded at varying speeds on different browsers. On Firefox and Safari for example the image loads fractionally slower that the corresponding question. On chrome the issues is not discenable to my eye. This will require futher investigation in order to resolve.
 
 #### Permissions Policy Issue
 The folowing warning message is diplayed in the console when using the _Chrome_ browser     
